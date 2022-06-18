@@ -12,6 +12,7 @@ struct CountdownApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(ModelData.shared)
         }
     }
 }

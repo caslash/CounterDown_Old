@@ -1,0 +1,23 @@
+{
+  "pins" : [
+    {
+      "identity" : "dynamiccolor",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/yannickl/DynamicColor",
+      "state" : {
+        "branch" : "master",
+        "revision" : "cf7c6eed080ea4b678592ae5af987c207ca8a232"
+      }
+    },
+    {
+      "identity" : "sfsymbolsfinder",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/abadikaka/SFSymbolsFinder.git",
+      "state" : {
+        "branch" : "master",
+        "revision" : "955b818250237756389a9e27d163142e983e77f3"
+      }
+    }
+  ],
+  "version" : 2
+}

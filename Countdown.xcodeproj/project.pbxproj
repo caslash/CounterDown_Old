@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2E0AC7C428411EC1002666D7 /* ComponentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0AC7C328411EC1002666D7 /* ComponentView.swift */; };
+		2E0B80792845B97600BD5CE4 /* EnvironmentValues+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0B80782845B97600BD5CE4 /* EnvironmentValues+Extension.swift */; };
+		2E58E7402841090C00E278EB /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E58E73F2841090C00E278EB /* Color+Extension.swift */; };
+		2E58E74228410DBB00E278EB /* CalendarComponents+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E58E74128410DBB00E278EB /* CalendarComponents+Extension.swift */; };
 		2E6247572840404B00BB2A48 /* CountdownApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6247562840404B00BB2A48 /* CountdownApp.swift */; };
 		2E6247592840404B00BB2A48 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6247582840404B00BB2A48 /* ContentView.swift */; };
 		2E62475B2840404C00BB2A48 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E62475A2840404C00BB2A48 /* Assets.xcassets */; };
@@ -14,6 +18,20 @@
 		2E6247682840404C00BB2A48 /* CountdownTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6247672840404C00BB2A48 /* CountdownTests.swift */; };
 		2E6247722840404C00BB2A48 /* CountdownUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6247712840404C00BB2A48 /* CountdownUITests.swift */; };
 		2E6247742840404C00BB2A48 /* CountdownUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6247732840404C00BB2A48 /* CountdownUITestsLaunchTests.swift */; };
+		2E6247842840408200BB2A48 /* AddEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6247832840408200BB2A48 /* AddEventView.swift */; };
+		2E6247862840409800BB2A48 /* AddEvent_ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6247852840409800BB2A48 /* AddEvent_ViewModel.swift */; };
+		2E6247892840415E00BB2A48 /* EventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6247882840415E00BB2A48 /* EventView.swift */; };
+		2E62478B2840417D00BB2A48 /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E62478A2840417D00BB2A48 /* ModelData.swift */; };
+		2E62478E284041AF00BB2A48 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E62478D284041AF00BB2A48 /* Event.swift */; };
+		2E6247902840423F00BB2A48 /* Preview_Events.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E62478F2840423F00BB2A48 /* Preview_Events.swift */; };
+		2E6247922840462F00BB2A48 /* Event_ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6247912840462F00BB2A48 /* Event_ViewModel.swift */; };
+		2E87A1912846D18600AD3624 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E87A1902846D18600AD3624 /* SettingsView.swift */; };
+		2E87A1952847014000AD3624 /* CalendarChooser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E87A1942847014000AD3624 /* CalendarChooser.swift */; };
+		2E92EAC028417532008E7393 /* Content_ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E92EABF28417532008E7393 /* Content_ViewModel.swift */; };
+		2E9AE099285D780E00C1EBCF /* EditEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9AE098285D780E00C1EBCF /* EditEventView.swift */; };
+		2E9AE09B285D781C00C1EBCF /* EditEvent_ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9AE09A285D781C00C1EBCF /* EditEvent_ViewModel.swift */; };
+		68444B2D285D00FD003EDF78 /* SFSymbolsFinder in Frameworks */ = {isa = PBXBuildFile; productRef = 68444B2C285D00FD003EDF78 /* SFSymbolsFinder */; };
+		68EF9180285D044E00E117C1 /* DynamicColor in Frameworks */ = {isa = PBXBuildFile; productRef = 68EF917F285D044E00E117C1 /* DynamicColor */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,7 +51,24 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		2EEE4E992841DBEC0041A0C8 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		2E0AC7C328411EC1002666D7 /* ComponentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComponentView.swift; sourceTree = "<group>"; };
+		2E0B80782845B97600BD5CE4 /* EnvironmentValues+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EnvironmentValues+Extension.swift"; sourceTree = "<group>"; };
+		2E58E73F2841090C00E278EB /* Color+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
+		2E58E74128410DBB00E278EB /* CalendarComponents+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CalendarComponents+Extension.swift"; sourceTree = "<group>"; };
 		2E6247532840404B00BB2A48 /* Countdown.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Countdown.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E6247562840404B00BB2A48 /* CountdownApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownApp.swift; sourceTree = "<group>"; };
 		2E6247582840404B00BB2A48 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -44,6 +79,23 @@
 		2E62476D2840404C00BB2A48 /* CountdownUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CountdownUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E6247712840404C00BB2A48 /* CountdownUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownUITests.swift; sourceTree = "<group>"; };
 		2E6247732840404C00BB2A48 /* CountdownUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		2E6247832840408200BB2A48 /* AddEventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEventView.swift; sourceTree = "<group>"; };
+		2E6247852840409800BB2A48 /* AddEvent_ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEvent_ViewModel.swift; sourceTree = "<group>"; };
+		2E6247882840415E00BB2A48 /* EventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventView.swift; sourceTree = "<group>"; };
+		2E62478A2840417D00BB2A48 /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
+		2E62478D284041AF00BB2A48 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		2E62478F2840423F00BB2A48 /* Preview_Events.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preview_Events.swift; sourceTree = "<group>"; };
+		2E6247912840462F00BB2A48 /* Event_ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event_ViewModel.swift; sourceTree = "<group>"; };
+		2E843FE92841E73B00BBA183 /* Intents.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Intents.framework; path = System/Library/Frameworks/Intents.framework; sourceTree = SDKROOT; };
+		2E843FF42841E73B00BBA183 /* IntentsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IntentsUI.framework; path = System/Library/Frameworks/IntentsUI.framework; sourceTree = SDKROOT; };
+		2E87A1902846D18600AD3624 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		2E87A1942847014000AD3624 /* CalendarChooser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarChooser.swift; sourceTree = "<group>"; };
+		2E91A7CD284995E200593037 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		2E92EABF28417532008E7393 /* Content_ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Content_ViewModel.swift; sourceTree = "<group>"; };
+		2E9AE098285D780E00C1EBCF /* EditEventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditEventView.swift; sourceTree = "<group>"; };
+		2E9AE09A285D781C00C1EBCF /* EditEvent_ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditEvent_ViewModel.swift; sourceTree = "<group>"; };
+		2EEE4E892841DBEB0041A0C8 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		2EEE4E8B2841DBEB0041A0C8 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +103,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				68EF9180285D044E00E117C1 /* DynamicColor in Frameworks */,
+				68444B2D285D00FD003EDF78 /* SFSymbolsFinder in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,12 +125,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2E58E73A284108A700E278EB /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				2E58E73E284108FF00E278EB /* Extensions */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		2E58E73E284108FF00E278EB /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				2E58E73F2841090C00E278EB /* Color+Extension.swift */,
+				2E58E74128410DBB00E278EB /* CalendarComponents+Extension.swift */,
+				2E0B80782845B97600BD5CE4 /* EnvironmentValues+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		2E62474A2840404B00BB2A48 = {
 			isa = PBXGroup;
 			children = (
 				2E6247552840404B00BB2A48 /* Countdown */,
 				2E6247662840404C00BB2A48 /* CountdownTests */,
 				2E6247702840404C00BB2A48 /* CountdownUITests */,
+				2EEE4E882841DBEB0041A0C8 /* Frameworks */,
 				2E6247542840404B00BB2A48 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -94,9 +167,12 @@
 		2E6247552840404B00BB2A48 /* Countdown */ = {
 			isa = PBXGroup;
 			children = (
+				2E91A7CD284995E200593037 /* Info.plist */,
 				2E6247562840404B00BB2A48 /* CountdownApp.swift */,
-				2E6247582840404B00BB2A48 /* ContentView.swift */,
 				2E62475A2840404C00BB2A48 /* Assets.xcassets */,
+				2E6247822840406400BB2A48 /* Models */,
+				2E6247812840405E00BB2A48 /* ViewModels */,
+				2E6247802840405800BB2A48 /* Views */,
 				2E62475C2840404C00BB2A48 /* Preview Content */,
 			);
 			path = Countdown;
@@ -106,6 +182,7 @@
 			isa = PBXGroup;
 			children = (
 				2E62475D2840404C00BB2A48 /* Preview Assets.xcassets */,
+				2E62478F2840423F00BB2A48 /* Preview_Events.swift */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -127,6 +204,68 @@
 			path = CountdownUITests;
 			sourceTree = "<group>";
 		};
+		2E6247802840405800BB2A48 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2E6247872840414A00BB2A48 /* Components */,
+				2E6247582840404B00BB2A48 /* ContentView.swift */,
+				2E6247832840408200BB2A48 /* AddEventView.swift */,
+				2E87A1902846D18600AD3624 /* SettingsView.swift */,
+				2E87A1942847014000AD3624 /* CalendarChooser.swift */,
+				2E9AE098285D780E00C1EBCF /* EditEventView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		2E6247812840405E00BB2A48 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				2E6247852840409800BB2A48 /* AddEvent_ViewModel.swift */,
+				2E6247912840462F00BB2A48 /* Event_ViewModel.swift */,
+				2E92EABF28417532008E7393 /* Content_ViewModel.swift */,
+				2E9AE09A285D781C00C1EBCF /* EditEvent_ViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		2E6247822840406400BB2A48 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2E58E73A284108A700E278EB /* Resources */,
+				2E62478C284041A300BB2A48 /* Objects */,
+				2E62478A2840417D00BB2A48 /* ModelData.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		2E6247872840414A00BB2A48 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				2E6247882840415E00BB2A48 /* EventView.swift */,
+				2E0AC7C328411EC1002666D7 /* ComponentView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		2E62478C284041A300BB2A48 /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+				2E62478D284041AF00BB2A48 /* Event.swift */,
+			);
+			path = Objects;
+			sourceTree = "<group>";
+		};
+		2EEE4E882841DBEB0041A0C8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2EEE4E892841DBEB0041A0C8 /* WidgetKit.framework */,
+				2EEE4E8B2841DBEB0041A0C8 /* SwiftUI.framework */,
+				2E843FE92841E73B00BBA183 /* Intents.framework */,
+				2E843FF42841E73B00BBA183 /* IntentsUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -137,12 +276,17 @@
 				2E62474F2840404B00BB2A48 /* Sources */,
 				2E6247502840404B00BB2A48 /* Frameworks */,
 				2E6247512840404B00BB2A48 /* Resources */,
+				2EEE4E992841DBEC0041A0C8 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = Countdown;
+			packageProductDependencies = (
+				68444B2C285D00FD003EDF78 /* SFSymbolsFinder */,
+				68EF917F285D044E00E117C1 /* DynamicColor */,
+			);
 			productName = Countdown;
 			productReference = 2E6247532840404B00BB2A48 /* Countdown.app */;
 			productType = "com.apple.product-type.application";
@@ -191,7 +335,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1340;
-				LastUpgradeCheck = 1340;
+				LastUpgradeCheck = 1400;
 				TargetAttributes = {
 					2E6247522840404B00BB2A48 = {
 						CreatedOnToolsVersion = 13.4;
@@ -215,6 +359,10 @@
 				Base,
 			);
 			mainGroup = 2E62474A2840404B00BB2A48;
+			packageReferences = (
+				68444B2B285D00FD003EDF78 /* XCRemoteSwiftPackageReference "SFSymbolsFinder" */,
+				68EF917E285D044E00E117C1 /* XCRemoteSwiftPackageReference "DynamicColor" */,
+			);
 			productRefGroup = 2E6247542840404B00BB2A48 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -257,8 +405,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E87A1912846D18600AD3624 /* SettingsView.swift in Sources */,
+				2E9AE09B285D781C00C1EBCF /* EditEvent_ViewModel.swift in Sources */,
 				2E6247592840404B00BB2A48 /* ContentView.swift in Sources */,
+				2E92EAC028417532008E7393 /* Content_ViewModel.swift in Sources */,
+				2E58E7402841090C00E278EB /* Color+Extension.swift in Sources */,
 				2E6247572840404B00BB2A48 /* CountdownApp.swift in Sources */,
+				2E6247862840409800BB2A48 /* AddEvent_ViewModel.swift in Sources */,
+				2E58E74228410DBB00E278EB /* CalendarComponents+Extension.swift in Sources */,
+				2E87A1952847014000AD3624 /* CalendarChooser.swift in Sources */,
+				2E6247842840408200BB2A48 /* AddEventView.swift in Sources */,
+				2E6247892840415E00BB2A48 /* EventView.swift in Sources */,
+				2E6247902840423F00BB2A48 /* Preview_Events.swift in Sources */,
+				2E0B80792845B97600BD5CE4 /* EnvironmentValues+Extension.swift in Sources */,
+				2E0AC7C428411EC1002666D7 /* ComponentView.swift in Sources */,
+				2E6247922840462F00BB2A48 /* Event_ViewModel.swift in Sources */,
+				2E62478E284041AF00BB2A48 /* Event.swift in Sources */,
+				2E62478B2840417D00BB2A48 /* ModelData.swift in Sources */,
+				2E9AE099285D780E00C1EBCF /* EditEventView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -345,7 +509,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -399,7 +563,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -412,6 +576,7 @@
 		2E6247782840404C00BB2A48 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -420,11 +585,14 @@
 				DEVELOPMENT_TEAM = 3S8XC6A264;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Countdown/Info.plist;
+				INFOPLIST_KEY_NSCalendarsUsageDescription = "Add calendar events to countdown to.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -441,6 +609,7 @@
 		2E6247792840404C00BB2A48 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -449,11 +618,14 @@
 				DEVELOPMENT_TEAM = 3S8XC6A264;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Countdown/Info.plist;
+				INFOPLIST_KEY_NSCalendarsUsageDescription = "Add calendar events to countdown to.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -583,6 +755,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		68444B2B285D00FD003EDF78 /* XCRemoteSwiftPackageReference "SFSymbolsFinder" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/abadikaka/SFSymbolsFinder";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		68EF917E285D044E00E117C1 /* XCRemoteSwiftPackageReference "DynamicColor" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/yannickl/DynamicColor";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		68444B2C285D00FD003EDF78 /* SFSymbolsFinder */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 68444B2B285D00FD003EDF78 /* XCRemoteSwiftPackageReference "SFSymbolsFinder" */;
+			productName = SFSymbolsFinder;
+		};
+		68EF917F285D044E00E117C1 /* DynamicColor */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 68EF917E285D044E00E117C1 /* XCRemoteSwiftPackageReference "DynamicColor" */;
+			productName = DynamicColor;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 2E62474B2840404B00BB2A48 /* Project object */;
 }
