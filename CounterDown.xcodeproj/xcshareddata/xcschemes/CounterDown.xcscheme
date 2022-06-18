@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "2E6247522840404B00BB2A48"
-               BuildableName = "Countdown.app"
-               BlueprintName = "Countdown"
-               ReferencedContainer = "container:Countdown.xcodeproj">
+               BuildableName = "CounterDown.app"
+               BlueprintName = "CounterDown"
+               ReferencedContainer = "container:CounterDown.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "2E6247622840404C00BB2A48"
-               BuildableName = "CountdownTests.xctest"
-               BlueprintName = "CountdownTests"
-               ReferencedContainer = "container:Countdown.xcodeproj">
+               BuildableName = "CounterDownTests.xctest"
+               BlueprintName = "CounterDownTests"
+               ReferencedContainer = "container:CounterDown.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
@@ -43,9 +43,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "2E62476C2840404C00BB2A48"
-               BuildableName = "CountdownUITests.xctest"
-               BlueprintName = "CountdownUITests"
-               ReferencedContainer = "container:Countdown.xcodeproj">
+               BuildableName = "CounterDownUITests.xctest"
+               BlueprintName = "CounterDownUITests"
+               ReferencedContainer = "container:CounterDown.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -65,9 +65,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2E6247522840404B00BB2A48"
-            BuildableName = "Countdown.app"
-            BlueprintName = "Countdown"
-            ReferencedContainer = "container:Countdown.xcodeproj">
+            BuildableName = "CounterDown.app"
+            BlueprintName = "CounterDown"
+            ReferencedContainer = "container:CounterDown.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -82,9 +82,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2E6247522840404B00BB2A48"
-            BuildableName = "Countdown.app"
-            BlueprintName = "Countdown"
-            ReferencedContainer = "container:Countdown.xcodeproj">
+            BuildableName = "CounterDown.app"
+            BlueprintName = "CounterDown"
+            ReferencedContainer = "container:CounterDown.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

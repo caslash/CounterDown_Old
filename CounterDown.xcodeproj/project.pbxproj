@@ -25,13 +25,13 @@
 		2E62478E284041AF00BB2A48 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E62478D284041AF00BB2A48 /* Event.swift */; };
 		2E6247902840423F00BB2A48 /* Preview_Events.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E62478F2840423F00BB2A48 /* Preview_Events.swift */; };
 		2E6247922840462F00BB2A48 /* Event_ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6247912840462F00BB2A48 /* Event_ViewModel.swift */; };
+		2E7BAD5E285E7E5A001F0505 /* SFSymbolsFinder in Frameworks */ = {isa = PBXBuildFile; productRef = 2E7BAD5D285E7E5A001F0505 /* SFSymbolsFinder */; };
+		2E7BAD61285E7E62001F0505 /* DynamicColor in Frameworks */ = {isa = PBXBuildFile; productRef = 2E7BAD60285E7E62001F0505 /* DynamicColor */; };
 		2E87A1912846D18600AD3624 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E87A1902846D18600AD3624 /* SettingsView.swift */; };
 		2E87A1952847014000AD3624 /* CalendarChooser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E87A1942847014000AD3624 /* CalendarChooser.swift */; };
 		2E92EAC028417532008E7393 /* Content_ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E92EABF28417532008E7393 /* Content_ViewModel.swift */; };
 		2E9AE099285D780E00C1EBCF /* EditEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9AE098285D780E00C1EBCF /* EditEventView.swift */; };
 		2E9AE09B285D781C00C1EBCF /* EditEvent_ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9AE09A285D781C00C1EBCF /* EditEvent_ViewModel.swift */; };
-		68444B2D285D00FD003EDF78 /* SFSymbolsFinder in Frameworks */ = {isa = PBXBuildFile; productRef = 68444B2C285D00FD003EDF78 /* SFSymbolsFinder */; };
-		68EF9180285D044E00E117C1 /* DynamicColor in Frameworks */ = {isa = PBXBuildFile; productRef = 68EF917F285D044E00E117C1 /* DynamicColor */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,14 +69,14 @@
 		2E0B80782845B97600BD5CE4 /* EnvironmentValues+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EnvironmentValues+Extension.swift"; sourceTree = "<group>"; };
 		2E58E73F2841090C00E278EB /* Color+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
 		2E58E74128410DBB00E278EB /* CalendarComponents+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CalendarComponents+Extension.swift"; sourceTree = "<group>"; };
-		2E6247532840404B00BB2A48 /* Countdown.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Countdown.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2E6247532840404B00BB2A48 /* CounterDown.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CounterDown.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E6247562840404B00BB2A48 /* CountdownApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownApp.swift; sourceTree = "<group>"; };
 		2E6247582840404B00BB2A48 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		2E62475A2840404C00BB2A48 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2E62475D2840404C00BB2A48 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		2E6247632840404C00BB2A48 /* CountdownTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CountdownTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2E6247632840404C00BB2A48 /* CounterDownTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CounterDownTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E6247672840404C00BB2A48 /* CountdownTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownTests.swift; sourceTree = "<group>"; };
-		2E62476D2840404C00BB2A48 /* CountdownUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CountdownUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2E62476D2840404C00BB2A48 /* CounterDownUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CounterDownUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E6247712840404C00BB2A48 /* CountdownUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownUITests.swift; sourceTree = "<group>"; };
 		2E6247732840404C00BB2A48 /* CountdownUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		2E6247832840408200BB2A48 /* AddEventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEventView.swift; sourceTree = "<group>"; };
@@ -103,8 +103,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				68EF9180285D044E00E117C1 /* DynamicColor in Frameworks */,
-				68444B2D285D00FD003EDF78 /* SFSymbolsFinder in Frameworks */,
+				2E7BAD61285E7E62001F0505 /* DynamicColor in Frameworks */,
+				2E7BAD5E285E7E5A001F0505 /* SFSymbolsFinder in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -146,9 +146,9 @@
 		2E62474A2840404B00BB2A48 = {
 			isa = PBXGroup;
 			children = (
-				2E6247552840404B00BB2A48 /* Countdown */,
-				2E6247662840404C00BB2A48 /* CountdownTests */,
-				2E6247702840404C00BB2A48 /* CountdownUITests */,
+				2E6247552840404B00BB2A48 /* CounterDown */,
+				2E6247662840404C00BB2A48 /* CounterDownTests */,
+				2E6247702840404C00BB2A48 /* CounterDownUITests */,
 				2EEE4E882841DBEB0041A0C8 /* Frameworks */,
 				2E6247542840404B00BB2A48 /* Products */,
 			);
@@ -157,14 +157,14 @@
 		2E6247542840404B00BB2A48 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				2E6247532840404B00BB2A48 /* Countdown.app */,
-				2E6247632840404C00BB2A48 /* CountdownTests.xctest */,
-				2E62476D2840404C00BB2A48 /* CountdownUITests.xctest */,
+				2E6247532840404B00BB2A48 /* CounterDown.app */,
+				2E6247632840404C00BB2A48 /* CounterDownTests.xctest */,
+				2E62476D2840404C00BB2A48 /* CounterDownUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		2E6247552840404B00BB2A48 /* Countdown */ = {
+		2E6247552840404B00BB2A48 /* CounterDown */ = {
 			isa = PBXGroup;
 			children = (
 				2E91A7CD284995E200593037 /* Info.plist */,
@@ -175,7 +175,7 @@
 				2E6247802840405800BB2A48 /* Views */,
 				2E62475C2840404C00BB2A48 /* Preview Content */,
 			);
-			path = Countdown;
+			path = CounterDown;
 			sourceTree = "<group>";
 		};
 		2E62475C2840404C00BB2A48 /* Preview Content */ = {
@@ -187,21 +187,21 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		2E6247662840404C00BB2A48 /* CountdownTests */ = {
+		2E6247662840404C00BB2A48 /* CounterDownTests */ = {
 			isa = PBXGroup;
 			children = (
 				2E6247672840404C00BB2A48 /* CountdownTests.swift */,
 			);
-			path = CountdownTests;
+			path = CounterDownTests;
 			sourceTree = "<group>";
 		};
-		2E6247702840404C00BB2A48 /* CountdownUITests */ = {
+		2E6247702840404C00BB2A48 /* CounterDownUITests */ = {
 			isa = PBXGroup;
 			children = (
 				2E6247712840404C00BB2A48 /* CountdownUITests.swift */,
 				2E6247732840404C00BB2A48 /* CountdownUITestsLaunchTests.swift */,
 			);
-			path = CountdownUITests;
+			path = CounterDownUITests;
 			sourceTree = "<group>";
 		};
 		2E6247802840405800BB2A48 /* Views */ = {
@@ -269,9 +269,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		2E6247522840404B00BB2A48 /* Countdown */ = {
+		2E6247522840404B00BB2A48 /* CounterDown */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2E6247772840404C00BB2A48 /* Build configuration list for PBXNativeTarget "Countdown" */;
+			buildConfigurationList = 2E6247772840404C00BB2A48 /* Build configuration list for PBXNativeTarget "CounterDown" */;
 			buildPhases = (
 				2E62474F2840404B00BB2A48 /* Sources */,
 				2E6247502840404B00BB2A48 /* Frameworks */,
@@ -282,18 +282,18 @@
 			);
 			dependencies = (
 			);
-			name = Countdown;
+			name = CounterDown;
 			packageProductDependencies = (
-				68444B2C285D00FD003EDF78 /* SFSymbolsFinder */,
-				68EF917F285D044E00E117C1 /* DynamicColor */,
+				2E7BAD5D285E7E5A001F0505 /* SFSymbolsFinder */,
+				2E7BAD60285E7E62001F0505 /* DynamicColor */,
 			);
 			productName = Countdown;
-			productReference = 2E6247532840404B00BB2A48 /* Countdown.app */;
+			productReference = 2E6247532840404B00BB2A48 /* CounterDown.app */;
 			productType = "com.apple.product-type.application";
 		};
-		2E6247622840404C00BB2A48 /* CountdownTests */ = {
+		2E6247622840404C00BB2A48 /* CounterDownTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2E62477A2840404C00BB2A48 /* Build configuration list for PBXNativeTarget "CountdownTests" */;
+			buildConfigurationList = 2E62477A2840404C00BB2A48 /* Build configuration list for PBXNativeTarget "CounterDownTests" */;
 			buildPhases = (
 				2E62475F2840404C00BB2A48 /* Sources */,
 				2E6247602840404C00BB2A48 /* Frameworks */,
@@ -304,14 +304,14 @@
 			dependencies = (
 				2E6247652840404C00BB2A48 /* PBXTargetDependency */,
 			);
-			name = CountdownTests;
+			name = CounterDownTests;
 			productName = CountdownTests;
-			productReference = 2E6247632840404C00BB2A48 /* CountdownTests.xctest */;
+			productReference = 2E6247632840404C00BB2A48 /* CounterDownTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		2E62476C2840404C00BB2A48 /* CountdownUITests */ = {
+		2E62476C2840404C00BB2A48 /* CounterDownUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2E62477D2840404C00BB2A48 /* Build configuration list for PBXNativeTarget "CountdownUITests" */;
+			buildConfigurationList = 2E62477D2840404C00BB2A48 /* Build configuration list for PBXNativeTarget "CounterDownUITests" */;
 			buildPhases = (
 				2E6247692840404C00BB2A48 /* Sources */,
 				2E62476A2840404C00BB2A48 /* Frameworks */,
@@ -322,9 +322,9 @@
 			dependencies = (
 				2E62476F2840404C00BB2A48 /* PBXTargetDependency */,
 			);
-			name = CountdownUITests;
+			name = CounterDownUITests;
 			productName = CountdownUITests;
-			productReference = 2E62476D2840404C00BB2A48 /* CountdownUITests.xctest */;
+			productReference = 2E62476D2840404C00BB2A48 /* CounterDownUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -350,7 +350,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 2E62474E2840404B00BB2A48 /* Build configuration list for PBXProject "Countdown" */;
+			buildConfigurationList = 2E62474E2840404B00BB2A48 /* Build configuration list for PBXProject "CounterDown" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -360,16 +360,16 @@
 			);
 			mainGroup = 2E62474A2840404B00BB2A48;
 			packageReferences = (
-				68444B2B285D00FD003EDF78 /* XCRemoteSwiftPackageReference "SFSymbolsFinder" */,
-				68EF917E285D044E00E117C1 /* XCRemoteSwiftPackageReference "DynamicColor" */,
+				2E7BAD5C285E7E5A001F0505 /* XCRemoteSwiftPackageReference "SFSymbolsFinder" */,
+				2E7BAD5F285E7E62001F0505 /* XCRemoteSwiftPackageReference "DynamicColor" */,
 			);
 			productRefGroup = 2E6247542840404B00BB2A48 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				2E6247522840404B00BB2A48 /* Countdown */,
-				2E6247622840404C00BB2A48 /* CountdownTests */,
-				2E62476C2840404C00BB2A48 /* CountdownUITests */,
+				2E6247522840404B00BB2A48 /* CounterDown */,
+				2E6247622840404C00BB2A48 /* CounterDownTests */,
+				2E62476C2840404C00BB2A48 /* CounterDownUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -448,12 +448,12 @@
 /* Begin PBXTargetDependency section */
 		2E6247652840404C00BB2A48 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 2E6247522840404B00BB2A48 /* Countdown */;
+			target = 2E6247522840404B00BB2A48 /* CounterDown */;
 			targetProxy = 2E6247642840404C00BB2A48 /* PBXContainerItemProxy */;
 		};
 		2E62476F2840404C00BB2A48 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 2E6247522840404B00BB2A48 /* Countdown */;
+			target = 2E6247522840404B00BB2A48 /* CounterDown */;
 			targetProxy = 2E62476E2840404C00BB2A48 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -581,11 +581,13 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Countdown/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"CounterDown/Preview Content\"";
 				DEVELOPMENT_TEAM = 3S8XC6A264;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Countdown/Info.plist;
+				INFOPLIST_FILE = CounterDown/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = CounterDown;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_NSCalendarsUsageDescription = "Add calendar events to countdown to.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -598,7 +600,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.Cameron.Slash.Countdown;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Cameron.Slash.Counterdown;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -614,11 +616,13 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Countdown/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"CounterDown/Preview Content\"";
 				DEVELOPMENT_TEAM = 3S8XC6A264;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Countdown/Info.plist;
+				INFOPLIST_FILE = CounterDown/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = CounterDown;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_NSCalendarsUsageDescription = "Add calendar events to countdown to.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -631,7 +635,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.Cameron.Slash.Countdown;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Cameron.Slash.Counterdown;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -655,7 +659,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Countdown.app/Countdown";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CounterDown.app/CounterDown";
 			};
 			name = Debug;
 		};
@@ -675,7 +679,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Countdown.app/Countdown";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CounterDown.app/CounterDown";
 			};
 			name = Release;
 		};
@@ -718,7 +722,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		2E62474E2840404B00BB2A48 /* Build configuration list for PBXProject "Countdown" */ = {
+		2E62474E2840404B00BB2A48 /* Build configuration list for PBXProject "CounterDown" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2E6247752840404C00BB2A48 /* Debug */,
@@ -727,7 +731,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2E6247772840404C00BB2A48 /* Build configuration list for PBXNativeTarget "Countdown" */ = {
+		2E6247772840404C00BB2A48 /* Build configuration list for PBXNativeTarget "CounterDown" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2E6247782840404C00BB2A48 /* Debug */,
@@ -736,7 +740,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2E62477A2840404C00BB2A48 /* Build configuration list for PBXNativeTarget "CountdownTests" */ = {
+		2E62477A2840404C00BB2A48 /* Build configuration list for PBXNativeTarget "CounterDownTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2E62477B2840404C00BB2A48 /* Debug */,
@@ -745,7 +749,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2E62477D2840404C00BB2A48 /* Build configuration list for PBXNativeTarget "CountdownUITests" */ = {
+		2E62477D2840404C00BB2A48 /* Build configuration list for PBXNativeTarget "CounterDownUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2E62477E2840404C00BB2A48 /* Debug */,
@@ -757,17 +761,17 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		68444B2B285D00FD003EDF78 /* XCRemoteSwiftPackageReference "SFSymbolsFinder" */ = {
+		2E7BAD5C285E7E5A001F0505 /* XCRemoteSwiftPackageReference "SFSymbolsFinder" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/abadikaka/SFSymbolsFinder";
+			repositoryURL = "https://github.com/abadikaka/SFSymbolsFinder.git";
 			requirement = {
 				branch = master;
 				kind = branch;
 			};
 		};
-		68EF917E285D044E00E117C1 /* XCRemoteSwiftPackageReference "DynamicColor" */ = {
+		2E7BAD5F285E7E62001F0505 /* XCRemoteSwiftPackageReference "DynamicColor" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/yannickl/DynamicColor";
+			repositoryURL = "https://github.com/yannickl/DynamicColor.git";
 			requirement = {
 				branch = master;
 				kind = branch;
@@ -776,14 +780,14 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		68444B2C285D00FD003EDF78 /* SFSymbolsFinder */ = {
+		2E7BAD5D285E7E5A001F0505 /* SFSymbolsFinder */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 68444B2B285D00FD003EDF78 /* XCRemoteSwiftPackageReference "SFSymbolsFinder" */;
+			package = 2E7BAD5C285E7E5A001F0505 /* XCRemoteSwiftPackageReference "SFSymbolsFinder" */;
 			productName = SFSymbolsFinder;
 		};
-		68EF917F285D044E00E117C1 /* DynamicColor */ = {
+		2E7BAD60285E7E62001F0505 /* DynamicColor */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 68EF917E285D044E00E117C1 /* XCRemoteSwiftPackageReference "DynamicColor" */;
+			package = 2E7BAD5F285E7E62001F0505 /* XCRemoteSwiftPackageReference "DynamicColor" */;
 			productName = DynamicColor;
 		};
 /* End XCSwiftPackageProductDependency section */

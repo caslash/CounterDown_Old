@@ -12,7 +12,7 @@
     {
       "identity" : "sfsymbolsfinder",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/abadikaka/SFSymbolsFinder.git",
+      "location" : "https://github.com/abadikaka/SFSymbolsFinder",
       "state" : {
         "branch" : "master",
         "revision" : "955b818250237756389a9e27d163142e983e77f3"
