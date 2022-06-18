@@ -7,6 +7,7 @@
 
 import EventKit
 import Foundation
+import SwiftUI
 
 @MainActor class ModelData: ObservableObject {
     static let shared = ModelData()
@@ -43,6 +44,15 @@ import Foundation
         }
     }
     
+    @Published var accentcolor = Color.black {
+        didSet {
+            
+            if let encoded = try? self.jsonEncoder.encode(accentcolor) {
+                UserDefaults.standard.set(encoded, forKey: "user_selected_accentcolor")
+            }
+        }
+    }
+    
     init() {
         self.ekstore = EKEventStore()
         
@@ -65,6 +75,12 @@ import Foundation
                         userSelectedCalendars.insert(calendar)
                     }
                 }
+            }
+        }
+        
+        if let user_selected_accentcolor = UserDefaults.standard.data(forKey: "user_selected_accentcolor") {
+            if let decoded = try? self.jsonDecoder.decode(Color.self, from: user_selected_accentcolor) {
+                self.accentcolor = decoded
             }
         }
         

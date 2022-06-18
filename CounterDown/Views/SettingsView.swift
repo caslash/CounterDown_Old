@@ -13,7 +13,6 @@ struct SettingsView: View {
     @Environment(\.presentationMode) var presentationMode
     @EnvironmentObject var modeldata: ModelData
     @State private var showingCalendarChooser = false
-    @State private var showingInfo = false
     var buildNum: String {
         if let text = Bundle.main.infoDictionary?["CFBundleVersion"] as? String {
             return text
@@ -29,19 +28,30 @@ struct SettingsView: View {
     }
     var body: some View {
         NavigationView {
-            Form {
-                Button {
-                    showingCalendarChooser = true
-                } label: {
-                    HStack {
-                        Text("Choose Calendars")
-                        
-                        Spacer()
-                        
-                        Image(systemName: .chevronRight)
+            ZStack {
+                Form {
+                    Button {
+                        showingCalendarChooser = true
+                    } label: {
+                        HStack {
+                            Text("Choose Calendars")
+                            
+                            Spacer()
+                            
+                            Image(systemName: .chevronRight)
+                        }
                     }
+                    .foregroundColor(.primary)
+                    
+                    ColorPicker("Accent Color", selection: $modeldata.accentcolor)
                 }
-                .foregroundColor(.primary)
+                
+                VStack {
+                    Spacer()
+                    
+                    Text("v\(versionNum) build \(buildNum)")
+                        .foregroundColor(modeldata.accentcolor)
+                }
             }
             .navigationTitle("Settings")
             .toolbar {
@@ -50,16 +60,6 @@ struct SettingsView: View {
                         self.presentationMode.wrappedValue.dismiss()
                     } label: {
                         Image(systemName: .xmarkCircleFill)
-                            .foregroundColor(.gray)
-                    }
-                }
-                
-                ToolbarItem(placement: .primaryAction) {
-                    Button {
-                        
-                    } label: {
-                        Image(systemName: .infoCircleFill)
-                            .foregroundColor(.gray)
                     }
                 }
             }
@@ -67,9 +67,7 @@ struct SettingsView: View {
                     CalendarChooser(calendars: $modeldata.userSelectedCalendars, eventStore: ModelData.shared.ekstore)
                     .ignoresSafeArea()
             }
-            .sheet(isPresented: $showingInfo) {
-                Text("v\(versionNum) build \(buildNum)")
-            }
+            .accentColor(modeldata.accentcolor)
         }
     }
 }

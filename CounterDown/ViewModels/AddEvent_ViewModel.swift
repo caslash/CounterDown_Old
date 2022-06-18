@@ -14,7 +14,7 @@ class AddEventViewModel: ObservableObject {
 
     @Published var name: String = String()
     @Published var due: Date = Date()
-    @Published var color: Color = .red
+    @Published var color: Color = ModelData.shared.accentcolor
     @Published var components: Set<Calendar.Component> = [.day, .hour, .minute, .second]
     @Published var includeYear: Bool = false
     @Published var includeMonth: Bool = false

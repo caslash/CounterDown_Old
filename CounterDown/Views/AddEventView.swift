@@ -56,10 +56,10 @@ struct AddEventView: View {
                         self.presentationMode.wrappedValue.dismiss()
                     } label: {
                         Image(systemName: .xmarkCircleFill)
-                            .foregroundColor(.gray)
                     }
                 }
             }
+            .accentColor(modeldata.accentcolor)
         }
     }
 }

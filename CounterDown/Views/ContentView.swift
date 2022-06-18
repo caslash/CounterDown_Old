@@ -87,6 +87,7 @@ struct ContentView: View {
                     }
                 }
             }
+            .accentColor(modeldata.accentcolor)
         }
     }
 }

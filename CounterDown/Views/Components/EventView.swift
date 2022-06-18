@@ -67,6 +67,7 @@ struct EventView: View {
                     }
                 }
             }
+            .foregroundColor(DynamicColor(viewmodel.event.color).isLight() ? .black : .white)
             .frame(width: (UIScreen.main.bounds.width / 4) * 3)
             .padding()
             .background(in: RoundedRectangle(cornerRadius: 20))

@@ -44,6 +44,7 @@ struct EditEventView: View {
                     }
                 }
             }
+            .accentColor(modeldata.accentcolor)
         }
     }
     
