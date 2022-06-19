@@ -29,7 +29,25 @@
 		2E7BAD61285E7E62001F0505 /* DynamicColor in Frameworks */ = {isa = PBXBuildFile; productRef = 2E7BAD60285E7E62001F0505 /* DynamicColor */; };
 		2E87A1912846D18600AD3624 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E87A1902846D18600AD3624 /* SettingsView.swift */; };
 		2E87A1952847014000AD3624 /* CalendarChooser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E87A1942847014000AD3624 /* CalendarChooser.swift */; };
+		2E92B1B8285EC9C8009449A6 /* CounterDownWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E92B1B7285EC9C8009449A6 /* CounterDownWidget.swift */; };
+		2E92B1BA285EC9C8009449A6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E92B1B9285EC9C8009449A6 /* Assets.xcassets */; };
+		2E92B1BE285EC9C8009449A6 /* CounterDownWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 2E92B1B3285EC9C8009449A6 /* CounterDownWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		2E92B1C2285ED043009449A6 /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E62478A2840417D00BB2A48 /* ModelData.swift */; };
+		2E92B1C3285ED04D009449A6 /* CalendarComponents+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E58E74128410DBB00E278EB /* CalendarComponents+Extension.swift */; };
+		2E92B1C4285ED04D009449A6 /* EnvironmentValues+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0B80782845B97600BD5CE4 /* EnvironmentValues+Extension.swift */; };
+		2E92B1C6285ED051009449A6 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E62478D284041AF00BB2A48 /* Event.swift */; };
+		2E92B1C8285ED097009449A6 /* WidgetContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E92B1C7285ED097009449A6 /* WidgetContent.swift */; };
+		2E92B1C9285ED097009449A6 /* WidgetContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E92B1C7285ED097009449A6 /* WidgetContent.swift */; };
+		2E92B1CB285ED0EB009449A6 /* EntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E92B1CA285ED0EB009449A6 /* EntryView.swift */; };
+		2E92B1CC285ED10D009449A6 /* Preview_Events.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E62478F2840423F00BB2A48 /* Preview_Events.swift */; };
 		2E92EAC028417532008E7393 /* Content_ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E92EABF28417532008E7393 /* Content_ViewModel.swift */; };
+		2E99CFEA285EE0FD00B37AB0 /* EventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6247882840415E00BB2A48 /* EventView.swift */; };
+		2E99CFEB285EE10400B37AB0 /* Event_ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6247912840462F00BB2A48 /* Event_ViewModel.swift */; };
+		2E99CFEC285EE17300B37AB0 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EEE4E8B2841DBEB0041A0C8 /* SwiftUI.framework */; };
+		2E99CFEF285EE17400B37AB0 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EEE4E892841DBEB0041A0C8 /* WidgetKit.framework */; };
+		2E99CFF2285EE19900B37AB0 /* DynamicColor in Frameworks */ = {isa = PBXBuildFile; productRef = 2E99CFF1285EE19900B37AB0 /* DynamicColor */; };
+		2E99CFF4285EE19D00B37AB0 /* SFSymbolsFinder in Frameworks */ = {isa = PBXBuildFile; productRef = 2E99CFF3285EE19D00B37AB0 /* SFSymbolsFinder */; };
+		2E99CFF5285EE9DF00B37AB0 /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E58E73F2841090C00E278EB /* Color+Extension.swift */; };
 		2E9AE099285D780E00C1EBCF /* EditEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9AE098285D780E00C1EBCF /* EditEventView.swift */; };
 		2E9AE09B285D781C00C1EBCF /* EditEvent_ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9AE09A285D781C00C1EBCF /* EditEvent_ViewModel.swift */; };
 /* End PBXBuildFile section */
@@ -49,6 +67,13 @@
 			remoteGlobalIDString = 2E6247522840404B00BB2A48;
 			remoteInfo = Countdown;
 		};
+		2E92B1BC285EC9C8009449A6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2E62474B2840404B00BB2A48 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2E92B1B2285EC9C8009449A6;
+			remoteInfo = CounterDownWidgetExtension;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -58,6 +83,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
+				2E92B1BE285EC9C8009449A6 /* CounterDownWidgetExtension.appex in Embed Foundation Extensions */,
 			);
 			name = "Embed Foundation Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -91,6 +117,12 @@
 		2E87A1902846D18600AD3624 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		2E87A1942847014000AD3624 /* CalendarChooser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarChooser.swift; sourceTree = "<group>"; };
 		2E91A7CD284995E200593037 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		2E92B1B3285EC9C8009449A6 /* CounterDownWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = CounterDownWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		2E92B1B7285EC9C8009449A6 /* CounterDownWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterDownWidget.swift; sourceTree = "<group>"; };
+		2E92B1B9285EC9C8009449A6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2E92B1BB285EC9C8009449A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2E92B1C7285ED097009449A6 /* WidgetContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetContent.swift; sourceTree = "<group>"; };
+		2E92B1CA285ED0EB009449A6 /* EntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryView.swift; sourceTree = "<group>"; };
 		2E92EABF28417532008E7393 /* Content_ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Content_ViewModel.swift; sourceTree = "<group>"; };
 		2E9AE098285D780E00C1EBCF /* EditEventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditEventView.swift; sourceTree = "<group>"; };
 		2E9AE09A285D781C00C1EBCF /* EditEvent_ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditEvent_ViewModel.swift; sourceTree = "<group>"; };
@@ -122,6 +154,17 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		2E92B1B0285EC9C8009449A6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2E99CFEC285EE17300B37AB0 /* SwiftUI.framework in Frameworks */,
+				2E99CFF4285EE19D00B37AB0 /* SFSymbolsFinder in Frameworks */,
+				2E99CFF2285EE19900B37AB0 /* DynamicColor in Frameworks */,
+				2E99CFEF285EE17400B37AB0 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -149,6 +192,7 @@
 				2E6247552840404B00BB2A48 /* CounterDown */,
 				2E6247662840404C00BB2A48 /* CounterDownTests */,
 				2E6247702840404C00BB2A48 /* CounterDownUITests */,
+				2E92B1B6285EC9C8009449A6 /* CounterDownWidget */,
 				2EEE4E882841DBEB0041A0C8 /* Frameworks */,
 				2E6247542840404B00BB2A48 /* Products */,
 			);
@@ -160,6 +204,7 @@
 				2E6247532840404B00BB2A48 /* CounterDown.app */,
 				2E6247632840404C00BB2A48 /* CounterDownTests.xctest */,
 				2E62476D2840404C00BB2A48 /* CounterDownUITests.xctest */,
+				2E92B1B3285EC9C8009449A6 /* CounterDownWidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -167,9 +212,9 @@
 		2E6247552840404B00BB2A48 /* CounterDown */ = {
 			isa = PBXGroup;
 			children = (
-				2E91A7CD284995E200593037 /* Info.plist */,
 				2E6247562840404B00BB2A48 /* CountdownApp.swift */,
 				2E62475A2840404C00BB2A48 /* Assets.xcassets */,
+				2E91A7CD284995E200593037 /* Info.plist */,
 				2E6247822840406400BB2A48 /* Models */,
 				2E6247812840405E00BB2A48 /* ViewModels */,
 				2E6247802840405800BB2A48 /* Views */,
@@ -255,6 +300,18 @@
 			path = Objects;
 			sourceTree = "<group>";
 		};
+		2E92B1B6285EC9C8009449A6 /* CounterDownWidget */ = {
+			isa = PBXGroup;
+			children = (
+				2E92B1B7285EC9C8009449A6 /* CounterDownWidget.swift */,
+				2E92B1C7285ED097009449A6 /* WidgetContent.swift */,
+				2E92B1CA285ED0EB009449A6 /* EntryView.swift */,
+				2E92B1B9285EC9C8009449A6 /* Assets.xcassets */,
+				2E92B1BB285EC9C8009449A6 /* Info.plist */,
+			);
+			path = CounterDownWidget;
+			sourceTree = "<group>";
+		};
 		2EEE4E882841DBEB0041A0C8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -281,6 +338,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				2E92B1BD285EC9C8009449A6 /* PBXTargetDependency */,
 			);
 			name = CounterDown;
 			packageProductDependencies = (
@@ -327,6 +385,27 @@
 			productReference = 2E62476D2840404C00BB2A48 /* CounterDownUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		2E92B1B2285EC9C8009449A6 /* CounterDownWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2E92B1C1285EC9C8009449A6 /* Build configuration list for PBXNativeTarget "CounterDownWidgetExtension" */;
+			buildPhases = (
+				2E92B1AF285EC9C8009449A6 /* Sources */,
+				2E92B1B0285EC9C8009449A6 /* Frameworks */,
+				2E92B1B1285EC9C8009449A6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CounterDownWidgetExtension;
+			packageProductDependencies = (
+				2E99CFF1285EE19900B37AB0 /* DynamicColor */,
+				2E99CFF3285EE19D00B37AB0 /* SFSymbolsFinder */,
+			);
+			productName = CounterDownWidgetExtension;
+			productReference = 2E92B1B3285EC9C8009449A6 /* CounterDownWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -334,7 +413,7 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1340;
+				LastSwiftUpdateCheck = 1400;
 				LastUpgradeCheck = 1400;
 				TargetAttributes = {
 					2E6247522840404B00BB2A48 = {
@@ -347,6 +426,9 @@
 					2E62476C2840404C00BB2A48 = {
 						CreatedOnToolsVersion = 13.4;
 						TestTargetID = 2E6247522840404B00BB2A48;
+					};
+					2E92B1B2285EC9C8009449A6 = {
+						CreatedOnToolsVersion = 14.0;
 					};
 				};
 			};
@@ -370,6 +452,7 @@
 				2E6247522840404B00BB2A48 /* CounterDown */,
 				2E6247622840404C00BB2A48 /* CounterDownTests */,
 				2E62476C2840404C00BB2A48 /* CounterDownUITests */,
+				2E92B1B2285EC9C8009449A6 /* CounterDownWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -398,6 +481,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		2E92B1B1285EC9C8009449A6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2E92B1BA285EC9C8009449A6 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -409,6 +500,7 @@
 				2E9AE09B285D781C00C1EBCF /* EditEvent_ViewModel.swift in Sources */,
 				2E6247592840404B00BB2A48 /* ContentView.swift in Sources */,
 				2E92EAC028417532008E7393 /* Content_ViewModel.swift in Sources */,
+				2E92B1C8285ED097009449A6 /* WidgetContent.swift in Sources */,
 				2E58E7402841090C00E278EB /* Color+Extension.swift in Sources */,
 				2E6247572840404B00BB2A48 /* CountdownApp.swift in Sources */,
 				2E6247862840409800BB2A48 /* AddEvent_ViewModel.swift in Sources */,
@@ -443,6 +535,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		2E92B1AF285EC9C8009449A6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2E92B1B8285EC9C8009449A6 /* CounterDownWidget.swift in Sources */,
+				2E99CFEB285EE10400B37AB0 /* Event_ViewModel.swift in Sources */,
+				2E92B1C3285ED04D009449A6 /* CalendarComponents+Extension.swift in Sources */,
+				2E92B1CC285ED10D009449A6 /* Preview_Events.swift in Sources */,
+				2E92B1C2285ED043009449A6 /* ModelData.swift in Sources */,
+				2E92B1C6285ED051009449A6 /* Event.swift in Sources */,
+				2E92B1C9285ED097009449A6 /* WidgetContent.swift in Sources */,
+				2E92B1C4285ED04D009449A6 /* EnvironmentValues+Extension.swift in Sources */,
+				2E92B1CB285ED0EB009449A6 /* EntryView.swift in Sources */,
+				2E99CFF5285EE9DF00B37AB0 /* Color+Extension.swift in Sources */,
+				2E99CFEA285EE0FD00B37AB0 /* EventView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -455,6 +565,11 @@
 			isa = PBXTargetDependency;
 			target = 2E6247522840404B00BB2A48 /* CounterDown */;
 			targetProxy = 2E62476E2840404C00BB2A48 /* PBXContainerItemProxy */;
+		};
+		2E92B1BD285EC9C8009449A6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2E92B1B2285EC9C8009449A6 /* CounterDownWidgetExtension */;
+			targetProxy = 2E92B1BC285EC9C8009449A6 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -723,6 +838,62 @@
 			};
 			name = Release;
 		};
+		2E92B1BF285EC9C8009449A6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3S8XC6A264;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CounterDownWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "CounterDown Widget";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Cameron.Slash.Counterdown.CounterDownWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		2E92B1C0285EC9C8009449A6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3S8XC6A264;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CounterDownWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "CounterDown Widget";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Cameron.Slash.Counterdown.CounterDownWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -762,6 +933,15 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		2E92B1C1285EC9C8009449A6 /* Build configuration list for PBXNativeTarget "CounterDownWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2E92B1BF285EC9C8009449A6 /* Debug */,
+				2E92B1C0285EC9C8009449A6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
@@ -793,6 +973,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 2E7BAD5F285E7E62001F0505 /* XCRemoteSwiftPackageReference "DynamicColor" */;
 			productName = DynamicColor;
+		};
+		2E99CFF1285EE19900B37AB0 /* DynamicColor */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2E7BAD5F285E7E62001F0505 /* XCRemoteSwiftPackageReference "DynamicColor" */;
+			productName = DynamicColor;
+		};
+		2E99CFF3285EE19D00B37AB0 /* SFSymbolsFinder */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2E7BAD5C285E7E5A001F0505 /* XCRemoteSwiftPackageReference "SFSymbolsFinder" */;
+			productName = SFSymbolsFinder;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
