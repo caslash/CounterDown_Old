@@ -65,7 +65,7 @@ struct ContentView: View {
             .sheet(isPresented: $showingSettingsSheet) {
                 if #available(iOS 16.0, *) {
                     SettingsView()
-                        .presentationDetents([.medium, .large])
+                        .presentationDetents([.fraction(0.3)])
                 } else {
                     SettingsView()
                 }
