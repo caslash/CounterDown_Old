@@ -1,20 +1,20 @@
 //
-//  WidgetContent.swift
+//  EventEntry.swift
 //  CounterDown
 //
-//  Created by Cameron Slash on 18/6/22.
+//  Created by Cameron Slash on 19/6/22.
 //
 
 import Foundation
 import WidgetKit
 
-struct WidgetContent: TimelineEntry {
+struct EventEntry: TimelineEntry {
     var date = Date()
     var event: Event
     
     let calendar = Calendar.current
     var components: DateComponents {
-        return calendar.dateComponents(self.event.components, from: self.date, to: self.event.due)
+        calendar.dateComponents([.year, .month, .day, .hour], from: self.date, to: self.event.due)
     }
     
     func yearsLeft() -> String {
@@ -28,11 +28,5 @@ struct WidgetContent: TimelineEntry {
     }
     func hoursLeft() -> String {
         return String(format: "%02d", self.components.hour ?? 00)
-    }
-    func minutesLeft() -> String {
-        return String(format: "%02d", self.components.minute ?? 00)
-    }
-    func secondsLeft() -> String {
-        return String(format: "%02d", self.components.second ?? 00)
     }
 }

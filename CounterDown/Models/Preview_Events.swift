@@ -25,6 +25,14 @@ struct PreviewEvents {
         return Event(name: name, due: due, color: color, components: components)
     }()
     
+    static let nyd: Event = {
+        let name = "New Years Day"
+        let due = Date(timeIntervalSince1970: 1672549200)
+        let color: Color = .yellow
+        let components: Set<Calendar.Component> = [Calendar.Component.month, Calendar.Component.day, Calendar.Component.hour]
+        return Event(name: name, due: due, color: color, components: components)
+    }()
+    
     static let events: [Event] = {
        return [birthday, christmas]
     }()
