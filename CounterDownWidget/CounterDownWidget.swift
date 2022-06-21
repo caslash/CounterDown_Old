@@ -68,7 +68,7 @@ struct SmallCounterDownWidgetEntryView: View {
     @ViewBuilder
     var body: some View {
         if #available(iOS 16.0, *) {
-            VStack {
+            VStack(spacing: 10) {
                 Spacer()
                 
                 Text(entry.event.name)
@@ -109,12 +109,13 @@ struct SmallCounterDownWidgetEntryView: View {
                 
                 Spacer()
             }
+            .padding()
             .background(entry.event.color.gradient)
         } else {
             ZStack {
                 entry.event.color
                 
-                VStack {
+                VStack(spacing: 10) {
                     Text(entry.event.name)
                         .font(.title3.weight(.black))
                         .multilineTextAlignment(.center)
@@ -160,6 +161,7 @@ struct SmallCounterDownWidgetEntryView: View {
                     }
                 }
             }
+            .padding()
         }
     }
     func monthsLeft() -> String {
@@ -213,6 +215,7 @@ struct LockScreenCounterDownWidgetEntryView: View {
         VStack {
             Text(entry.event.name)
                 .fontWeight(.bold)
+                .multilineTextAlignment(.center)
             
             Text(timeLeftString)
         }
@@ -277,6 +280,6 @@ struct CounterDownWidget: Widget {
 struct CounterDownWidget_Previews: PreviewProvider {
     static var previews: some View {
         CounterDownWidgetEntryView(entry: SimpleEntry(date: Date(), event: PreviewEvents.nyd))
-            .previewContext(WidgetPreviewContext(family: .accessoryRectangular))
+            .previewContext(WidgetPreviewContext(family: .systemSmall))
     }
 }

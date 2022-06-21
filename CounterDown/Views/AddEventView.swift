@@ -34,7 +34,13 @@ struct AddEventView: View {
                             viewmodel.name = event.title
                             viewmodel.due = event.startDate
                         } label: {
-                            Text(event.title)
+                            HStack {
+                                if viewmodel.name == event.title && viewmodel.due == event.startDate {
+                                    Image(systemName: .checkmark)
+                                }
+                                
+                                Text(event.title)
+                            }
                         }
                     }
                 }
