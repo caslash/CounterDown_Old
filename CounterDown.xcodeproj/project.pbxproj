@@ -9,6 +9,28 @@
 /* Begin PBXBuildFile section */
 		2E0AC7C428411EC1002666D7 /* ComponentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0AC7C328411EC1002666D7 /* ComponentView.swift */; };
 		2E0B80792845B97600BD5CE4 /* EnvironmentValues+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0B80782845B97600BD5CE4 /* EnvironmentValues+Extension.swift */; };
+		2E1A6E142860379400D91FBA /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EEE4E892841DBEB0041A0C8 /* WidgetKit.framework */; };
+		2E1A6E152860379400D91FBA /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EEE4E8B2841DBEB0041A0C8 /* SwiftUI.framework */; };
+		2E1A6E182860379400D91FBA /* CounterDownWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1A6E172860379400D91FBA /* CounterDownWidget.swift */; };
+		2E1A6E1A2860379500D91FBA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E1A6E192860379500D91FBA /* Assets.xcassets */; };
+		2E1A6E1E2860379500D91FBA /* CounterDownWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 2E1A6E132860379400D91FBA /* CounterDownWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		2E1A6E27286037C400D91FBA /* Intents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E843FE92841E73B00BBA183 /* Intents.framework */; };
+		2E1A6E2A286037C400D91FBA /* IntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1A6E29286037C400D91FBA /* IntentHandler.swift */; };
+		2E1A6E2E286037C400D91FBA /* CounterDownIntentHandler.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 2E1A6E26286037C400D91FBA /* CounterDownIntentHandler.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		2E1A6E33286037EF00D91FBA /* DynamicEventSelection.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 2E1A6E32286037EF00D91FBA /* DynamicEventSelection.intentdefinition */; };
+		2E1A6E34286037EF00D91FBA /* DynamicEventSelection.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 2E1A6E32286037EF00D91FBA /* DynamicEventSelection.intentdefinition */; };
+		2E31B6D8286038B600AB086F /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E62478A2840417D00BB2A48 /* ModelData.swift */; };
+		2E31B6D9286038B700AB086F /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E62478A2840417D00BB2A48 /* ModelData.swift */; };
+		2E31B6DA286038C500AB086F /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E62478D284041AF00BB2A48 /* Event.swift */; };
+		2E31B6DB286038C600AB086F /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E62478D284041AF00BB2A48 /* Event.swift */; };
+		2E31B6DC286038CB00AB086F /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E58E73F2841090C00E278EB /* Color+Extension.swift */; };
+		2E31B6DD286038CB00AB086F /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E58E73F2841090C00E278EB /* Color+Extension.swift */; };
+		2E31B6DE286038CD00AB086F /* CalendarComponents+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E58E74128410DBB00E278EB /* CalendarComponents+Extension.swift */; };
+		2E31B6DF286038CE00AB086F /* CalendarComponents+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E58E74128410DBB00E278EB /* CalendarComponents+Extension.swift */; };
+		2E31B6E02860397700AB086F /* Preview_Events.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E62478F2840423F00BB2A48 /* Preview_Events.swift */; };
+		2E31B6E228603FDD00AB086F /* SFSymbolsFinder in Frameworks */ = {isa = PBXBuildFile; productRef = 2E31B6E128603FDD00AB086F /* SFSymbolsFinder */; };
+		2E31B6E428603FDD00AB086F /* DynamicColor in Frameworks */ = {isa = PBXBuildFile; productRef = 2E31B6E328603FDD00AB086F /* DynamicColor */; };
+		2E31B6E72860462D00AB086F /* Preview_Events.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E62478F2840423F00BB2A48 /* Preview_Events.swift */; };
 		2E58E7402841090C00E278EB /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E58E73F2841090C00E278EB /* Color+Extension.swift */; };
 		2E58E74228410DBB00E278EB /* CalendarComponents+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E58E74128410DBB00E278EB /* CalendarComponents+Extension.swift */; };
 		2E6247572840404B00BB2A48 /* CountdownApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6247562840404B00BB2A48 /* CountdownApp.swift */; };
@@ -32,21 +54,25 @@
 		2E92EAC028417532008E7393 /* Content_ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E92EABF28417532008E7393 /* Content_ViewModel.swift */; };
 		2E9AE099285D780E00C1EBCF /* EditEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9AE098285D780E00C1EBCF /* EditEventView.swift */; };
 		2E9AE09B285D781C00C1EBCF /* EditEvent_ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9AE09A285D781C00C1EBCF /* EditEvent_ViewModel.swift */; };
-		2EFAF794286022F2003A8C75 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EEE4E892841DBEB0041A0C8 /* WidgetKit.framework */; };
-		2EFAF795286022F2003A8C75 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EEE4E8B2841DBEB0041A0C8 /* SwiftUI.framework */; };
-		2EFAF798286022F2003A8C75 /* EventViewWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EFAF797286022F2003A8C75 /* EventViewWidget.swift */; };
-		2EFAF79A286022F3003A8C75 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2EFAF799286022F3003A8C75 /* Assets.xcassets */; };
-		2EFAF79E286022F3003A8C75 /* EventViewWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 2EFAF793286022F2003A8C75 /* EventViewWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		2EFAF7A628602382003A8C75 /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E58E73F2841090C00E278EB /* Color+Extension.swift */; };
-		2EFAF7A728602384003A8C75 /* CalendarComponents+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E58E74128410DBB00E278EB /* CalendarComponents+Extension.swift */; };
-		2EFAF7A82860238A003A8C75 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E62478D284041AF00BB2A48 /* Event.swift */; };
-		2EFAF7A928602415003A8C75 /* Preview_Events.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E62478F2840423F00BB2A48 /* Preview_Events.swift */; };
-		2EFAF7AA2860262D003A8C75 /* SmallEventEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EFAF7A428602317003A8C75 /* SmallEventEntryView.swift */; };
-		2EFAF7AB28602633003A8C75 /* EventEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EFAF7A228602306003A8C75 /* EventEntry.swift */; };
-		2EFAF7AC286026D0003A8C75 /* EventEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EFAF7A228602306003A8C75 /* EventEntry.swift */; };
+		2EC61D992860BFB80018EEDF /* SFSymbolsFinder in Frameworks */ = {isa = PBXBuildFile; productRef = 2EC61D982860BFB80018EEDF /* SFSymbolsFinder */; };
+		2EC61D9B2860BFB80018EEDF /* DynamicColor in Frameworks */ = {isa = PBXBuildFile; productRef = 2EC61D9A2860BFB80018EEDF /* DynamicColor */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		2E1A6E1C2860379500D91FBA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2E62474B2840404B00BB2A48 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2E1A6E122860379400D91FBA;
+			remoteInfo = CounterDownWidgetExtension;
+		};
+		2E1A6E2C286037C400D91FBA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2E62474B2840404B00BB2A48 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2E1A6E25286037C400D91FBA;
+			remoteInfo = CounterDownIntentHandler;
+		};
 		2E6247642840404C00BB2A48 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 2E62474B2840404B00BB2A48 /* Project object */;
@@ -61,13 +87,6 @@
 			remoteGlobalIDString = 2E6247522840404B00BB2A48;
 			remoteInfo = Countdown;
 		};
-		2EFAF79C286022F3003A8C75 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 2E62474B2840404B00BB2A48 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 2EFAF792286022F2003A8C75;
-			remoteInfo = EventViewWidgetExtension;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -77,7 +96,8 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				2EFAF79E286022F3003A8C75 /* EventViewWidgetExtension.appex in Embed Foundation Extensions */,
+				2E1A6E2E286037C400D91FBA /* CounterDownIntentHandler.appex in Embed Foundation Extensions */,
+				2E1A6E1E2860379500D91FBA /* CounterDownWidgetExtension.appex in Embed Foundation Extensions */,
 			);
 			name = "Embed Foundation Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -87,6 +107,16 @@
 /* Begin PBXFileReference section */
 		2E0AC7C328411EC1002666D7 /* ComponentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComponentView.swift; sourceTree = "<group>"; };
 		2E0B80782845B97600BD5CE4 /* EnvironmentValues+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EnvironmentValues+Extension.swift"; sourceTree = "<group>"; };
+		2E1A6E132860379400D91FBA /* CounterDownWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = CounterDownWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		2E1A6E172860379400D91FBA /* CounterDownWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterDownWidget.swift; sourceTree = "<group>"; };
+		2E1A6E192860379500D91FBA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2E1A6E1B2860379500D91FBA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2E1A6E26286037C400D91FBA /* CounterDownIntentHandler.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = CounterDownIntentHandler.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		2E1A6E29286037C400D91FBA /* IntentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntentHandler.swift; sourceTree = "<group>"; };
+		2E1A6E2B286037C400D91FBA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2E1A6E32286037EF00D91FBA /* DynamicEventSelection.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = DynamicEventSelection.intentdefinition; sourceTree = "<group>"; };
+		2E31B6E5286042B300AB086F /* CounterDownIntentHandler.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CounterDownIntentHandler.entitlements; sourceTree = "<group>"; };
+		2E31B6E6286042E300AB086F /* CounterDown.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CounterDown.entitlements; sourceTree = "<group>"; };
 		2E58E73F2841090C00E278EB /* Color+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
 		2E58E74128410DBB00E278EB /* CalendarComponents+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CalendarComponents+Extension.swift"; sourceTree = "<group>"; };
 		2E6247532840404B00BB2A48 /* CounterDown.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CounterDown.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -110,21 +140,37 @@
 		2E843FF42841E73B00BBA183 /* IntentsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IntentsUI.framework; path = System/Library/Frameworks/IntentsUI.framework; sourceTree = SDKROOT; };
 		2E87A1902846D18600AD3624 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		2E87A1942847014000AD3624 /* CalendarChooser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarChooser.swift; sourceTree = "<group>"; };
+		2E8D55032861143500852B4D /* CounterDownWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CounterDownWidgetExtension.entitlements; sourceTree = "<group>"; };
 		2E91A7CD284995E200593037 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		2E92EABF28417532008E7393 /* Content_ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Content_ViewModel.swift; sourceTree = "<group>"; };
 		2E9AE098285D780E00C1EBCF /* EditEventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditEventView.swift; sourceTree = "<group>"; };
 		2E9AE09A285D781C00C1EBCF /* EditEvent_ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditEvent_ViewModel.swift; sourceTree = "<group>"; };
 		2EEE4E892841DBEB0041A0C8 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		2EEE4E8B2841DBEB0041A0C8 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
-		2EFAF793286022F2003A8C75 /* EventViewWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = EventViewWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
-		2EFAF797286022F2003A8C75 /* EventViewWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventViewWidget.swift; sourceTree = "<group>"; };
-		2EFAF799286022F3003A8C75 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		2EFAF79B286022F3003A8C75 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2EFAF7A228602306003A8C75 /* EventEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventEntry.swift; sourceTree = "<group>"; };
-		2EFAF7A428602317003A8C75 /* SmallEventEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallEventEntryView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		2E1A6E102860379400D91FBA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2E31B6E428603FDD00AB086F /* DynamicColor in Frameworks */,
+				2E1A6E152860379400D91FBA /* SwiftUI.framework in Frameworks */,
+				2E31B6E228603FDD00AB086F /* SFSymbolsFinder in Frameworks */,
+				2E1A6E142860379400D91FBA /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2E1A6E23286037C400D91FBA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2E1A6E27286037C400D91FBA /* Intents.framework in Frameworks */,
+				2EC61D9B2860BFB80018EEDF /* DynamicColor in Frameworks */,
+				2EC61D992860BFB80018EEDF /* SFSymbolsFinder in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2E6247502840404B00BB2A48 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -148,18 +194,30 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2EFAF790286022F2003A8C75 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				2EFAF795286022F2003A8C75 /* SwiftUI.framework in Frameworks */,
-				2EFAF794286022F2003A8C75 /* WidgetKit.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2E1A6E162860379400D91FBA /* CounterDownWidget */ = {
+			isa = PBXGroup;
+			children = (
+				2E1A6E172860379400D91FBA /* CounterDownWidget.swift */,
+				2E1A6E192860379500D91FBA /* Assets.xcassets */,
+				2E1A6E1B2860379500D91FBA /* Info.plist */,
+				2E1A6E32286037EF00D91FBA /* DynamicEventSelection.intentdefinition */,
+			);
+			path = CounterDownWidget;
+			sourceTree = "<group>";
+		};
+		2E1A6E28286037C400D91FBA /* CounterDownIntentHandler */ = {
+			isa = PBXGroup;
+			children = (
+				2E31B6E5286042B300AB086F /* CounterDownIntentHandler.entitlements */,
+				2E1A6E29286037C400D91FBA /* IntentHandler.swift */,
+				2E1A6E2B286037C400D91FBA /* Info.plist */,
+			);
+			path = CounterDownIntentHandler;
+			sourceTree = "<group>";
+		};
 		2E58E73A284108A700E278EB /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -181,10 +239,12 @@
 		2E62474A2840404B00BB2A48 = {
 			isa = PBXGroup;
 			children = (
+				2E8D55032861143500852B4D /* CounterDownWidgetExtension.entitlements */,
 				2E6247552840404B00BB2A48 /* CounterDown */,
 				2E6247662840404C00BB2A48 /* CounterDownTests */,
 				2E6247702840404C00BB2A48 /* CounterDownUITests */,
-				2EFAF796286022F2003A8C75 /* EventViewWidget */,
+				2E1A6E162860379400D91FBA /* CounterDownWidget */,
+				2E1A6E28286037C400D91FBA /* CounterDownIntentHandler */,
 				2EEE4E882841DBEB0041A0C8 /* Frameworks */,
 				2E6247542840404B00BB2A48 /* Products */,
 			);
@@ -196,7 +256,8 @@
 				2E6247532840404B00BB2A48 /* CounterDown.app */,
 				2E6247632840404C00BB2A48 /* CounterDownTests.xctest */,
 				2E62476D2840404C00BB2A48 /* CounterDownUITests.xctest */,
-				2EFAF793286022F2003A8C75 /* EventViewWidgetExtension.appex */,
+				2E1A6E132860379400D91FBA /* CounterDownWidgetExtension.appex */,
+				2E1A6E26286037C400D91FBA /* CounterDownIntentHandler.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -204,6 +265,7 @@
 		2E6247552840404B00BB2A48 /* CounterDown */ = {
 			isa = PBXGroup;
 			children = (
+				2E31B6E6286042E300AB086F /* CounterDown.entitlements */,
 				2E6247562840404B00BB2A48 /* CountdownApp.swift */,
 				2E62475A2840404C00BB2A48 /* Assets.xcassets */,
 				2E91A7CD284995E200593037 /* Info.plist */,
@@ -303,21 +365,51 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		2EFAF796286022F2003A8C75 /* EventViewWidget */ = {
-			isa = PBXGroup;
-			children = (
-				2EFAF797286022F2003A8C75 /* EventViewWidget.swift */,
-				2EFAF7A428602317003A8C75 /* SmallEventEntryView.swift */,
-				2EFAF7A228602306003A8C75 /* EventEntry.swift */,
-				2EFAF799286022F3003A8C75 /* Assets.xcassets */,
-				2EFAF79B286022F3003A8C75 /* Info.plist */,
-			);
-			path = EventViewWidget;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		2E1A6E122860379400D91FBA /* CounterDownWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2E1A6E1F2860379500D91FBA /* Build configuration list for PBXNativeTarget "CounterDownWidgetExtension" */;
+			buildPhases = (
+				2E1A6E0F2860379400D91FBA /* Sources */,
+				2E1A6E102860379400D91FBA /* Frameworks */,
+				2E1A6E112860379400D91FBA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CounterDownWidgetExtension;
+			packageProductDependencies = (
+				2E31B6E128603FDD00AB086F /* SFSymbolsFinder */,
+				2E31B6E328603FDD00AB086F /* DynamicColor */,
+			);
+			productName = CounterDownWidgetExtension;
+			productReference = 2E1A6E132860379400D91FBA /* CounterDownWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		2E1A6E25286037C400D91FBA /* CounterDownIntentHandler */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2E1A6E2F286037C400D91FBA /* Build configuration list for PBXNativeTarget "CounterDownIntentHandler" */;
+			buildPhases = (
+				2E1A6E22286037C400D91FBA /* Sources */,
+				2E1A6E23286037C400D91FBA /* Frameworks */,
+				2E1A6E24286037C400D91FBA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CounterDownIntentHandler;
+			packageProductDependencies = (
+				2EC61D982860BFB80018EEDF /* SFSymbolsFinder */,
+				2EC61D9A2860BFB80018EEDF /* DynamicColor */,
+			);
+			productName = CounterDownIntentHandler;
+			productReference = 2E1A6E26286037C400D91FBA /* CounterDownIntentHandler.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		2E6247522840404B00BB2A48 /* CounterDown */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2E6247772840404C00BB2A48 /* Build configuration list for PBXNativeTarget "CounterDown" */;
@@ -330,7 +422,8 @@
 			buildRules = (
 			);
 			dependencies = (
-				2EFAF79D286022F3003A8C75 /* PBXTargetDependency */,
+				2E1A6E1D2860379500D91FBA /* PBXTargetDependency */,
+				2E1A6E2D286037C400D91FBA /* PBXTargetDependency */,
 			);
 			name = CounterDown;
 			packageProductDependencies = (
@@ -377,23 +470,6 @@
 			productReference = 2E62476D2840404C00BB2A48 /* CounterDownUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
-		2EFAF792286022F2003A8C75 /* EventViewWidgetExtension */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 2EFAF7A1286022F3003A8C75 /* Build configuration list for PBXNativeTarget "EventViewWidgetExtension" */;
-			buildPhases = (
-				2EFAF78F286022F2003A8C75 /* Sources */,
-				2EFAF790286022F2003A8C75 /* Frameworks */,
-				2EFAF791286022F2003A8C75 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = EventViewWidgetExtension;
-			productName = EventViewWidgetExtension;
-			productReference = 2EFAF793286022F2003A8C75 /* EventViewWidgetExtension.appex */;
-			productType = "com.apple.product-type.app-extension";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -404,6 +480,12 @@
 				LastSwiftUpdateCheck = 1400;
 				LastUpgradeCheck = 1400;
 				TargetAttributes = {
+					2E1A6E122860379400D91FBA = {
+						CreatedOnToolsVersion = 14.0;
+					};
+					2E1A6E25286037C400D91FBA = {
+						CreatedOnToolsVersion = 14.0;
+					};
 					2E6247522840404B00BB2A48 = {
 						CreatedOnToolsVersion = 13.4;
 					};
@@ -414,9 +496,6 @@
 					2E62476C2840404C00BB2A48 = {
 						CreatedOnToolsVersion = 13.4;
 						TestTargetID = 2E6247522840404B00BB2A48;
-					};
-					2EFAF792286022F2003A8C75 = {
-						CreatedOnToolsVersion = 14.0;
 					};
 				};
 			};
@@ -440,12 +519,28 @@
 				2E6247522840404B00BB2A48 /* CounterDown */,
 				2E6247622840404C00BB2A48 /* CounterDownTests */,
 				2E62476C2840404C00BB2A48 /* CounterDownUITests */,
-				2EFAF792286022F2003A8C75 /* EventViewWidgetExtension */,
+				2E1A6E122860379400D91FBA /* CounterDownWidgetExtension */,
+				2E1A6E25286037C400D91FBA /* CounterDownIntentHandler */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		2E1A6E112860379400D91FBA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2E1A6E1A2860379500D91FBA /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2E1A6E24286037C400D91FBA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2E6247512840404B00BB2A48 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -469,17 +564,37 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2EFAF791286022F2003A8C75 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				2EFAF79A286022F3003A8C75 /* Assets.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		2E1A6E0F2860379400D91FBA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2E31B6DA286038C500AB086F /* Event.swift in Sources */,
+				2E31B6DE286038CD00AB086F /* CalendarComponents+Extension.swift in Sources */,
+				2E31B6DC286038CB00AB086F /* Color+Extension.swift in Sources */,
+				2E31B6E02860397700AB086F /* Preview_Events.swift in Sources */,
+				2E1A6E33286037EF00D91FBA /* DynamicEventSelection.intentdefinition in Sources */,
+				2E1A6E182860379400D91FBA /* CounterDownWidget.swift in Sources */,
+				2E31B6D8286038B600AB086F /* ModelData.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2E1A6E22286037C400D91FBA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2E31B6DB286038C600AB086F /* Event.swift in Sources */,
+				2E31B6DF286038CE00AB086F /* CalendarComponents+Extension.swift in Sources */,
+				2E31B6DD286038CB00AB086F /* Color+Extension.swift in Sources */,
+				2E31B6E72860462D00AB086F /* Preview_Events.swift in Sources */,
+				2E1A6E34286037EF00D91FBA /* DynamicEventSelection.intentdefinition in Sources */,
+				2E1A6E2A286037C400D91FBA /* IntentHandler.swift in Sources */,
+				2E31B6D9286038B700AB086F /* ModelData.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2E62474F2840404B00BB2A48 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -487,7 +602,6 @@
 				2E87A1912846D18600AD3624 /* SettingsView.swift in Sources */,
 				2E9AE09B285D781C00C1EBCF /* EditEvent_ViewModel.swift in Sources */,
 				2E6247592840404B00BB2A48 /* ContentView.swift in Sources */,
-				2EFAF7AC286026D0003A8C75 /* EventEntry.swift in Sources */,
 				2E92EAC028417532008E7393 /* Content_ViewModel.swift in Sources */,
 				2E58E7402841090C00E278EB /* Color+Extension.swift in Sources */,
 				2E6247572840404B00BB2A48 /* CountdownApp.swift in Sources */,
@@ -523,23 +637,19 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2EFAF78F286022F2003A8C75 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				2EFAF7AA2860262D003A8C75 /* SmallEventEntryView.swift in Sources */,
-				2EFAF7A82860238A003A8C75 /* Event.swift in Sources */,
-				2EFAF7AB28602633003A8C75 /* EventEntry.swift in Sources */,
-				2EFAF798286022F2003A8C75 /* EventViewWidget.swift in Sources */,
-				2EFAF7A728602384003A8C75 /* CalendarComponents+Extension.swift in Sources */,
-				2EFAF7A628602382003A8C75 /* Color+Extension.swift in Sources */,
-				2EFAF7A928602415003A8C75 /* Preview_Events.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		2E1A6E1D2860379500D91FBA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2E1A6E122860379400D91FBA /* CounterDownWidgetExtension */;
+			targetProxy = 2E1A6E1C2860379500D91FBA /* PBXContainerItemProxy */;
+		};
+		2E1A6E2D286037C400D91FBA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2E1A6E25286037C400D91FBA /* CounterDownIntentHandler */;
+			targetProxy = 2E1A6E2C286037C400D91FBA /* PBXContainerItemProxy */;
+		};
 		2E6247652840404C00BB2A48 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 2E6247522840404B00BB2A48 /* CounterDown */;
@@ -550,14 +660,121 @@
 			target = 2E6247522840404B00BB2A48 /* CounterDown */;
 			targetProxy = 2E62476E2840404C00BB2A48 /* PBXContainerItemProxy */;
 		};
-		2EFAF79D286022F3003A8C75 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 2EFAF792286022F2003A8C75 /* EventViewWidgetExtension */;
-			targetProxy = 2EFAF79C286022F3003A8C75 /* PBXContainerItemProxy */;
-		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		2E1A6E202860379500D91FBA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = CounterDownWidgetExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3S8XC6A264;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CounterDownWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = CounterDownWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Cameron.Slash.Counterdown.CounterDownWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		2E1A6E212860379500D91FBA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = CounterDownWidgetExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3S8XC6A264;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CounterDownWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = CounterDownWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Cameron.Slash.Counterdown.CounterDownWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		2E1A6E30286037C400D91FBA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = CounterDownIntentHandler/CounterDownIntentHandler.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3S8XC6A264;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CounterDownIntentHandler/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = CounterDownIntentHandler;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Cameron.Slash.Counterdown.CounterDownIntentHandler;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		2E1A6E31286037C400D91FBA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = CounterDownIntentHandler/CounterDownIntentHandler.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3S8XC6A264;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CounterDownIntentHandler/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = CounterDownIntentHandler;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Cameron.Slash.Counterdown.CounterDownIntentHandler;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
 		2E6247752840404C00BB2A48 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -678,6 +895,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = CounterDown/CounterDown.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"CounterDown/Preview Content\"";
@@ -715,6 +933,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = CounterDown/CounterDown.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"CounterDown/Preview Content\"";
@@ -822,65 +1041,27 @@
 			};
 			name = Release;
 		};
-		2EFAF79F286022F3003A8C75 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 3S8XC6A264;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = EventViewWidget/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = EventViewWidget;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.Cameron.Slash.Counterdown.EventViewWidget;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		2EFAF7A0286022F3003A8C75 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 3S8XC6A264;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = EventViewWidget/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = EventViewWidget;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.Cameron.Slash.Counterdown.EventViewWidget;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		2E1A6E1F2860379500D91FBA /* Build configuration list for PBXNativeTarget "CounterDownWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2E1A6E202860379500D91FBA /* Debug */,
+				2E1A6E212860379500D91FBA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2E1A6E2F286037C400D91FBA /* Build configuration list for PBXNativeTarget "CounterDownIntentHandler" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2E1A6E30286037C400D91FBA /* Debug */,
+				2E1A6E31286037C400D91FBA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		2E62474E2840404B00BB2A48 /* Build configuration list for PBXProject "CounterDown" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -917,15 +1098,6 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2EFAF7A1286022F3003A8C75 /* Build configuration list for PBXNativeTarget "EventViewWidgetExtension" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				2EFAF79F286022F3003A8C75 /* Debug */,
-				2EFAF7A0286022F3003A8C75 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
@@ -948,12 +1120,32 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		2E31B6E128603FDD00AB086F /* SFSymbolsFinder */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2E7BAD5C285E7E5A001F0505 /* XCRemoteSwiftPackageReference "SFSymbolsFinder" */;
+			productName = SFSymbolsFinder;
+		};
+		2E31B6E328603FDD00AB086F /* DynamicColor */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2E7BAD5F285E7E62001F0505 /* XCRemoteSwiftPackageReference "DynamicColor" */;
+			productName = DynamicColor;
+		};
 		2E7BAD5D285E7E5A001F0505 /* SFSymbolsFinder */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 2E7BAD5C285E7E5A001F0505 /* XCRemoteSwiftPackageReference "SFSymbolsFinder" */;
 			productName = SFSymbolsFinder;
 		};
 		2E7BAD60285E7E62001F0505 /* DynamicColor */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2E7BAD5F285E7E62001F0505 /* XCRemoteSwiftPackageReference "DynamicColor" */;
+			productName = DynamicColor;
+		};
+		2EC61D982860BFB80018EEDF /* SFSymbolsFinder */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2E7BAD5C285E7E5A001F0505 /* XCRemoteSwiftPackageReference "SFSymbolsFinder" */;
+			productName = SFSymbolsFinder;
+		};
+		2EC61D9A2860BFB80018EEDF /* DynamicColor */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 2E7BAD5F285E7E62001F0505 /* XCRemoteSwiftPackageReference "DynamicColor" */;
 			productName = DynamicColor;

@@ -49,7 +49,7 @@ struct ContentView: View {
             .sheet(isPresented: $showingAddSheet) {
                 if #available(iOS 16, *) {
                     AddEventView()
-                        .presentationDetents([.fraction(0.42), .large])
+                        .presentationDetents([.fraction(0.5), .large])
                 } else {
                     AddEventView()
                 }
