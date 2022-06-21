@@ -160,8 +160,8 @@ struct SmallCounterDownWidgetEntryView: View {
                         }
                     }
                 }
+                .padding()
             }
-            .padding()
         }
     }
     func monthsLeft() -> String {
