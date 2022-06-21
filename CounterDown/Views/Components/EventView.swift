@@ -16,13 +16,14 @@ struct EventView: View {
         if #available(iOS 16.0, *) {
             VStack {
                 Text(viewmodel.event.name)
-                    .font(.headline)
+                    .font(.title.weight(.black))
                     .padding(.bottom)
                 
                 HStack {
                     if viewmodel.event.components.contains(.year) {
                         VStack {
                             Text(viewmodel.yearsLeft())
+                                .font(.title3.weight(.black))
                             
                             Text("YR")
                                 .font(.subheadline.weight(.semibold))
@@ -32,6 +33,7 @@ struct EventView: View {
                     if viewmodel.event.components.contains(.month) {
                         VStack {
                             Text(viewmodel.monthsLeft())
+                                .font(.title3.weight(.black))
                             
                             Text("MTH")
                                 .font(.subheadline.weight(.semibold))
@@ -40,6 +42,7 @@ struct EventView: View {
                     
                     VStack {
                         Text(viewmodel.daysLeft())
+                            .font(.title3.weight(.black))
                         
                         Text("DAY")
                             .font(.subheadline.weight(.semibold))
@@ -47,6 +50,7 @@ struct EventView: View {
                     
                     VStack {
                         Text(viewmodel.hoursLeft())
+                            .font(.title3.weight(.black))
                         
                         Text("HR")
                             .font(.subheadline.weight(.semibold))
@@ -54,6 +58,7 @@ struct EventView: View {
                     
                     VStack {
                         Text(viewmodel.minutesLeft())
+                            .font(.title3.weight(.black))
                         
                         Text("MIN")
                             .font(.subheadline.weight(.semibold))
@@ -61,6 +66,7 @@ struct EventView: View {
                     
                     VStack {
                         Text(viewmodel.secondsLeft())
+                            .font(.title3.weight(.black))
                         
                         Text("SEC")
                             .font(.subheadline.weight(.semibold))

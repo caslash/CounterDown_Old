@@ -9,8 +9,9 @@ import EventKit
 import Foundation
 import SwiftUI
 
-@MainActor class ModelData: ObservableObject {
+class ModelData: ObservableObject {
     static let shared = ModelData()
+    let userdefaults = UserDefaults(suiteName: "group.Cameron.Slash.CounterDown")!
     let ekstore: EKEventStore
     let jsonEncoder = JSONEncoder()
     let jsonDecoder = JSONDecoder()
@@ -18,7 +19,7 @@ import SwiftUI
     @Published var savedEvents = [Event]() {
         didSet {
             if let encoded = try? self.jsonEncoder.encode(savedEvents) {
-                UserDefaults.standard.set(encoded, forKey: "saved_events")
+                self.userdefaults.set(encoded, forKey: "saved_events")
             }
         }
     }
@@ -26,7 +27,7 @@ import SwiftUI
     @Published var calendarAccessGranted = false {
         didSet {
             if let encoded = try? self.jsonEncoder.encode(calendarAccessGranted) {
-                UserDefaults.standard.set(encoded, forKey: "calendar_access_status")
+                self.userdefaults.set(encoded, forKey: "calendar_access_status")
             }
         }
     }
@@ -39,16 +40,16 @@ import SwiftUI
             }
             
             if let encoded = try? self.jsonEncoder.encode(calendarIDs) {
-                UserDefaults.standard.set(encoded, forKey: "user_selected_calendars")
+                self.userdefaults.set(encoded, forKey: "user_selected_calendars")
             }
         }
     }
     
-    @Published var accentcolor = Color.black {
+    @Published var accentcolor = Color.primary {
         didSet {
             
             if let encoded = try? self.jsonEncoder.encode(accentcolor) {
-                UserDefaults.standard.set(encoded, forKey: "user_selected_accentcolor")
+                self.userdefaults.set(encoded, forKey: "user_selected_accentcolor")
             }
         }
     }
@@ -56,19 +57,19 @@ import SwiftUI
     init() {
         self.ekstore = EKEventStore()
         
-        if let saved_events = UserDefaults.standard.data(forKey: "saved_events") {
+        if let saved_events = self.userdefaults.data(forKey: "saved_events") {
             if let decoded = try? self.jsonDecoder.decode([Event].self, from: saved_events) {
                 self.savedEvents = decoded
             }
         }
         
-        if let calendar_access_status = UserDefaults.standard.data(forKey: "calendar_access_status") {
+        if let calendar_access_status = self.userdefaults.data(forKey: "calendar_access_status") {
             if let decoded = try? self.jsonDecoder.decode(Bool.self, from: calendar_access_status) {
                 self.calendarAccessGranted = decoded
             }
         }
         
-        if let user_selected_calendars = UserDefaults.standard.data(forKey: "user_selected_calendars") {
+        if let user_selected_calendars = self.userdefaults.data(forKey: "user_selected_calendars") {
             if let decoded = try? self.jsonDecoder.decode([String].self, from: user_selected_calendars) {
                 for id in decoded {
                     if let calendar = ekstore.calendar(withIdentifier: id) {
@@ -78,7 +79,7 @@ import SwiftUI
             }
         }
         
-        if let user_selected_accentcolor = UserDefaults.standard.data(forKey: "user_selected_accentcolor") {
+        if let user_selected_accentcolor = self.userdefaults.data(forKey: "user_selected_accentcolor") {
             if let decoded = try? self.jsonDecoder.decode(Color.self, from: user_selected_accentcolor) {
                 self.accentcolor = decoded
             }

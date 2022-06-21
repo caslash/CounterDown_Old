@@ -52,3 +52,23 @@ extension Calendar.Component: CaseIterable, Codable {
         }
     }
 }
+
+extension Calendar {
+    private var currentDate: Date { Date() }
+    
+    func isDateInNextYear(_ date: Date) -> Bool {
+        guard let nextYear = self.date(byAdding: DateComponents(year: 1), to: currentDate) else {
+            return false
+        }
+        
+        return date < nextYear
+    }
+    
+    func isDateInNextMonth(_ date: Date) -> Bool {
+        guard let nextMonth = self.date(byAdding: DateComponents(month: 1), to: currentDate) else {
+            return false
+        }
+        
+        return date < nextMonth
+    }
+}
