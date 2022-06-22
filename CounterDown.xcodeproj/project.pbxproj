@@ -54,6 +54,8 @@
 		2E92EAC028417532008E7393 /* Content_ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E92EABF28417532008E7393 /* Content_ViewModel.swift */; };
 		2E9AE099285D780E00C1EBCF /* EditEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9AE098285D780E00C1EBCF /* EditEventView.swift */; };
 		2E9AE09B285D781C00C1EBCF /* EditEvent_ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9AE09A285D781C00C1EBCF /* EditEvent_ViewModel.swift */; };
+		2EAE12582862739000755BAF /* AccessoryRectangularCounterDownWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EAE12572862739000755BAF /* AccessoryRectangularCounterDownWidget.swift */; };
+		2EAE125B286273A400755BAF /* SystemSmallCounterDownWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EAE125A286273A400755BAF /* SystemSmallCounterDownWidget.swift */; };
 		2EC61D992860BFB80018EEDF /* SFSymbolsFinder in Frameworks */ = {isa = PBXBuildFile; productRef = 2EC61D982860BFB80018EEDF /* SFSymbolsFinder */; };
 		2EC61D9B2860BFB80018EEDF /* DynamicColor in Frameworks */ = {isa = PBXBuildFile; productRef = 2EC61D9A2860BFB80018EEDF /* DynamicColor */; };
 /* End PBXBuildFile section */
@@ -145,6 +147,8 @@
 		2E92EABF28417532008E7393 /* Content_ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Content_ViewModel.swift; sourceTree = "<group>"; };
 		2E9AE098285D780E00C1EBCF /* EditEventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditEventView.swift; sourceTree = "<group>"; };
 		2E9AE09A285D781C00C1EBCF /* EditEvent_ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditEvent_ViewModel.swift; sourceTree = "<group>"; };
+		2EAE12572862739000755BAF /* AccessoryRectangularCounterDownWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessoryRectangularCounterDownWidget.swift; sourceTree = "<group>"; };
+		2EAE125A286273A400755BAF /* SystemSmallCounterDownWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemSmallCounterDownWidget.swift; sourceTree = "<group>"; };
 		2EEE4E892841DBEB0041A0C8 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		2EEE4E8B2841DBEB0041A0C8 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
@@ -201,9 +205,10 @@
 			isa = PBXGroup;
 			children = (
 				2E1A6E172860379400D91FBA /* CounterDownWidget.swift */,
+				2E1A6E32286037EF00D91FBA /* DynamicEventSelection.intentdefinition */,
+				2EAE125D286280F400755BAF /* WidgetViews */,
 				2E1A6E192860379500D91FBA /* Assets.xcassets */,
 				2E1A6E1B2860379500D91FBA /* Info.plist */,
-				2E1A6E32286037EF00D91FBA /* DynamicEventSelection.intentdefinition */,
 			);
 			path = CounterDownWidget;
 			sourceTree = "<group>";
@@ -352,6 +357,15 @@
 				2E62478D284041AF00BB2A48 /* Event.swift */,
 			);
 			path = Objects;
+			sourceTree = "<group>";
+		};
+		2EAE125D286280F400755BAF /* WidgetViews */ = {
+			isa = PBXGroup;
+			children = (
+				2EAE12572862739000755BAF /* AccessoryRectangularCounterDownWidget.swift */,
+				2EAE125A286273A400755BAF /* SystemSmallCounterDownWidget.swift */,
+			);
+			path = WidgetViews;
 			sourceTree = "<group>";
 		};
 		2EEE4E882841DBEB0041A0C8 /* Frameworks */ = {
@@ -577,6 +591,8 @@
 				2E31B6E02860397700AB086F /* Preview_Events.swift in Sources */,
 				2E1A6E33286037EF00D91FBA /* DynamicEventSelection.intentdefinition in Sources */,
 				2E1A6E182860379400D91FBA /* CounterDownWidget.swift in Sources */,
+				2EAE12582862739000755BAF /* AccessoryRectangularCounterDownWidget.swift in Sources */,
+				2EAE125B286273A400755BAF /* SystemSmallCounterDownWidget.swift in Sources */,
 				2E31B6D8286038B600AB086F /* ModelData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
