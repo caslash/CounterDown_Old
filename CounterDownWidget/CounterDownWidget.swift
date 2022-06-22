@@ -25,7 +25,7 @@ struct Provider: IntentTimelineProvider {
 
     func getTimeline(for configuration: DynamicEventSelectionIntent, in context: Context, completion: @escaping (Timeline<Entry>) -> ()) {
         var entries: [SimpleEntry] = []
-        let selectedEvent = eventFromId(UUID(uuidString: (configuration.event?.identifier)!))
+        let selectedEvent = event(for: configuration)
 
         // Generate a timeline consisting of five entries an hour apart, starting from the current date.
         let currentDate = Date()
@@ -39,18 +39,12 @@ struct Provider: IntentTimelineProvider {
         completion(timeline)
     }
     
-    func eventFromId(_ id: UUID?) -> Event {
-       let userdefaults = UserDefaults(suiteName: "group.Cameron.Slash.CounterDown")!
-       if let saved_events = userdefaults.data(forKey: "saved_events") {
-           if let decoded = try? JSONDecoder().decode([Event].self, from: saved_events) {
-               if let event = decoded.first(where: { $0.id == id }) {
-                   return event
-               }
-           }
-       }
-       
-       return PreviewEvents.nyd
-   }
+    func event(for configuration: DynamicEventSelectionIntent) -> Event {
+        if let id = configuration.event?.identifier, let uuid = UUID(uuidString: id), let event = Event.eventFromId(uuid) {
+            return event
+        }
+        return PreviewEvents.nyd
+    }
 }
 
 struct SimpleEntry: TimelineEntry {
