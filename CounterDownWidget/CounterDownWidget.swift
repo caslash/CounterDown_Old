@@ -29,7 +29,7 @@ struct Provider: IntentTimelineProvider {
 
         // Generate a timeline consisting of five entries an hour apart, starting from the current date.
         let currentDate = Date()
-        for _ in 0 ..< 48 {
+        for _ in 0 ..< 4 {
             let entryDate = Calendar.current.date(byAdding: .minute, value: 30, to: currentDate)!
             let entry = SimpleEntry(date: entryDate, event: selectedEvent)
             entries.append(entry)
