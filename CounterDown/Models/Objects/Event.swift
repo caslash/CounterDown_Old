@@ -25,4 +25,13 @@ struct Event: Codable, Identifiable {
         }
         return nil
     }
+    
+    static func savedEventFromId(_ id: UUID) -> SavedEvent? {
+        if let savedEvents = try? ModelData.shared.moc.fetch(SavedEvent.fetchRequest()) {
+            if let savedEvent = savedEvents.first(where: { $0.wrappedId == id }) {
+                return savedEvent
+            }
+        }
+        return nil
+    }
 }

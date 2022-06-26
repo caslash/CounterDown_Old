@@ -6,6 +6,7 @@
 //
 
 import SFSymbolsFinder
+import SPAlert
 import SwiftUI
 
 struct AddEventView: View {

@@ -10,7 +10,7 @@ import WidgetKit
 
 @available(iOS 16.0, *)
 struct GradientSystemSmallCounterDownWidget: View {
-    var entry: Provider.Entry
+    @State var entry: Provider.Entry
     var calendar = Calendar.current
     var components: DateComponents { calendar.dateComponents([.year, .month, .day, .hour], from: Date(), to: self.entry.event.due) }
     var eventIsWithinNextYear: Bool { calendar.isDateInNextYear(self.entry.event.due) }

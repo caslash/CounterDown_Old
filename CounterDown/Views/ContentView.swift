@@ -5,34 +5,44 @@
 //  Created by Cameron Slash on 26/5/22.
 //
 
+import CoreData
 import SFSymbolsFinder
 import SwiftUI
 
 struct ContentView: View {
     @EnvironmentObject var modeldata: ModelData
     @ObservedObject var viewmodel = ContentViewModel()
+    @FetchRequest(sortDescriptors: [], predicate: nil)
+    var events: FetchedResults<SavedEvent>
     @State var eventToEdit: Event?
     @State private var showingAddSheet = false
     @State private var showingSettingsSheet = false
+    @State private var showingEditSheet = false
     var body: some View {
         NavigationView {
             ScrollView(showsIndicators: false) {
                 VStack {
-                    ForEach(modeldata.savedEvents, id: \.id) { event in
-                        EventView(event: event, now: self.viewmodel.now)
+                    ForEach(self.events, id: \.id) { event in
+                        EventView(event: event.wrappedEvent, now: self.viewmodel.now)
                             .contextMenu {
                                 if #available(iOS 15.0, *) {
                                     Button(role: .cancel) {
-                                        self.eventToEdit = event
+                                        self.eventToEdit = event.wrappedEvent
+                                        self.showingEditSheet = true
                                     } label: {
                                         Label("Edit", systemImage: "pencil")
                                     }
-                                    Button(role: .destructive) { modeldata.savedEvents.removeAll(where: { $0.id == event.id }) } label: {
+                                    
+                                    Button(role: .destructive) {
+                                        self.modeldata.deleteEvent(uuid: event.wrappedId)
+                                        self.modeldata.saveMoc()
+                                    } label: {
                                         Label("Delete", systemImage: "trash")
                                     }
                                 } else {
                                     Button {
-                                        modeldata.savedEvents.removeAll(where: { $0.id == event.id })
+                                        self.modeldata.deleteEvent(uuid: event.wrappedId)
+                                        self.modeldata.saveMoc()
                                     } label: {
                                         Label("Delete", systemImage: "trash")
                                     }

@@ -33,7 +33,8 @@ class AddEventViewModel: ObservableObject {
         if includeYear { components.insert(.year) }
         if includeMonth { components.insert(.month) }
         let newEvent = Event(name: self.name, due: self.due, color: self.color, components: self.components)
-        modeldata.savedEvents.append(newEvent)
+        self.modeldata.saveEvent(newEvent)
+        self.modeldata.saveMoc()
     }
     
     func getCalendarEvents() -> [EKEvent]? {
