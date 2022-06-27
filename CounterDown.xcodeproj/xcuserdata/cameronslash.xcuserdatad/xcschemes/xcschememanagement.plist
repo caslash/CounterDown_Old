@@ -32,12 +32,12 @@
 		<key>CounterDownIntentHandler.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>2</integer>
+			<integer>1</integer>
 		</dict>
 		<key>CounterDownWidgetExtension.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>1</integer>
+			<integer>2</integer>
 		</dict>
 		<key>EventViewWidgetExtension.xcscheme_^#shared#^_</key>
 		<dict>
@@ -99,6 +99,16 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>2E1A6E122860379400D91FBA</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>2E1A6E25286037C400D91FBA</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>2E6247522840404B00BB2A48</key>
 		<dict>
 			<key>primary</key>
