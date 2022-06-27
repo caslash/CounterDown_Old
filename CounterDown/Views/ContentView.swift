@@ -12,8 +12,7 @@ import SwiftUI
 struct ContentView: View {
     @EnvironmentObject var modeldata: ModelData
     @ObservedObject var viewmodel = ContentViewModel()
-    @FetchRequest(sortDescriptors: [], predicate: nil)
-    var events: FetchedResults<SavedEvent>
+    @FetchRequest(fetchRequest: SavedEvent.getSavedEventFetchRequest()) var events: FetchedResults<SavedEvent>
     @State var eventToEdit: Event?
     @State private var showingAddSheet = false
     @State private var showingSettingsSheet = false

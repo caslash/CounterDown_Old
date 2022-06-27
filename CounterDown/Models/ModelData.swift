@@ -98,7 +98,7 @@ class ModelData: ObservableObject {
     }
     
     func saveMoc() {
-        try? self.moc.save()
+        DataController.shared.saveContext()
     }
     
     func saveEvent(_ event: Event) {
@@ -113,14 +113,14 @@ class ModelData: ObservableObject {
     }
     
     func deleteEvent(uuid: UUID) {
-        let mocID = Event.savedEventFromId(uuid)!.objectID
+        let mocID = self.savedEventFromId(uuid)!.objectID
         let event = self.moc.object(with: mocID)
         self.savedEvents.removeAll(where: { $0.id == uuid })
         self.moc.delete(event)
     }
     
     func updateEvent(_ updatedEvent: Event) {
-        let savedevent = self.moc.object(with: Event.savedEventFromId(updatedEvent.id)!.objectID)
+        let savedevent = self.moc.object(with: self.savedEventFromId(updatedEvent.id)!.objectID)
         
         savedevent.setValue(updatedEvent.id, forKey: "id")
         savedevent.setValue(updatedEvent.name, forKey: "name")
@@ -135,5 +135,14 @@ class ModelData: ObservableObject {
         if savedevent.isUpdated {
             try? savedevent.validateForUpdate()
         }
+    }
+    
+    func savedEventFromId(_ id: UUID) -> SavedEvent? {
+        if let savedEvents = try? DataController.shared.container.viewContext.fetch(SavedEvent.fetchRequest()) {
+            if let savedEvent = savedEvents.first(where: { $0.wrappedId == id }) {
+                return savedEvent
+            }
+        }
+        return nil
     }
 }

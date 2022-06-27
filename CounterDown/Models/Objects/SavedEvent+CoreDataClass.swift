@@ -13,3 +13,11 @@ import CoreData
 public class SavedEvent: NSManagedObject {
 
 }
+
+extension SavedEvent {
+    static func getSavedEventFetchRequest() -> NSFetchRequest<SavedEvent> {
+        let request = SavedEvent.fetchRequest() as! NSFetchRequest<SavedEvent>
+        request.sortDescriptors = [NSSortDescriptor(key: #keyPath(SavedEvent.due), ascending: true)]
+        return request
+    }
+}
