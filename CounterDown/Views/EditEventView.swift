@@ -5,6 +5,7 @@
 //  Created by Cameron Slash on 17/6/22.
 //
 
+import CoreData
 import SwiftUI
 
 struct EditEventView: View {
@@ -28,8 +29,9 @@ struct EditEventView: View {
             .toolbar {
                 ToolbarItem(placement: .primaryAction) {
                     Button {
-                        viewmodel.editEvent()
-                        presentationMode.wrappedValue.dismiss()
+                        self.viewmodel.editEvent()
+                        self.modeldata.saveMoc()
+                        self.presentationMode.wrappedValue.dismiss()
                     } label: {
                         Text("Save")
                     }
@@ -37,7 +39,7 @@ struct EditEventView: View {
                 
                 ToolbarItem(placement: .cancellationAction) {
                     Button {
-                        presentationMode.wrappedValue.dismiss()
+                        self.presentationMode.wrappedValue.dismiss()
                     } label: {
                         Image(systemName: .xmarkCircleFill)
                             .foregroundColor(.gray)
@@ -55,6 +57,6 @@ struct EditEventView: View {
 
 struct EditEventView_Previews: PreviewProvider {
     static var previews: some View {
-        EditEventView(ModelData.shared.savedEvents.first!)
+        EditEventView(PreviewEvents.nyd)
     }
 }

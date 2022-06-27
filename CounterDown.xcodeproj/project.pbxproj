@@ -19,8 +19,6 @@
 		2E1A6E2E286037C400D91FBA /* CounterDownIntentHandler.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 2E1A6E26286037C400D91FBA /* CounterDownIntentHandler.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		2E1A6E33286037EF00D91FBA /* DynamicEventSelection.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 2E1A6E32286037EF00D91FBA /* DynamicEventSelection.intentdefinition */; };
 		2E1A6E34286037EF00D91FBA /* DynamicEventSelection.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 2E1A6E32286037EF00D91FBA /* DynamicEventSelection.intentdefinition */; };
-		2E31B6D8286038B600AB086F /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E62478A2840417D00BB2A48 /* ModelData.swift */; };
-		2E31B6D9286038B700AB086F /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E62478A2840417D00BB2A48 /* ModelData.swift */; };
 		2E31B6DA286038C500AB086F /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E62478D284041AF00BB2A48 /* Event.swift */; };
 		2E31B6DB286038C600AB086F /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E62478D284041AF00BB2A48 /* Event.swift */; };
 		2E31B6DC286038CB00AB086F /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E58E73F2841090C00E278EB /* Color+Extension.swift */; };
@@ -44,6 +42,14 @@
 		2E62478E284041AF00BB2A48 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E62478D284041AF00BB2A48 /* Event.swift */; };
 		2E6247902840423F00BB2A48 /* Preview_Events.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E62478F2840423F00BB2A48 /* Preview_Events.swift */; };
 		2E6247922840462F00BB2A48 /* Event_ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6247912840462F00BB2A48 /* Event_ViewModel.swift */; };
+		2E6D2D6D28654C23006DF9F7 /* CounterDownModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2E6D2D6B28654C23006DF9F7 /* CounterDownModel.xcdatamodeld */; };
+		2E6D2D6F28654C73006DF9F7 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6D2D6E28654C73006DF9F7 /* DataController.swift */; };
+		2E6D2D7328654FC2006DF9F7 /* SavedEvent+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6D2D7128654FC2006DF9F7 /* SavedEvent+CoreDataClass.swift */; };
+		2E6D2D7428654FC2006DF9F7 /* SavedEvent+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6D2D7228654FC2006DF9F7 /* SavedEvent+CoreDataProperties.swift */; };
+		2E6D2D7F2865587C006DF9F7 /* DispatchQueue+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6D2D7E2865587C006DF9F7 /* DispatchQueue+Extension.swift */; };
+		2E6D2D802865591B006DF9F7 /* DispatchQueue+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6D2D7E2865587C006DF9F7 /* DispatchQueue+Extension.swift */; };
+		2E6D2D812865591B006DF9F7 /* DispatchQueue+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6D2D7E2865587C006DF9F7 /* DispatchQueue+Extension.swift */; };
+		2E6D2D8428655D2C006DF9F7 /* SPAlert in Frameworks */ = {isa = PBXBuildFile; productRef = 2E6D2D8328655D2C006DF9F7 /* SPAlert */; };
 		2E7BAD5E285E7E5A001F0505 /* SFSymbolsFinder in Frameworks */ = {isa = PBXBuildFile; productRef = 2E7BAD5D285E7E5A001F0505 /* SFSymbolsFinder */; };
 		2E7BAD61285E7E62001F0505 /* DynamicColor in Frameworks */ = {isa = PBXBuildFile; productRef = 2E7BAD60285E7E62001F0505 /* DynamicColor */; };
 		2E87A1912846D18600AD3624 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E87A1902846D18600AD3624 /* SettingsView.swift */; };
@@ -116,6 +122,11 @@
 		2E62478D284041AF00BB2A48 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		2E62478F2840423F00BB2A48 /* Preview_Events.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preview_Events.swift; sourceTree = "<group>"; };
 		2E6247912840462F00BB2A48 /* Event_ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event_ViewModel.swift; sourceTree = "<group>"; };
+		2E6D2D6C28654C23006DF9F7 /* CounterDownModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CounterDownModel.xcdatamodel; sourceTree = "<group>"; };
+		2E6D2D6E28654C73006DF9F7 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
+		2E6D2D7128654FC2006DF9F7 /* SavedEvent+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SavedEvent+CoreDataClass.swift"; sourceTree = "<group>"; };
+		2E6D2D7228654FC2006DF9F7 /* SavedEvent+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SavedEvent+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		2E6D2D7E2865587C006DF9F7 /* DispatchQueue+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DispatchQueue+Extension.swift"; sourceTree = "<group>"; };
 		2E843FE92841E73B00BBA183 /* Intents.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Intents.framework; path = System/Library/Frameworks/Intents.framework; sourceTree = SDKROOT; };
 		2E843FF42841E73B00BBA183 /* IntentsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IntentsUI.framework; path = System/Library/Frameworks/IntentsUI.framework; sourceTree = SDKROOT; };
 		2E87A1902846D18600AD3624 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
@@ -157,6 +168,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E6D2D8428655D2C006DF9F7 /* SPAlert in Frameworks */,
 				2E7BAD61285E7E62001F0505 /* DynamicColor in Frameworks */,
 				2E7BAD5E285E7E5A001F0505 /* SFSymbolsFinder in Frameworks */,
 			);
@@ -201,6 +213,7 @@
 				2E58E73F2841090C00E278EB /* Color+Extension.swift */,
 				2E58E74128410DBB00E278EB /* CalendarComponents+Extension.swift */,
 				2E0B80782845B97600BD5CE4 /* EnvironmentValues+Extension.swift */,
+				2E6D2D7E2865587C006DF9F7 /* DispatchQueue+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -234,6 +247,7 @@
 				2E6247562840404B00BB2A48 /* CountdownApp.swift */,
 				2E62475A2840404C00BB2A48 /* Assets.xcassets */,
 				2E91A7CD284995E200593037 /* Info.plist */,
+				2E6D2D6A28654BD3006DF9F7 /* CoreData */,
 				2E6247822840406400BB2A48 /* Models */,
 				2E6247812840405E00BB2A48 /* ViewModels */,
 				2E6247802840405800BB2A48 /* Views */,
@@ -297,9 +311,20 @@
 		2E62478C284041A300BB2A48 /* Objects */ = {
 			isa = PBXGroup;
 			children = (
+				2E6D2D7128654FC2006DF9F7 /* SavedEvent+CoreDataClass.swift */,
+				2E6D2D7228654FC2006DF9F7 /* SavedEvent+CoreDataProperties.swift */,
 				2E62478D284041AF00BB2A48 /* Event.swift */,
 			);
 			path = Objects;
+			sourceTree = "<group>";
+		};
+		2E6D2D6A28654BD3006DF9F7 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				2E6D2D6B28654C23006DF9F7 /* CounterDownModel.xcdatamodeld */,
+				2E6D2D6E28654C73006DF9F7 /* DataController.swift */,
+			);
+			path = CoreData;
 			sourceTree = "<group>";
 		};
 		2EAE125D286280F400755BAF /* WidgetViews */ = {
@@ -386,6 +411,7 @@
 			packageProductDependencies = (
 				2E7BAD5D285E7E5A001F0505 /* SFSymbolsFinder */,
 				2E7BAD60285E7E62001F0505 /* DynamicColor */,
+				2E6D2D8328655D2C006DF9F7 /* SPAlert */,
 			);
 			productName = Countdown;
 			productReference = 2E6247532840404B00BB2A48 /* CounterDown.app */;
@@ -424,6 +450,7 @@
 			packageReferences = (
 				2E7BAD5C285E7E5A001F0505 /* XCRemoteSwiftPackageReference "SFSymbolsFinder" */,
 				2E7BAD5F285E7E62001F0505 /* XCRemoteSwiftPackageReference "DynamicColor" */,
+				2E6D2D8228655D2C006DF9F7 /* XCRemoteSwiftPackageReference "SPAlert" */,
 			);
 			productRefGroup = 2E6247542840404B00BB2A48 /* Products */;
 			projectDirPath = "";
@@ -469,6 +496,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2E31B6DA286038C500AB086F /* Event.swift in Sources */,
+				2E6D2D802865591B006DF9F7 /* DispatchQueue+Extension.swift in Sources */,
 				2E31B6DE286038CD00AB086F /* CalendarComponents+Extension.swift in Sources */,
 				2E31B6DC286038CB00AB086F /* Color+Extension.swift in Sources */,
 				2E31B6E02860397700AB086F /* Preview_Events.swift in Sources */,
@@ -476,7 +504,6 @@
 				2E1A6E182860379400D91FBA /* CounterDownWidget.swift in Sources */,
 				2EAE12582862739000755BAF /* AccessoryRectangularCounterDownWidget.swift in Sources */,
 				2EAE125B286273A400755BAF /* SystemSmallCounterDownWidget.swift in Sources */,
-				2E31B6D8286038B600AB086F /* ModelData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -485,12 +512,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				2E31B6DB286038C600AB086F /* Event.swift in Sources */,
+				2E6D2D812865591B006DF9F7 /* DispatchQueue+Extension.swift in Sources */,
 				2E31B6DF286038CE00AB086F /* CalendarComponents+Extension.swift in Sources */,
 				2E31B6DD286038CB00AB086F /* Color+Extension.swift in Sources */,
 				2E31B6E72860462D00AB086F /* Preview_Events.swift in Sources */,
 				2E1A6E34286037EF00D91FBA /* DynamicEventSelection.intentdefinition in Sources */,
 				2E1A6E2A286037C400D91FBA /* IntentHandler.swift in Sources */,
-				2E31B6D9286038B700AB086F /* ModelData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -500,9 +527,13 @@
 			files = (
 				2E87A1912846D18600AD3624 /* SettingsView.swift in Sources */,
 				2E9AE09B285D781C00C1EBCF /* EditEvent_ViewModel.swift in Sources */,
+				2E6D2D6D28654C23006DF9F7 /* CounterDownModel.xcdatamodeld in Sources */,
 				2E6247592840404B00BB2A48 /* ContentView.swift in Sources */,
 				2E92EAC028417532008E7393 /* Content_ViewModel.swift in Sources */,
+				2E6D2D7F2865587C006DF9F7 /* DispatchQueue+Extension.swift in Sources */,
+				2E6D2D6F28654C73006DF9F7 /* DataController.swift in Sources */,
 				2E58E7402841090C00E278EB /* Color+Extension.swift in Sources */,
+				2E6D2D7328654FC2006DF9F7 /* SavedEvent+CoreDataClass.swift in Sources */,
 				2E6247572840404B00BB2A48 /* CountdownApp.swift in Sources */,
 				2E6247862840409800BB2A48 /* AddEvent_ViewModel.swift in Sources */,
 				2E58E74228410DBB00E278EB /* CalendarComponents+Extension.swift in Sources */,
@@ -513,6 +544,7 @@
 				2E0B80792845B97600BD5CE4 /* EnvironmentValues+Extension.swift in Sources */,
 				2E0AC7C428411EC1002666D7 /* ComponentView.swift in Sources */,
 				2E6247922840462F00BB2A48 /* Event_ViewModel.swift in Sources */,
+				2E6D2D7428654FC2006DF9F7 /* SavedEvent+CoreDataProperties.swift in Sources */,
 				2E62478E284041AF00BB2A48 /* Event.swift in Sources */,
 				2E62478B2840417D00BB2A48 /* ModelData.swift in Sources */,
 				2E9AE099285D780E00C1EBCF /* EditEventView.swift in Sources */,
@@ -792,7 +824,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
-				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -830,7 +862,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
-				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -879,6 +911,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		2E6D2D8228655D2C006DF9F7 /* XCRemoteSwiftPackageReference "SPAlert" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ivanvorobei/SPAlert";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
 		2E7BAD5C285E7E5A001F0505 /* XCRemoteSwiftPackageReference "SFSymbolsFinder" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/abadikaka/SFSymbolsFinder.git";
@@ -908,6 +948,11 @@
 			package = 2E7BAD5F285E7E62001F0505 /* XCRemoteSwiftPackageReference "DynamicColor" */;
 			productName = DynamicColor;
 		};
+		2E6D2D8328655D2C006DF9F7 /* SPAlert */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2E6D2D8228655D2C006DF9F7 /* XCRemoteSwiftPackageReference "SPAlert" */;
+			productName = SPAlert;
+		};
 		2E7BAD5D285E7E5A001F0505 /* SFSymbolsFinder */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 2E7BAD5C285E7E5A001F0505 /* XCRemoteSwiftPackageReference "SFSymbolsFinder" */;
@@ -929,6 +974,19 @@
 			productName = DynamicColor;
 		};
 /* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		2E6D2D6B28654C23006DF9F7 /* CounterDownModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				2E6D2D6C28654C23006DF9F7 /* CounterDownModel.xcdatamodel */,
+			);
+			currentVersion = 2E6D2D6C28654C23006DF9F7 /* CounterDownModel.xcdatamodel */;
+			path = CounterDownModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 2E62474B2840404B00BB2A48 /* Project object */;
 }

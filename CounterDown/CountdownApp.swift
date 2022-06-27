@@ -13,6 +13,7 @@ struct CountdownApp: App {
         WindowGroup {
             ContentView()
                 .environmentObject(ModelData.shared)
+                .environment(\.managedObjectContext, DataController.shared.container.viewContext)
         }
     }
 }

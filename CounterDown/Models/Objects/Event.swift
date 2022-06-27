@@ -16,7 +16,8 @@ struct Event: Codable, Identifiable {
     var components: Set<Calendar.Component>
     
     static func eventFromId(_ id: UUID) -> Event? {
-        if let savedevents = ModelData.shared.userdefaults.data(forKey: "saved_events") {
+        let userdefaults = UserDefaults(suiteName: "group.Cameron.Slash.CounterDown")!
+        if let savedevents = userdefaults.data(forKey: "saved_events") {
             if let events = try? JSONDecoder().decode([Event].self, from: savedevents) {
                 if let event = events.first(where: { $0.id == id }) {
                     return event
