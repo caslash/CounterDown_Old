@@ -5,6 +5,7 @@
 //  Created by Cameron Slash on 17/6/22.
 //
 
+import CounterKit
 import CoreData
 import Foundation
 import SwiftUI
@@ -41,6 +42,7 @@ class EditEventViewModel: ObservableObject {
         } else if includeMonth {
             components.insert(.month)
         }
+        
         let updatedEvent = Event(id: self.eventId, name: self.name, due: self.due, color: self.color, components: self.components)
         self.modeldata.updateEvent(updatedEvent)
         self.modeldata.saveMoc()

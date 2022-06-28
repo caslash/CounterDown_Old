@@ -5,6 +5,7 @@
 //  Created by Cameron Slash on 20/6/22.
 //
 
+import CounterKit
 import UIKit
 import SwiftUI
 import WidgetKit

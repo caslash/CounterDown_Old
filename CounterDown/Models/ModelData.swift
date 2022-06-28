@@ -6,6 +6,7 @@
 //
 
 import CoreData
+import CounterKit
 import EventKit
 import Foundation
 import SwiftUI
@@ -17,14 +18,6 @@ class ModelData: ObservableObject {
     let ekstore: EKEventStore
     let jsonEncoder = JSONEncoder()
     let jsonDecoder = JSONDecoder()
-    
-    @Published var savedEvents = [Event]() {
-        didSet {
-            if let encoded = try? self.jsonEncoder.encode(savedEvents) {
-                self.userdefaults.set(encoded, forKey: "saved_events")
-            }
-        }
-    }
     
     @Published var calendarAccessGranted = false {
         didSet {
@@ -59,12 +52,6 @@ class ModelData: ObservableObject {
     init() {
         self.ekstore = EKEventStore()
         self.moc = DataController.shared.container.viewContext
-        
-        if let saved_events = self.userdefaults.data(forKey: "saved_events") {
-            if let decoded = try? self.jsonDecoder.decode([Event].self, from: saved_events) {
-                self.savedEvents = decoded
-            }
-        }
         
         if let calendar_access_status = self.userdefaults.data(forKey: "calendar_access_status") {
             if let decoded = try? self.jsonDecoder.decode(Bool.self, from: calendar_access_status) {
@@ -109,13 +96,11 @@ class ModelData: ObservableObject {
         savedEvent.due = event.due
         savedEvent.components = try? self.jsonEncoder.encode(event.components)
         
-        savedEvents.append(event)
     }
     
     func deleteEvent(uuid: UUID) {
         let mocID = self.savedEventFromId(uuid)!.objectID
         let event = self.moc.object(with: mocID)
-        self.savedEvents.removeAll(where: { $0.id == uuid })
         self.moc.delete(event)
     }
     
@@ -127,10 +112,6 @@ class ModelData: ObservableObject {
         savedevent.setValue(updatedEvent.due, forKey: "due")
         savedevent.setValue(UIColor(updatedEvent.color).toHexString(), forKey: "colorHex")
         savedevent.setValue(try? self.jsonEncoder.encode(updatedEvent.components), forKey: "components")
-        
-        if let i = self.savedEvents.firstIndex(where: { $0.id == updatedEvent.id }) {
-            self.savedEvents[i] = updatedEvent
-        }
         
         if savedevent.isUpdated {
             try? savedevent.validateForUpdate()

@@ -17,15 +17,6 @@
         "branch" : "master",
         "revision" : "955b818250237756389a9e27d163142e983e77f3"
       }
-    },
-    {
-      "identity" : "spalert",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/ivanvorobei/SPAlert",
-      "state" : {
-        "branch" : "main",
-        "revision" : "979a716b640b9e277b28f15f99ed35733694c844"
-      }
     }
   ],
   "version" : 2

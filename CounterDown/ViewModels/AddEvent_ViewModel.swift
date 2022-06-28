@@ -5,6 +5,7 @@
 //  Created by Cameron Slash on 26/5/22.
 //
 
+import CounterKit
 import Foundation
 import SwiftUI
 import EventKit

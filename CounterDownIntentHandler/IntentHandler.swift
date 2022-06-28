@@ -5,23 +5,26 @@
 //  Created by Cameron Slash on 20/6/22.
 //
 
+import CounterKit
 import Intents
 
 class IntentHandler: INExtension, DynamicEventSelectionIntentHandling {
     let userdefaults = UserDefaults(suiteName: "group.Cameron.Slash.CounterDown")!
     
     func provideEventOptionsCollection(for intent: DynamicEventSelectionIntent, with completion: @escaping (INObjectCollection<CountdownEvent>?, Error?) -> Void) {
-        if let saved_events = self.userdefaults.data(forKey: "saved_events") {
-            if let decoded = try? JSONDecoder().decode([Event].self, from: saved_events) {
-                let events = decoded.map { event in
-                    return CountdownEvent(identifier: event.id.uuidString, display: event.name)
-                }
-                
-                let collection = INObjectCollection(items: events)
-                
-                completion(collection, nil)
-            }
+        let moc = DataController.shared.container.viewContext
+        do {
+            let savedevents = try moc.fetch(SavedEvent.getSavedEventFetchRequest())
+            let events = savedevents.map { CountdownEvent(identifier: $0.wrappedEvent.id.uuidString, display: $0.wrappedEvent.name) }
+
+            let collection = INObjectCollection(items: events)
+
+            completion(collection, nil)
+        } catch {
+            let nserror = error as NSError
+            fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
         }
+        
     }
     
     func defaultEvent(for intent: DynamicEventSelectionIntent) -> CountdownEvent? {

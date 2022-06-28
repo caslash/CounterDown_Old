@@ -5,6 +5,7 @@
 //  Created by Cameron Slash on 31/5/22.
 //
 
+import CounterKit
 import SFSymbolsFinder
 import SwiftUI
 import EventKit
