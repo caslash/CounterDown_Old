@@ -23,7 +23,7 @@
 		2E1A9E06286A947100EA2BA2 /* WidgetKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2EEE4E892841DBEB0041A0C8 /* WidgetKit.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		2E31B6E228603FDD00AB086F /* SFSymbolsFinder in Frameworks */ = {isa = PBXBuildFile; productRef = 2E31B6E128603FDD00AB086F /* SFSymbolsFinder */; };
 		2E3C5B99286BE59400341101 /* CounterKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E3C5B92286BE54F00341101 /* CounterKit.framework */; };
-		2E3C5B9A286BE59400341101 /* CounterKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2E3C5B92286BE54F00341101 /* CounterKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		2E3C5B9A286BE59400341101 /* CounterKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2E3C5B92286BE54F00341101 /* CounterKit.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		2E6247572840404B00BB2A48 /* CountdownApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6247562840404B00BB2A48 /* CountdownApp.swift */; };
 		2E6247592840404B00BB2A48 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6247582840404B00BB2A48 /* ContentView.swift */; };
 		2E62475B2840404C00BB2A48 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E62475A2840404C00BB2A48 /* Assets.xcassets */; };
@@ -195,6 +195,7 @@
 		2E1A6E162860379400D91FBA /* CounterDownWidget */ = {
 			isa = PBXGroup;
 			children = (
+				2E8D55032861143500852B4D /* CounterDownWidgetExtension.entitlements */,
 				2E1A6E172860379400D91FBA /* CounterDownWidget.swift */,
 				2E1A6E32286037EF00D91FBA /* DynamicEventSelection.intentdefinition */,
 				2EAE125D286280F400755BAF /* WidgetViews */,
@@ -233,7 +234,6 @@
 		2E62474A2840404B00BB2A48 = {
 			isa = PBXGroup;
 			children = (
-				2E8D55032861143500852B4D /* CounterDownWidgetExtension.entitlements */,
 				2E6247552840404B00BB2A48 /* CounterDown */,
 				2E1A6E162860379400D91FBA /* CounterDownWidget */,
 				2E1A6E28286037C400D91FBA /* CounterDownIntentHandler */,
@@ -555,6 +555,7 @@
 		2E1A6E202860379500D91FBA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_ENTITLEMENTS = CounterDownWidgetExtension.entitlements;
@@ -585,6 +586,7 @@
 		2E1A6E212860379500D91FBA /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_ENTITLEMENTS = CounterDownWidgetExtension.entitlements;
@@ -615,6 +617,7 @@
 		2E1A6E30286037C400D91FBA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CODE_SIGN_ENTITLEMENTS = CounterDownIntentHandler/CounterDownIntentHandler.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -643,6 +646,7 @@
 		2E1A6E31286037C400D91FBA /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CODE_SIGN_ENTITLEMENTS = CounterDownIntentHandler/CounterDownIntentHandler.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
