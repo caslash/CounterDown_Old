@@ -22,6 +22,12 @@
 		2E1A9E05286A947100EA2BA2 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EEE4E892841DBEB0041A0C8 /* WidgetKit.framework */; };
 		2E1A9E06286A947100EA2BA2 /* WidgetKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2EEE4E892841DBEB0041A0C8 /* WidgetKit.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		2E31B6E228603FDD00AB086F /* SFSymbolsFinder in Frameworks */ = {isa = PBXBuildFile; productRef = 2E31B6E128603FDD00AB086F /* SFSymbolsFinder */; };
+		2E3C5B99286BE59400341101 /* CounterKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E3C5B92286BE54F00341101 /* CounterKit.framework */; };
+		2E3C5B9A286BE59400341101 /* CounterKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2E3C5B92286BE54F00341101 /* CounterKit.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		2E3C5B9C286BE59800341101 /* CounterKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E3C5B96286BE55900341101 /* CounterKit.framework */; };
+		2E3C5B9D286BE59800341101 /* CounterKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2E3C5B96286BE55900341101 /* CounterKit.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		2E3C5B9E286BE59C00341101 /* CounterKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E3C5B8F286BE4F700341101 /* CounterKit.framework */; };
+		2E3C5B9F286BE59C00341101 /* CounterKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2E3C5B8F286BE4F700341101 /* CounterKit.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		2E6247572840404B00BB2A48 /* CountdownApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6247562840404B00BB2A48 /* CountdownApp.swift */; };
 		2E6247592840404B00BB2A48 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6247582840404B00BB2A48 /* ContentView.swift */; };
 		2E62475B2840404C00BB2A48 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E62475A2840404C00BB2A48 /* Assets.xcassets */; };
@@ -34,12 +40,6 @@
 		2E6D2D7F2865587C006DF9F7 /* DispatchQueue+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6D2D7E2865587C006DF9F7 /* DispatchQueue+Extension.swift */; };
 		2E6D2D802865591B006DF9F7 /* DispatchQueue+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6D2D7E2865587C006DF9F7 /* DispatchQueue+Extension.swift */; };
 		2E6D2D812865591B006DF9F7 /* DispatchQueue+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6D2D7E2865587C006DF9F7 /* DispatchQueue+Extension.swift */; };
-		2E7B4D37286A9BA600A9BE57 /* CounterKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E7B4D36286A9BA600A9BE57 /* CounterKit.framework */; };
-		2E7B4D38286A9BA600A9BE57 /* CounterKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2E7B4D36286A9BA600A9BE57 /* CounterKit.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		2E7B4D3A286A9BD600A9BE57 /* CounterKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E7B4D39286A9BD600A9BE57 /* CounterKit.framework */; };
-		2E7B4D3B286A9BD600A9BE57 /* CounterKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2E7B4D39286A9BD600A9BE57 /* CounterKit.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		2E7B4D3D286A9BDB00A9BE57 /* CounterKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E7B4D3C286A9BDB00A9BE57 /* CounterKit.framework */; };
-		2E7B4D3E286A9BDB00A9BE57 /* CounterKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2E7B4D3C286A9BDB00A9BE57 /* CounterKit.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		2E7B4D40286A9BFF00A9BE57 /* DynamicColor in Frameworks */ = {isa = PBXBuildFile; productRef = 2E7B4D3F286A9BFF00A9BE57 /* DynamicColor */; };
 		2E7B4D42286A9C0500A9BE57 /* DynamicColor in Frameworks */ = {isa = PBXBuildFile; productRef = 2E7B4D41286A9C0500A9BE57 /* DynamicColor */; };
 		2E7BAD5E285E7E5A001F0505 /* SFSymbolsFinder in Frameworks */ = {isa = PBXBuildFile; productRef = 2E7BAD5D285E7E5A001F0505 /* SFSymbolsFinder */; };
@@ -78,7 +78,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				2E7B4D3B286A9BD600A9BE57 /* CounterKit.framework in Embed Frameworks */,
+				2E3C5B9D286BE59800341101 /* CounterKit.framework in Embed Frameworks */,
 				2E1A9E04286A946F00EA2BA2 /* SwiftUI.framework in Embed Frameworks */,
 				2E1A9E06286A947100EA2BA2 /* WidgetKit.framework in Embed Frameworks */,
 			);
@@ -91,19 +91,19 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				2E7B4D3E286A9BDB00A9BE57 /* CounterKit.framework in Embed Frameworks */,
+				2E3C5B9F286BE59C00341101 /* CounterKit.framework in Embed Frameworks */,
 				2E1A9E02286A946A00EA2BA2 /* Intents.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2E7B4D35286A9B9500A9BE57 /* Embed Frameworks */ = {
+		2E3C5B9B286BE59400341101 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				2E7B4D38286A9BA600A9BE57 /* CounterKit.framework in Embed Frameworks */,
+				2E3C5B9A286BE59400341101 /* CounterKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -134,6 +134,9 @@
 		2E1A6E32286037EF00D91FBA /* DynamicEventSelection.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = DynamicEventSelection.intentdefinition; sourceTree = "<group>"; };
 		2E31B6E5286042B300AB086F /* CounterDownIntentHandler.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CounterDownIntentHandler.entitlements; sourceTree = "<group>"; };
 		2E31B6E6286042E300AB086F /* CounterDown.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CounterDown.entitlements; sourceTree = "<group>"; };
+		2E3C5B8F286BE4F700341101 /* CounterKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CounterKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2E3C5B92286BE54F00341101 /* CounterKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CounterKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2E3C5B96286BE55900341101 /* CounterKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CounterKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E6247532840404B00BB2A48 /* CounterDown.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CounterDown.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E6247562840404B00BB2A48 /* CountdownApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownApp.swift; sourceTree = "<group>"; };
 		2E6247582840404B00BB2A48 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -145,9 +148,6 @@
 		2E62478A2840417D00BB2A48 /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
 		2E6247912840462F00BB2A48 /* Event_ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event_ViewModel.swift; sourceTree = "<group>"; };
 		2E6D2D7E2865587C006DF9F7 /* DispatchQueue+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DispatchQueue+Extension.swift"; sourceTree = "<group>"; };
-		2E7B4D36286A9BA600A9BE57 /* CounterKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CounterKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		2E7B4D39286A9BD600A9BE57 /* CounterKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CounterKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		2E7B4D3C286A9BDB00A9BE57 /* CounterKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CounterKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E843FE92841E73B00BBA183 /* Intents.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Intents.framework; path = System/Library/Frameworks/Intents.framework; sourceTree = SDKROOT; };
 		2E843FF42841E73B00BBA183 /* IntentsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IntentsUI.framework; path = System/Library/Frameworks/IntentsUI.framework; sourceTree = SDKROOT; };
 		2E87A1902846D18600AD3624 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
@@ -169,8 +169,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				2E1A9E03286A946F00EA2BA2 /* SwiftUI.framework in Frameworks */,
+				2E3C5B9C286BE59800341101 /* CounterKit.framework in Frameworks */,
 				2E7B4D40286A9BFF00A9BE57 /* DynamicColor in Frameworks */,
-				2E7B4D3A286A9BD600A9BE57 /* CounterKit.framework in Frameworks */,
 				2E1A9E05286A947100EA2BA2 /* WidgetKit.framework in Frameworks */,
 				2E31B6E228603FDD00AB086F /* SFSymbolsFinder in Frameworks */,
 			);
@@ -180,7 +180,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2E7B4D3D286A9BDB00A9BE57 /* CounterKit.framework in Frameworks */,
+				2E3C5B9E286BE59C00341101 /* CounterKit.framework in Frameworks */,
 				2EC61D9B2860BFB80018EEDF /* DynamicColor in Frameworks */,
 				2E1A9E01286A946A00EA2BA2 /* Intents.framework in Frameworks */,
 				2EC61D992860BFB80018EEDF /* SFSymbolsFinder in Frameworks */,
@@ -191,7 +191,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2E7B4D37286A9BA600A9BE57 /* CounterKit.framework in Frameworks */,
+				2E3C5B99286BE59400341101 /* CounterKit.framework in Frameworks */,
 				2E7B4D42286A9C0500A9BE57 /* DynamicColor in Frameworks */,
 				2E7BAD5E285E7E5A001F0505 /* SFSymbolsFinder in Frameworks */,
 			);
@@ -345,9 +345,9 @@
 		2EEE4E882841DBEB0041A0C8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				2E7B4D3C286A9BDB00A9BE57 /* CounterKit.framework */,
-				2E7B4D39286A9BD600A9BE57 /* CounterKit.framework */,
-				2E7B4D36286A9BA600A9BE57 /* CounterKit.framework */,
+				2E3C5B96286BE55900341101 /* CounterKit.framework */,
+				2E3C5B92286BE54F00341101 /* CounterKit.framework */,
+				2E3C5B8F286BE4F700341101 /* CounterKit.framework */,
 				2EEE4E892841DBEB0041A0C8 /* WidgetKit.framework */,
 				2EEE4E8B2841DBEB0041A0C8 /* SwiftUI.framework */,
 				2E843FE92841E73B00BBA183 /* Intents.framework */,
@@ -411,7 +411,7 @@
 				2E6247502840404B00BB2A48 /* Frameworks */,
 				2E6247512840404B00BB2A48 /* Resources */,
 				2EEE4E992841DBEC0041A0C8 /* Embed Foundation Extensions */,
-				2E7B4D35286A9B9500A9BE57 /* Embed Frameworks */,
+				2E3C5B9B286BE59400341101 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
