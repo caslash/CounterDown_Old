@@ -6,6 +6,7 @@
 //
 
 import CounterKit
+import DynamicColor
 import SwiftUI
 import WidgetKit
 
