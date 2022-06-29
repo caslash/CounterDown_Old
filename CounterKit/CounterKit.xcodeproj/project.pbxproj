@@ -12,7 +12,6 @@
 		2E1A9DC6286A919A00EA2BA2 /* CounterKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1A9DC5286A919A00EA2BA2 /* CounterKitTests.swift */; };
 		2E1A9DC7286A919A00EA2BA2 /* CounterKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 2E1A9DB9286A919A00EA2BA2 /* CounterKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2E1A9DED286A936700EA2BA2 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1A9DEC286A936700EA2BA2 /* DataController.swift */; };
-		2E1A9E15286A95FC00EA2BA2 /* DynamicColor in Frameworks */ = {isa = PBXBuildFile; productRef = 2E1A9E14286A95FC00EA2BA2 /* DynamicColor */; };
 		2E3C5B77286BE42F00341101 /* SavedEvent+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E3C5B75286BE42F00341101 /* SavedEvent+CoreDataClass.swift */; };
 		2E3C5B78286BE42F00341101 /* SavedEvent+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E3C5B76286BE42F00341101 /* SavedEvent+CoreDataProperties.swift */; };
 		2E7B4D25286A981D00A9BE57 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E7B4D24286A981D00A9BE57 /* Event.swift */; };
@@ -53,7 +52,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2E1A9E15286A95FC00EA2BA2 /* DynamicColor in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -164,7 +162,6 @@
 			);
 			name = CounterKit;
 			packageProductDependencies = (
-				2E1A9E14286A95FC00EA2BA2 /* DynamicColor */,
 			);
 			productName = CounterKit;
 			productReference = 2E1A9DB6286A919A00EA2BA2 /* CounterKit.framework */;
@@ -404,6 +401,7 @@
 		2E1A9DCB286A919A00EA2BA2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -440,6 +438,7 @@
 		2E1A9DCC286A919A00EA2BA2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -557,14 +556,6 @@
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		2E1A9E14286A95FC00EA2BA2 /* DynamicColor */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 2E1A9E13286A95FC00EA2BA2 /* XCRemoteSwiftPackageReference "DynamicColor" */;
-			productName = DynamicColor;
-		};
-/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		2EBBD244286A9FDB00477E14 /* CounterDownModel.xcdatamodeld */ = {
