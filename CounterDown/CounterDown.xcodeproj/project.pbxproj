@@ -195,7 +195,6 @@
 		2E1A6E162860379400D91FBA /* CounterDownWidget */ = {
 			isa = PBXGroup;
 			children = (
-				2E8D55032861143500852B4D /* CounterDownWidgetExtension.entitlements */,
 				2E1A6E172860379400D91FBA /* CounterDownWidget.swift */,
 				2E1A6E32286037EF00D91FBA /* DynamicEventSelection.intentdefinition */,
 				2EAE125D286280F400755BAF /* WidgetViews */,
@@ -234,6 +233,7 @@
 		2E62474A2840404B00BB2A48 = {
 			isa = PBXGroup;
 			children = (
+				2E8D55032861143500852B4D /* CounterDownWidgetExtension.entitlements */,
 				2E6247552840404B00BB2A48 /* CounterDown */,
 				2E1A6E162860379400D91FBA /* CounterDownWidget */,
 				2E1A6E28286037C400D91FBA /* CounterDownIntentHandler */,
