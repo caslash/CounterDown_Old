@@ -404,7 +404,6 @@
 				2E6247512840404B00BB2A48 /* Resources */,
 				2EEE4E992841DBEC0041A0C8 /* Embed Foundation Extensions */,
 				2E3C5B9B286BE59400341101 /* Embed Frameworks */,
-				2E3C5BBE286D242000341101 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -492,27 +491,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		2E3C5BBE286D242000341101 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			alwaysOutOfDate = 1;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "cd \"${CODESIGNING_FOLDER_PATH}\"\nfind ./PlugIns -type d -name Frameworks | xargs rm -rf\nfi\n";
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		2E1A6E0F2860379400D91FBA /* Sources */ = {
