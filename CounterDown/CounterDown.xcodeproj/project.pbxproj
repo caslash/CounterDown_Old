@@ -16,14 +16,11 @@
 		2E1A6E33286037EF00D91FBA /* DynamicEventSelection.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 2E1A6E32286037EF00D91FBA /* DynamicEventSelection.intentdefinition */; };
 		2E1A6E34286037EF00D91FBA /* DynamicEventSelection.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 2E1A6E32286037EF00D91FBA /* DynamicEventSelection.intentdefinition */; };
 		2E1A9E01286A946A00EA2BA2 /* Intents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E843FE92841E73B00BBA183 /* Intents.framework */; };
-		2E1A9E02286A946A00EA2BA2 /* Intents.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2E843FE92841E73B00BBA183 /* Intents.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		2E1A9E03286A946F00EA2BA2 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EEE4E8B2841DBEB0041A0C8 /* SwiftUI.framework */; };
-		2E1A9E04286A946F00EA2BA2 /* SwiftUI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2EEE4E8B2841DBEB0041A0C8 /* SwiftUI.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		2E1A9E05286A947100EA2BA2 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EEE4E892841DBEB0041A0C8 /* WidgetKit.framework */; };
 		2E31B6E228603FDD00AB086F /* SFSymbolsFinder in Frameworks */ = {isa = PBXBuildFile; productRef = 2E31B6E128603FDD00AB086F /* SFSymbolsFinder */; };
 		2E3C5B99286BE59400341101 /* CounterKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E3C5B92286BE54F00341101 /* CounterKit.framework */; };
 		2E3C5B9A286BE59400341101 /* CounterKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2E3C5B92286BE54F00341101 /* CounterKit.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		2E3C5BBD286D238700341101 /* WidgetKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2EEE4E892841DBEB0041A0C8 /* WidgetKit.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		2E6247572840404B00BB2A48 /* CountdownApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6247562840404B00BB2A48 /* CountdownApp.swift */; };
 		2E6247592840404B00BB2A48 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6247582840404B00BB2A48 /* ContentView.swift */; };
 		2E62475B2840404C00BB2A48 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E62475A2840404C00BB2A48 /* Assets.xcassets */; };
@@ -68,29 +65,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		2E1A9DFC286A945F00EA2BA2 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				2E3C5BBD286D238700341101 /* WidgetKit.framework in Embed Frameworks */,
-				2E1A9E04286A946F00EA2BA2 /* SwiftUI.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		2E1A9E00286A946400EA2BA2 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				2E1A9E02286A946A00EA2BA2 /* Intents.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		2E3C5B9B286BE59400341101 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -358,7 +332,6 @@
 				2E1A6E0F2860379400D91FBA /* Sources */,
 				2E1A6E102860379400D91FBA /* Frameworks */,
 				2E1A6E112860379400D91FBA /* Resources */,
-				2E1A9DFC286A945F00EA2BA2 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -380,7 +353,6 @@
 				2E1A6E22286037C400D91FBA /* Sources */,
 				2E1A6E23286037C400D91FBA /* Frameworks */,
 				2E1A6E24286037C400D91FBA /* Resources */,
-				2E1A9E00286A946400EA2BA2 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
