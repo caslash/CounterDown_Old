@@ -23,6 +23,7 @@
 		2E31B6E228603FDD00AB086F /* SFSymbolsFinder in Frameworks */ = {isa = PBXBuildFile; productRef = 2E31B6E128603FDD00AB086F /* SFSymbolsFinder */; };
 		2E3C5B99286BE59400341101 /* CounterKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E3C5B92286BE54F00341101 /* CounterKit.framework */; };
 		2E3C5B9A286BE59400341101 /* CounterKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2E3C5B92286BE54F00341101 /* CounterKit.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		2E3C5BBD286D238700341101 /* WidgetKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2EEE4E892841DBEB0041A0C8 /* WidgetKit.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		2E6247572840404B00BB2A48 /* CountdownApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6247562840404B00BB2A48 /* CountdownApp.swift */; };
 		2E6247592840404B00BB2A48 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6247582840404B00BB2A48 /* ContentView.swift */; };
 		2E62475B2840404C00BB2A48 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E62475A2840404C00BB2A48 /* Assets.xcassets */; };
@@ -73,6 +74,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				2E3C5BBD286D238700341101 /* WidgetKit.framework in Embed Frameworks */,
 				2E1A9E04286A946F00EA2BA2 /* SwiftUI.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -402,6 +404,7 @@
 				2E6247512840404B00BB2A48 /* Resources */,
 				2EEE4E992841DBEC0041A0C8 /* Embed Foundation Extensions */,
 				2E3C5B9B286BE59400341101 /* Embed Frameworks */,
+				2E3C5BBE286D242000341101 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -489,6 +492,26 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2E3C5BBE286D242000341101 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "cd \"${CONFIGURATION_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/\"\nif [[ -d \"Frameworks\" ]]; then \n    rm -fr Frameworks\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		2E1A6E0F2860379400D91FBA /* Sources */ = {
