@@ -509,7 +509,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "cd \"${CONFIGURATION_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/\"\nif [[ -d \"Frameworks\" ]]; then \n    rm -fr Frameworks\nfi\n";
+			shellScript = "cd \"${CODESIGNING_FOLDER_PATH}\"\nfind ./PlugIns -type d -name Frameworks | xargs rm -rf\nfi\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
