@@ -16,12 +16,9 @@ public struct Event: Codable, Identifiable {
     public var components: Set<Calendar.Component>
     
     public static func eventFromId(_ id: UUID) -> Event? {
-        let userdefaults = UserDefaults(suiteName: "group.Cameron.Slash.CounterDown")!
-        if let savedevents = userdefaults.data(forKey: "saved_events") {
-            if let events = try? JSONDecoder().decode([Event].self, from: savedevents) {
-                if let event = events.first(where: { $0.id == id }) {
-                    return event
-                }
+        if let savedEvents = try? DataController.shared.container.viewContext.fetch(SavedEvent.fetchRequest()) {
+            if let savedEvent = savedEvents.first(where: { $0.wrappedId == id }) {
+                return savedEvent.wrappedEvent
             }
         }
         return nil

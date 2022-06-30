@@ -9,7 +9,6 @@ import CounterKit
 import Intents
 
 class IntentHandler: INExtension, DynamicEventSelectionIntentHandling {
-    let userdefaults = UserDefaults(suiteName: "group.Cameron.Slash.CounterDown")!
     
     func provideEventOptionsCollection(for intent: DynamicEventSelectionIntent, with completion: @escaping (INObjectCollection<CountdownEvent>?, Error?) -> Void) {
         let moc = DataController.shared.container.viewContext
