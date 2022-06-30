@@ -20,7 +20,6 @@
 		2E1A9E03286A946F00EA2BA2 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EEE4E8B2841DBEB0041A0C8 /* SwiftUI.framework */; };
 		2E1A9E04286A946F00EA2BA2 /* SwiftUI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2EEE4E8B2841DBEB0041A0C8 /* SwiftUI.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		2E1A9E05286A947100EA2BA2 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EEE4E892841DBEB0041A0C8 /* WidgetKit.framework */; };
-		2E1A9E06286A947100EA2BA2 /* WidgetKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2EEE4E892841DBEB0041A0C8 /* WidgetKit.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		2E31B6E228603FDD00AB086F /* SFSymbolsFinder in Frameworks */ = {isa = PBXBuildFile; productRef = 2E31B6E128603FDD00AB086F /* SFSymbolsFinder */; };
 		2E3C5B99286BE59400341101 /* CounterKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E3C5B92286BE54F00341101 /* CounterKit.framework */; };
 		2E3C5B9A286BE59400341101 /* CounterKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2E3C5B92286BE54F00341101 /* CounterKit.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -75,7 +74,6 @@
 			dstSubfolderSpec = 10;
 			files = (
 				2E1A9E04286A946F00EA2BA2 /* SwiftUI.framework in Embed Frameworks */,
-				2E1A9E06286A947100EA2BA2 /* WidgetKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
