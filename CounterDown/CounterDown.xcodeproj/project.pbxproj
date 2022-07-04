@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2E0AC7C428411EC1002666D7 /* ComponentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0AC7C328411EC1002666D7 /* ComponentView.swift */; };
 		2E1A6E182860379400D91FBA /* CounterDownWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1A6E172860379400D91FBA /* CounterDownWidget.swift */; };
 		2E1A6E1A2860379500D91FBA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E1A6E192860379500D91FBA /* Assets.xcassets */; };
 		2E1A6E1E2860379500D91FBA /* CounterDownWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 2E1A6E132860379400D91FBA /* CounterDownWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -29,7 +28,6 @@
 		2E62475E2840404C00BB2A48 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E62475D2840404C00BB2A48 /* Preview Assets.xcassets */; };
 		2E6247842840408200BB2A48 /* AddEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6247832840408200BB2A48 /* AddEventView.swift */; };
 		2E6247862840409800BB2A48 /* AddEvent_ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6247852840409800BB2A48 /* AddEvent_ViewModel.swift */; };
-		2E6247892840415E00BB2A48 /* EventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6247882840415E00BB2A48 /* EventView.swift */; };
 		2E62478B2840417D00BB2A48 /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E62478A2840417D00BB2A48 /* ModelData.swift */; };
 		2E6247922840462F00BB2A48 /* Event_ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6247912840462F00BB2A48 /* Event_ViewModel.swift */; };
 		2E6D2D7F2865587C006DF9F7 /* DispatchQueue+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6D2D7E2865587C006DF9F7 /* DispatchQueue+Extension.swift */; };
@@ -93,7 +91,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		2E0AC7C328411EC1002666D7 /* ComponentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComponentView.swift; sourceTree = "<group>"; };
 		2E1A6E132860379400D91FBA /* CounterDownWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = CounterDownWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E1A6E172860379400D91FBA /* CounterDownWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterDownWidget.swift; sourceTree = "<group>"; };
 		2E1A6E192860379500D91FBA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -116,7 +113,6 @@
 		2E62475D2840404C00BB2A48 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		2E6247832840408200BB2A48 /* AddEventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEventView.swift; sourceTree = "<group>"; };
 		2E6247852840409800BB2A48 /* AddEvent_ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEvent_ViewModel.swift; sourceTree = "<group>"; };
-		2E6247882840415E00BB2A48 /* EventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventView.swift; sourceTree = "<group>"; };
 		2E62478A2840417D00BB2A48 /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
 		2E6247912840462F00BB2A48 /* Event_ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event_ViewModel.swift; sourceTree = "<group>"; };
 		2E6D2D7E2865587C006DF9F7 /* DispatchQueue+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DispatchQueue+Extension.swift"; sourceTree = "<group>"; };
@@ -282,7 +278,6 @@
 			children = (
 				2E62478A2840417D00BB2A48 /* ModelData.swift */,
 				2E58E73A284108A700E278EB /* Resources */,
-				2E62478C284041A300BB2A48 /* Objects */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -290,19 +285,10 @@
 		2E6247872840414A00BB2A48 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				2E6247882840415E00BB2A48 /* EventView.swift */,
-				2E0AC7C328411EC1002666D7 /* ComponentView.swift */,
 				2E3322892872787400D74706 /* GradientEventView.swift */,
 				2E33228B28727AE200D74706 /* FlatEventView.swift */,
 			);
 			path = Components;
-			sourceTree = "<group>";
-		};
-		2E62478C284041A300BB2A48 /* Objects */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Objects;
 			sourceTree = "<group>";
 		};
 		2EAE125D286280F400755BAF /* WidgetViews */ = {
@@ -507,8 +493,6 @@
 				2E6247862840409800BB2A48 /* AddEvent_ViewModel.swift in Sources */,
 				2E87A1952847014000AD3624 /* CalendarChooser.swift in Sources */,
 				2E6247842840408200BB2A48 /* AddEventView.swift in Sources */,
-				2E6247892840415E00BB2A48 /* EventView.swift in Sources */,
-				2E0AC7C428411EC1002666D7 /* ComponentView.swift in Sources */,
 				2E6247922840462F00BB2A48 /* Event_ViewModel.swift in Sources */,
 				2E62478B2840417D00BB2A48 /* ModelData.swift in Sources */,
 				2E33228A2872787400D74706 /* GradientEventView.swift in Sources */,
