@@ -39,16 +39,16 @@ class AddEventViewModel: ObservableObject {
     }
     
     func getCalendarEvents() -> [EKEvent]? {
-        if modeldata.calendarAccessGranted {
+        if self.modeldata.calendarAccessGranted && !self.modeldata.userSelectedCalendars.isEmpty {
             let today = Date()
             var dateComponents = DateComponents()
             dateComponents.year = 1
             
-            let predicate = modeldata.ekstore.predicateForEvents(withStart: today, end: Calendar.current.date(byAdding: dateComponents, to: today)!, calendars: Array(modeldata.userSelectedCalendars))
+            let predicate = self.modeldata.ekstore.predicateForEvents(withStart: today, end: Calendar.current.date(byAdding: dateComponents, to: today)!, calendars: Array(modeldata.userSelectedCalendars))
             
-            return modeldata.ekstore.events(matching: predicate)
+            return self.modeldata.ekstore.events(matching: predicate)
         }
         
-        return nil
+        return []
     }
 }

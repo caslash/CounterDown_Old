@@ -12,7 +12,7 @@ import SwiftUI
 struct EditEventView: View {
     @Environment(\.presentationMode) private var presentationMode
     @EnvironmentObject var modeldata: ModelData
-    @ObservedObject var viewmodel: EditEventViewModel
+    @StateObject var viewmodel: EditEventViewModel
     var body: some View {
         NavigationView {
             Form {
@@ -52,7 +52,7 @@ struct EditEventView: View {
     }
     
     init(_ event: Event) {
-        self.viewmodel = EditEventViewModel(event)
+        _viewmodel = StateObject(wrappedValue: EditEventViewModel(event))
     }
 }
 

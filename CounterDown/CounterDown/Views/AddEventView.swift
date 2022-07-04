@@ -12,7 +12,7 @@ import SwiftUI
 struct AddEventView: View {
     @Environment(\.presentationMode) private var presentationMode
     @EnvironmentObject var modeldata: ModelData
-    @ObservedObject var viewmodel = AddEventViewModel()
+    @StateObject var viewmodel = AddEventViewModel()
     
     var body: some View {
         NavigationView {
@@ -29,18 +29,20 @@ struct AddEventView: View {
                     Toggle("Show Months", isOn: $viewmodel.includeMonth)
                 }
                 
-                Section(header: Text("Select Event From Calendar")) {
-                    ForEach(viewmodel.calendarEvents, id: \.eventIdentifier) { event in
-                        Button {
-                            viewmodel.name = event.title
-                            viewmodel.due = event.startDate
-                        } label: {
-                            HStack {
-                                if viewmodel.name == event.title && viewmodel.due == event.startDate {
-                                    Image(systemName: .checkmark)
+                if !self.viewmodel.calendarEvents.isEmpty {
+                    Section(header: Text("Select Event From Calendar")) {
+                        ForEach(viewmodel.calendarEvents, id: \.eventIdentifier) { event in
+                            Button {
+                                viewmodel.name = event.title
+                                viewmodel.due = event.startDate
+                            } label: {
+                                HStack {
+                                    if viewmodel.name == event.title && viewmodel.due == event.startDate {
+                                        Image(systemName: .checkmark)
+                                    }
+                                    
+                                    Text(event.title)
                                 }
-                                
-                                Text(event.title)
                             }
                         }
                     }

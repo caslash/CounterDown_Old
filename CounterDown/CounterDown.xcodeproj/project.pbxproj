@@ -15,10 +15,12 @@
 		2E1A6E2E286037C400D91FBA /* CounterDownIntentHandler.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 2E1A6E26286037C400D91FBA /* CounterDownIntentHandler.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		2E1A6E33286037EF00D91FBA /* DynamicEventSelection.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 2E1A6E32286037EF00D91FBA /* DynamicEventSelection.intentdefinition */; };
 		2E1A6E34286037EF00D91FBA /* DynamicEventSelection.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 2E1A6E32286037EF00D91FBA /* DynamicEventSelection.intentdefinition */; };
-		2E1A9E01286A946A00EA2BA2 /* Intents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E843FE92841E73B00BBA183 /* Intents.framework */; };
 		2E1A9E03286A946F00EA2BA2 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EEE4E8B2841DBEB0041A0C8 /* SwiftUI.framework */; };
 		2E1A9E05286A947100EA2BA2 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EEE4E892841DBEB0041A0C8 /* WidgetKit.framework */; };
 		2E31B6E228603FDD00AB086F /* SFSymbolsFinder in Frameworks */ = {isa = PBXBuildFile; productRef = 2E31B6E128603FDD00AB086F /* SFSymbolsFinder */; };
+		2E3322862872783E00D74706 /* Intents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E843FE92841E73B00BBA183 /* Intents.framework */; };
+		2E33228A2872787400D74706 /* GradientEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E3322892872787400D74706 /* GradientEventView.swift */; };
+		2E33228C28727AE200D74706 /* FlatEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E33228B28727AE200D74706 /* FlatEventView.swift */; };
 		2E3C5B99286BE59400341101 /* CounterKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E3C5B92286BE54F00341101 /* CounterKit.framework */; };
 		2E3C5B9A286BE59400341101 /* CounterKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2E3C5B92286BE54F00341101 /* CounterKit.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		2E6247572840404B00BB2A48 /* CountdownApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6247562840404B00BB2A48 /* CountdownApp.swift */; };
@@ -102,6 +104,8 @@
 		2E1A6E32286037EF00D91FBA /* DynamicEventSelection.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = DynamicEventSelection.intentdefinition; sourceTree = "<group>"; };
 		2E31B6E5286042B300AB086F /* CounterDownIntentHandler.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CounterDownIntentHandler.entitlements; sourceTree = "<group>"; };
 		2E31B6E6286042E300AB086F /* CounterDown.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CounterDown.entitlements; sourceTree = "<group>"; };
+		2E3322892872787400D74706 /* GradientEventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientEventView.swift; sourceTree = "<group>"; };
+		2E33228B28727AE200D74706 /* FlatEventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlatEventView.swift; sourceTree = "<group>"; };
 		2E3C5B8F286BE4F700341101 /* CounterKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CounterKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E3C5B92286BE54F00341101 /* CounterKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CounterKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E3C5B96286BE55900341101 /* CounterKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CounterKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -147,8 +151,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E3322862872783E00D74706 /* Intents.framework in Frameworks */,
 				2EC61D9B2860BFB80018EEDF /* DynamicColor in Frameworks */,
-				2E1A9E01286A946A00EA2BA2 /* Intents.framework in Frameworks */,
 				2EC61D992860BFB80018EEDF /* SFSymbolsFinder in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -288,6 +292,8 @@
 			children = (
 				2E6247882840415E00BB2A48 /* EventView.swift */,
 				2E0AC7C328411EC1002666D7 /* ComponentView.swift */,
+				2E3322892872787400D74706 /* GradientEventView.swift */,
+				2E33228B28727AE200D74706 /* FlatEventView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -493,6 +499,7 @@
 			files = (
 				2E87A1912846D18600AD3624 /* SettingsView.swift in Sources */,
 				2E9AE09B285D781C00C1EBCF /* EditEvent_ViewModel.swift in Sources */,
+				2E33228C28727AE200D74706 /* FlatEventView.swift in Sources */,
 				2E6247592840404B00BB2A48 /* ContentView.swift in Sources */,
 				2E92EAC028417532008E7393 /* Content_ViewModel.swift in Sources */,
 				2E6D2D7F2865587C006DF9F7 /* DispatchQueue+Extension.swift in Sources */,
@@ -504,6 +511,7 @@
 				2E0AC7C428411EC1002666D7 /* ComponentView.swift in Sources */,
 				2E6247922840462F00BB2A48 /* Event_ViewModel.swift in Sources */,
 				2E62478B2840417D00BB2A48 /* ModelData.swift in Sources */,
+				2E33228A2872787400D74706 /* GradientEventView.swift in Sources */,
 				2E9AE099285D780E00C1EBCF /* EditEventView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -539,7 +547,7 @@
 				INFOPLIST_FILE = CounterDownWidget/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = CounterDownWidget;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -570,7 +578,7 @@
 				INFOPLIST_FILE = CounterDownWidget/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = CounterDownWidget;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -589,7 +597,6 @@
 		2E1A6E30286037C400D91FBA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CODE_SIGN_ENTITLEMENTS = CounterDownIntentHandler/CounterDownIntentHandler.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -599,7 +606,7 @@
 				INFOPLIST_FILE = CounterDownIntentHandler/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = CounterDownIntentHandler;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -618,7 +625,6 @@
 		2E1A6E31286037C400D91FBA /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CODE_SIGN_ENTITLEMENTS = CounterDownIntentHandler/CounterDownIntentHandler.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -628,7 +634,7 @@
 				INFOPLIST_FILE = CounterDownIntentHandler/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = CounterDownIntentHandler;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -695,7 +701,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -750,7 +756,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -783,7 +789,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -822,7 +828,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
