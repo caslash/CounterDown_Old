@@ -23,31 +23,6 @@ struct ContentView: View {
             ScrollView(showsIndicators: false) {
                 VStack {
                     ForEach(self.events, id: \.id) { event in
-//                        EventView(event: event.wrappedEvent, now: self.viewmodel.now)
-//                            .contextMenu {
-//                                if #available(iOS 15.0, *) {
-//                                    Button(role: .cancel) {
-//                                        self.eventToEdit = event.wrappedEvent
-//                                        self.showingEditSheet = true
-//                                    } label: {
-//                                        Label("Edit", systemImage: "pencil")
-//                                    }
-//
-//                                    Button(role: .destructive) {
-//                                        self.modeldata.deleteEvent(uuid: event.wrappedId)
-//                                        self.modeldata.saveMoc()
-//                                    } label: {
-//                                        Label("Delete", systemImage: "trash")
-//                                    }
-//                                } else {
-//                                    Button {
-//                                        self.modeldata.deleteEvent(uuid: event.wrappedId)
-//                                        self.modeldata.saveMoc()
-//                                    } label: {
-//                                        Label("Delete", systemImage: "trash")
-//                                    }
-//                                }
-//                            }
                         if #available(iOS 16.0, *) {
                             GradientEventView(event: event.wrappedEvent)
                         } else {
@@ -111,5 +86,6 @@ struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
             .environmentObject(ModelData.shared)
+            .environment(\.managedObjectContext, DataController.preview.container.viewContext)
     }
 }

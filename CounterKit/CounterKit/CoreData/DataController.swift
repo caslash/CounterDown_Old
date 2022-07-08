@@ -7,15 +7,25 @@
 
 import CoreData
 import Foundation
+import UIKit
 
 public class DataController: ObservableObject {
     public static var shared = DataController()
-    
-    static let preview: DataController = {
-        DataController()
+    public static let preview: DataController = {
+        let dataController = DataController(inMemory: true)
+        
+        do {
+            try dataController.createSampleData()
+        } catch {
+            fatalError("Could not create preview: \(error.localizedDescription)")
+        }
+        
+        return dataController
     }()
     
-    public lazy var container: NSPersistentCloudKitContainer = {
+    public let container: NSPersistentCloudKitContainer
+    
+    init(inMemory: Bool = false) {
         let momdName = "CounterDownModel"
         
         guard let modelURL = Bundle(for: type(of: self)).url(forResource: momdName, withExtension: "momd") else {
@@ -26,29 +36,68 @@ public class DataController: ObservableObject {
             fatalError("Error initializing mom from: \(modelURL)")
         }
         
-        var container = NSPersistentCloudKitContainer(name: "CounterDownModel", managedObjectModel: mom)
+        let container = NSPersistentCloudKitContainer(name: "CounterDownModel", managedObjectModel: mom)
         
-        guard let description = container.persistentStoreDescriptions.first else {
-            fatalError("No Descriptions Found")
+        if !inMemory {
+            guard let description = container.persistentStoreDescriptions.first else {
+                fatalError("No Descriptions Found")
+            }
+            description.setOption(true as NSObject, forKey: NSPersistentStoreRemoteChangeNotificationPostOptionKey)
+            
+            description.cloudKitContainerOptions = NSPersistentCloudKitContainerOptions(containerIdentifier: "iCloud.Cameron.Slash.CounterDown")
+        } else {
+            container.persistentStoreDescriptions.first?.url = URL(fileURLWithPath: "/dev/null")
         }
-        description.setOption(true as NSObject, forKey: NSPersistentStoreRemoteChangeNotificationPostOptionKey)
-        
-        description.cloudKitContainerOptions = NSPersistentCloudKitContainerOptions(containerIdentifier: "iCloud.Cameron.Slash.CounterDown")
-        
+
         container.loadPersistentStores { description, error in
             if let error = error {
                 print("Core Data failed to load: \(error.localizedDescription)")
                 return
             }
         }
-        
+
         container.viewContext.automaticallyMergesChangesFromParent = true
         container.viewContext.mergePolicy = NSMergeByPropertyObjectTrumpMergePolicy
         
+        self.container = container
+
         NotificationCenter.default.addObserver(self, selector: #selector(self.processUpdate), name: .NSPersistentStoreRemoteChange, object: nil)
-        
-        return container
-    }()
+    }
+    
+//    public lazy var container: NSPersistentCloudKitContainer = {
+//        let momdName = "CounterDownModel"
+//
+//        guard let modelURL = Bundle(for: type(of: self)).url(forResource: momdName, withExtension: "momd") else {
+//            fatalError("Error loading model from bundle")
+//        }
+//
+//        guard let mom = NSManagedObjectModel(contentsOf: modelURL) else {
+//            fatalError("Error initializing mom from: \(modelURL)")
+//        }
+//
+//        var container = NSPersistentCloudKitContainer(name: "CounterDownModel", managedObjectModel: mom)
+//
+//        guard let description = container.persistentStoreDescriptions.first else {
+//            fatalError("No Descriptions Found")
+//        }
+//        description.setOption(true as NSObject, forKey: NSPersistentStoreRemoteChangeNotificationPostOptionKey)
+//
+//        description.cloudKitContainerOptions = NSPersistentCloudKitContainerOptions(containerIdentifier: "iCloud.Cameron.Slash.CounterDown")
+//
+//        container.loadPersistentStores { description, error in
+//            if let error = error {
+//                print("Core Data failed to load: \(error.localizedDescription)")
+//                return
+//            }
+//        }
+//
+//        container.viewContext.automaticallyMergesChangesFromParent = true
+//        container.viewContext.mergePolicy = NSMergeByPropertyObjectTrumpMergePolicy
+//
+//        NotificationCenter.default.addObserver(self, selector: #selector(self.processUpdate), name: .NSPersistentStoreRemoteChange, object: nil)
+//
+//        return container
+//    }()
     
     public func saveContext() {
         let context = container.viewContext
@@ -96,5 +145,22 @@ public class DataController: ObservableObject {
         queue.maxConcurrentOperationCount = 1
         return queue
     }()
+    
+    func createSampleData() throws {
+        let viewContext = self.container.viewContext
+        
+        let components: Set<Calendar.Component> = [.day, .hour, .minute, .second]
+        
+        for i in 1...5 {
+            let event = SavedEvent(context: viewContext)
+            event.id = UUID()
+            event.name = "Event \(i)"
+            event.due = Calendar.current.date(byAdding: .day, value: Int.random(in: 10..<365), to: Date())
+            event.colorHex = UIColor(red: CGFloat(Int.random(in: 1..<255)), green: CGFloat(Int.random(in: 1..<255)), blue: CGFloat(Int.random(in: 1..<255)), alpha: 1).toHexString()
+            event.components = try JSONEncoder().encode(components)
+        }
+        
+        try viewContext.save()
+    }
 }
 
