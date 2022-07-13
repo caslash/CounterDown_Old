@@ -30,9 +30,6 @@
 		2E6247862840409800BB2A48 /* AddEvent_ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6247852840409800BB2A48 /* AddEvent_ViewModel.swift */; };
 		2E62478B2840417D00BB2A48 /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E62478A2840417D00BB2A48 /* ModelData.swift */; };
 		2E6247922840462F00BB2A48 /* Event_ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6247912840462F00BB2A48 /* Event_ViewModel.swift */; };
-		2E6D2D7F2865587C006DF9F7 /* DispatchQueue+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6D2D7E2865587C006DF9F7 /* DispatchQueue+Extension.swift */; };
-		2E6D2D802865591B006DF9F7 /* DispatchQueue+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6D2D7E2865587C006DF9F7 /* DispatchQueue+Extension.swift */; };
-		2E6D2D812865591B006DF9F7 /* DispatchQueue+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6D2D7E2865587C006DF9F7 /* DispatchQueue+Extension.swift */; };
 		2E7B4D40286A9BFF00A9BE57 /* DynamicColor in Frameworks */ = {isa = PBXBuildFile; productRef = 2E7B4D3F286A9BFF00A9BE57 /* DynamicColor */; };
 		2E7B4D42286A9C0500A9BE57 /* DynamicColor in Frameworks */ = {isa = PBXBuildFile; productRef = 2E7B4D41286A9C0500A9BE57 /* DynamicColor */; };
 		2E7BAD5E285E7E5A001F0505 /* SFSymbolsFinder in Frameworks */ = {isa = PBXBuildFile; productRef = 2E7BAD5D285E7E5A001F0505 /* SFSymbolsFinder */; };
@@ -115,7 +112,6 @@
 		2E6247852840409800BB2A48 /* AddEvent_ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEvent_ViewModel.swift; sourceTree = "<group>"; };
 		2E62478A2840417D00BB2A48 /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
 		2E6247912840462F00BB2A48 /* Event_ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event_ViewModel.swift; sourceTree = "<group>"; };
-		2E6D2D7E2865587C006DF9F7 /* DispatchQueue+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DispatchQueue+Extension.swift"; sourceTree = "<group>"; };
 		2E843FE92841E73B00BBA183 /* Intents.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Intents.framework; path = System/Library/Frameworks/Intents.framework; sourceTree = SDKROOT; };
 		2E843FF42841E73B00BBA183 /* IntentsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IntentsUI.framework; path = System/Library/Frameworks/IntentsUI.framework; sourceTree = SDKROOT; };
 		2E87A1902846D18600AD3624 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
@@ -186,22 +182,6 @@
 				2E1A6E2B286037C400D91FBA /* Info.plist */,
 			);
 			path = CounterDownIntentHandler;
-			sourceTree = "<group>";
-		};
-		2E58E73A284108A700E278EB /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				2E58E73E284108FF00E278EB /* Extensions */,
-			);
-			path = Resources;
-			sourceTree = "<group>";
-		};
-		2E58E73E284108FF00E278EB /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				2E6D2D7E2865587C006DF9F7 /* DispatchQueue+Extension.swift */,
-			);
-			path = Extensions;
 			sourceTree = "<group>";
 		};
 		2E62474A2840404B00BB2A48 = {
@@ -277,7 +257,6 @@
 			isa = PBXGroup;
 			children = (
 				2E62478A2840417D00BB2A48 /* ModelData.swift */,
-				2E58E73A284108A700E278EB /* Resources */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -461,7 +440,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2E6D2D802865591B006DF9F7 /* DispatchQueue+Extension.swift in Sources */,
 				2E1A6E33286037EF00D91FBA /* DynamicEventSelection.intentdefinition in Sources */,
 				2E1A6E182860379400D91FBA /* CounterDownWidget.swift in Sources */,
 				2EAE12582862739000755BAF /* AccessoryRectangularCounterDownWidget.swift in Sources */,
@@ -473,7 +451,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2E6D2D812865591B006DF9F7 /* DispatchQueue+Extension.swift in Sources */,
 				2E1A6E34286037EF00D91FBA /* DynamicEventSelection.intentdefinition in Sources */,
 				2E1A6E2A286037C400D91FBA /* IntentHandler.swift in Sources */,
 			);
@@ -488,7 +465,6 @@
 				2E33228C28727AE200D74706 /* FlatEventView.swift in Sources */,
 				2E6247592840404B00BB2A48 /* ContentView.swift in Sources */,
 				2E92EAC028417532008E7393 /* Content_ViewModel.swift in Sources */,
-				2E6D2D7F2865587C006DF9F7 /* DispatchQueue+Extension.swift in Sources */,
 				2E6247572840404B00BB2A48 /* CountdownApp.swift in Sources */,
 				2E6247862840409800BB2A48 /* AddEvent_ViewModel.swift in Sources */,
 				2E87A1952847014000AD3624 /* CalendarChooser.swift in Sources */,

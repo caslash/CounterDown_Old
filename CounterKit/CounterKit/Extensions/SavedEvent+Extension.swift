@@ -22,6 +22,8 @@ extension SavedEvent: Comparable {
         event.due = Date(timeIntervalSince1970: 1672549200)
         event.colorHex = UIColor(.green).toHexString()
         event.components = try? JSONEncoder().encode(components)
+        event.isRecurring = true
+        event.recurrenceInterval = Int16(RecurrenceInterval.yearly.rawValue)
         
         return event
     }
@@ -63,6 +65,9 @@ extension SavedEvent: Comparable {
             }
         }
         return Set([.day, .hour, .minute, .second])
+    }
+    public var eventRecurrenceInterval: RecurrenceInterval {
+        RecurrenceInterval(rawValue: Int(recurrenceInterval)) ?? .none
     }
     
     public static func eventFromId(_ id: UUID) -> SavedEvent? {

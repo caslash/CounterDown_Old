@@ -16,6 +16,8 @@ class EditEventViewModel: ObservableObject {
     @Published var due: Date
     @Published var color: Color
     @Published var components: Set<Calendar.Component>
+    @Published var isRecurring: Bool
+    @Published var recurrenceInterval: RecurrenceInterval
     @Published var includeYear: Bool
     @Published var includeMonth: Bool
 
@@ -25,6 +27,8 @@ class EditEventViewModel: ObservableObject {
         self.due = event.eventDueDate
         self.color = event.eventColor
         self.components = event.eventComponents
+        self.isRecurring = event.isRecurring
+        self.recurrenceInterval = event.eventRecurrenceInterval
         self.includeYear = event.eventComponents.contains(.year)
         self.includeMonth = event.eventComponents.contains(.month)
     }
@@ -47,5 +51,11 @@ class EditEventViewModel: ObservableObject {
         self.event.due = self.due
         self.event.colorHex = UIColor(self.color).toHexString()
         self.event.components = try? JSONEncoder().encode(self.components)
+        self.event.isRecurring = self.isRecurring
+        if self.isRecurring {
+            self.event.recurrenceInterval = Int16(self.recurrenceInterval.rawValue)
+        } else {
+            self.event.recurrenceInterval = -1
+        }
     }
 }

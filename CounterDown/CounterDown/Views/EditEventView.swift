@@ -16,15 +16,25 @@ struct EditEventView: View {
     var body: some View {
         NavigationView {
             Form {
-                TextField("Event Name", text: $viewmodel.name)
+                TextField("Event Name", text: self.$viewmodel.name)
                 
-                DatePicker("Event Date", selection: $viewmodel.due)
+                DatePicker("Event Date", selection: self.$viewmodel.due)
                 
-                ColorPicker("Event Color", selection: $viewmodel.color)
+                ColorPicker("Event Color", selection: self.$viewmodel.color)
                 
-                Toggle("Show Years", isOn: $viewmodel.includeYear)
+                Toggle("Show Years", isOn: self.$viewmodel.includeYear)
                 
-                Toggle("Show Months", isOn: $viewmodel.includeMonth)
+                Toggle("Show Months", isOn: self.$viewmodel.includeMonth)
+                
+                Toggle("Is This Event Recurring?", isOn: self.$viewmodel.isRecurring)
+                
+                if self.viewmodel.isRecurring {
+                    Picker("Repeat", selection: self.$viewmodel.recurrenceInterval) {
+                        ForEach(RecurrenceInterval.allCases.dropFirst(), id: \.self) { interval in
+                            Text("\(interval.displayName)")
+                        }
+                    }
+                }
             }
             .navigationTitle("Edit Event")
             .toolbar {
@@ -47,7 +57,7 @@ struct EditEventView: View {
                     }
                 }
             }
-            .accentColor(modeldata.accentcolor)
+            .accentColor(self.modeldata.accentcolor)
         }
     }
     
@@ -59,5 +69,6 @@ struct EditEventView: View {
 struct EditEventView_Previews: PreviewProvider {
     static var previews: some View {
         EditEventView(SavedEvent.exampleEvent)
+            .environmentObject(ModelData.shared)
     }
 }
