@@ -15,6 +15,8 @@ class AddEventViewModel: ObservableObject {
     @Published var due: Date = Date()
     @Published var color: Color = ModelData.shared.accentcolor
     @Published var components: Set<Calendar.Component> = [.day, .hour, .minute, .second]
+    @Published var isRecurring: Bool = false
+    @Published var recurrenceInterval: RecurrenceInterval = .none
     @Published var includeYear: Bool = false
     @Published var includeMonth: Bool = false
     
@@ -38,7 +40,12 @@ class AddEventViewModel: ObservableObject {
         newEvent.due = self.due
         newEvent.colorHex = UIColor(self.color).toHexString()
         newEvent.components = try? JSONEncoder().encode(self.components)
-        DataController.shared.save()
+        newEvent.isRecurring = self.isRecurring
+        if self.isRecurring {
+            newEvent.recurrenceInterval = Int16(self.recurrenceInterval.rawValue)
+        } else {
+            newEvent.recurrenceInterval = 0
+        }
     }
     
     func getCalendarEvents() -> [EKEvent]? {

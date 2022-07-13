@@ -11,6 +11,7 @@ import SwiftUI
 
 struct EditEventView: View {
     @Environment(\.presentationMode) private var presentationMode
+    @EnvironmentObject var dataController: DataController
     @EnvironmentObject var modeldata: ModelData
     @StateObject var viewmodel: EditEventViewModel
     var body: some View {
@@ -41,7 +42,7 @@ struct EditEventView: View {
                 ToolbarItem(placement: .primaryAction) {
                     Button {
                         self.viewmodel.updateEvent()
-                        DataController.shared.save()
+                        self.dataController.save()
                         self.presentationMode.wrappedValue.dismiss()
                     } label: {
                         Text("Save")
@@ -69,6 +70,7 @@ struct EditEventView: View {
 struct EditEventView_Previews: PreviewProvider {
     static var previews: some View {
         EditEventView(SavedEvent.exampleEvent)
+            .environmentObject(DataController.preview)
             .environmentObject(ModelData.shared)
     }
 }

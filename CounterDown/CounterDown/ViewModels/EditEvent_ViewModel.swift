@@ -55,7 +55,7 @@ class EditEventViewModel: ObservableObject {
         if self.isRecurring {
             self.event.recurrenceInterval = Int16(self.recurrenceInterval.rawValue)
         } else {
-            self.event.recurrenceInterval = -1
+            self.event.recurrenceInterval = 0
         }
     }
 }
