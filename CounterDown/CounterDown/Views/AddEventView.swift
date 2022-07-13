@@ -11,6 +11,7 @@ import SwiftUI
 
 struct AddEventView: View {
     @Environment(\.presentationMode) private var presentationMode
+    @EnvironmentObject var dataController: DataController
     @EnvironmentObject var modeldata: ModelData
     @StateObject var viewmodel = AddEventViewModel()
     
@@ -77,5 +78,6 @@ struct AddView_Previews: PreviewProvider {
     static var previews: some View {
         AddEventView()
             .environmentObject(ModelData.shared)
+            .environmentObject(DataController.preview)
     }
 }

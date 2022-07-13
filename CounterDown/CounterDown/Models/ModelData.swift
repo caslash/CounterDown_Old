@@ -14,7 +14,6 @@ import SwiftUI
 class ModelData: ObservableObject {
     static let shared = ModelData()
     let userdefaults = UserDefaults(suiteName: "group.Cameron.Slash.CounterDown")!
-    let moc: NSManagedObjectContext
     let ekstore: EKEventStore
     let jsonEncoder = JSONEncoder()
     let jsonDecoder = JSONDecoder()
@@ -51,7 +50,6 @@ class ModelData: ObservableObject {
     
     init() {
         self.ekstore = EKEventStore()
-        self.moc = DataController.shared.container.viewContext
         
         if let calendar_access_status = self.userdefaults.data(forKey: "calendar_access_status") {
             if let decoded = try? self.jsonDecoder.decode(Bool.self, from: calendar_access_status) {
@@ -82,48 +80,5 @@ class ModelData: ObservableObject {
                 }
             }
         }
-    }
-    
-    func saveMoc() {
-        DataController.shared.saveContext()
-    }
-    
-    func saveEvent(_ event: Event) {
-        let savedEvent = SavedEvent(context: self.moc)
-        savedEvent.id = event.id
-        savedEvent.name = event.name
-        savedEvent.colorHex = UIColor(event.color).toHexString()
-        savedEvent.due = event.due
-        savedEvent.components = try? self.jsonEncoder.encode(event.components)
-        
-    }
-    
-    func deleteEvent(uuid: UUID) {
-        let mocID = self.savedEventFromId(uuid)!.objectID
-        let event = self.moc.object(with: mocID)
-        self.moc.delete(event)
-    }
-    
-    func updateEvent(_ updatedEvent: Event) {
-        let savedevent = self.moc.object(with: self.savedEventFromId(updatedEvent.id)!.objectID)
-        
-        savedevent.setValue(updatedEvent.id, forKey: "id")
-        savedevent.setValue(updatedEvent.name, forKey: "name")
-        savedevent.setValue(updatedEvent.due, forKey: "due")
-        savedevent.setValue(UIColor(updatedEvent.color).toHexString(), forKey: "colorHex")
-        savedevent.setValue(try? self.jsonEncoder.encode(updatedEvent.components), forKey: "components")
-        
-        if savedevent.isUpdated {
-            try? savedevent.validateForUpdate()
-        }
-    }
-    
-    func savedEventFromId(_ id: UUID) -> SavedEvent? {
-        if let savedEvents = try? DataController.shared.container.viewContext.fetch(SavedEvent.fetchRequest()) {
-            if let savedEvent = savedEvents.first(where: { $0.wrappedId == id }) {
-                return savedEvent
-            }
-        }
-        return nil
     }
 }

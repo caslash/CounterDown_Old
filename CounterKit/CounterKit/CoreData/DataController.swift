@@ -64,51 +64,18 @@ public class DataController: ObservableObject {
         NotificationCenter.default.addObserver(self, selector: #selector(self.processUpdate), name: .NSPersistentStoreRemoteChange, object: nil)
     }
     
-//    public lazy var container: NSPersistentCloudKitContainer = {
-//        let momdName = "CounterDownModel"
-//
-//        guard let modelURL = Bundle(for: type(of: self)).url(forResource: momdName, withExtension: "momd") else {
-//            fatalError("Error loading model from bundle")
-//        }
-//
-//        guard let mom = NSManagedObjectModel(contentsOf: modelURL) else {
-//            fatalError("Error initializing mom from: \(modelURL)")
-//        }
-//
-//        var container = NSPersistentCloudKitContainer(name: "CounterDownModel", managedObjectModel: mom)
-//
-//        guard let description = container.persistentStoreDescriptions.first else {
-//            fatalError("No Descriptions Found")
-//        }
-//        description.setOption(true as NSObject, forKey: NSPersistentStoreRemoteChangeNotificationPostOptionKey)
-//
-//        description.cloudKitContainerOptions = NSPersistentCloudKitContainerOptions(containerIdentifier: "iCloud.Cameron.Slash.CounterDown")
-//
-//        container.loadPersistentStores { description, error in
-//            if let error = error {
-//                print("Core Data failed to load: \(error.localizedDescription)")
-//                return
-//            }
-//        }
-//
-//        container.viewContext.automaticallyMergesChangesFromParent = true
-//        container.viewContext.mergePolicy = NSMergeByPropertyObjectTrumpMergePolicy
-//
-//        NotificationCenter.default.addObserver(self, selector: #selector(self.processUpdate), name: .NSPersistentStoreRemoteChange, object: nil)
-//
-//        return container
-//    }()
+    public func save() {
+        if self.container.viewContext.hasChanges { try? self.container.viewContext.save() }
+    }
     
-    public func saveContext() {
-        let context = container.viewContext
-        if context.hasChanges {
-            do {
-                try context.save()
-            } catch {
-                let nserror = error as NSError
-                fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
-            }
-        }
+    public func delete(_ object: NSManagedObject) {
+        self.container.viewContext.delete(object)
+    }
+    
+    public func deleteAll() {
+        let fetchRequest: NSFetchRequest<NSFetchRequestResult> = SavedEvent.fetchRequest()
+        let batchDeleteRequest = NSBatchDeleteRequest(fetchRequest: fetchRequest)
+        _ = try? container.viewContext.execute(batchDeleteRequest)
     }
     
     @objc

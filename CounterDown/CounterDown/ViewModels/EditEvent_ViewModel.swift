@@ -11,9 +11,7 @@ import Foundation
 import SwiftUI
 
 class EditEventViewModel: ObservableObject {
-    @ObservedObject var modeldata = ModelData.shared
-
-    @Published var eventId: UUID
+    @Published var event: SavedEvent
     @Published var name: String
     @Published var due: Date
     @Published var color: Color
@@ -21,30 +19,33 @@ class EditEventViewModel: ObservableObject {
     @Published var includeYear: Bool
     @Published var includeMonth: Bool
 
-    init(_ event: Event) {
-        self.eventId = event.id
-        self.name = event.name
-        self.due = event.due
-        self.color = event.color
-        self.components = event.components
-        self.includeYear = event.components.contains(.year)
-        self.includeMonth = event.components.contains(.month)
+    init(_ event: SavedEvent) {
+        self.event = event
+        self.name = event.eventName
+        self.due = event.eventDueDate
+        self.color = event.eventColor
+        self.components = event.eventComponents
+        self.includeYear = event.eventComponents.contains(.year)
+        self.includeMonth = event.eventComponents.contains(.month)
     }
     
-    func editEvent() {
-        if !includeYear && components.contains(.year) {
-            components.remove(.year)
+    func updateEvent() {
+        self.event.objectWillChange.send()
+        
+        if !self.includeYear && self.components.contains(.year) {
+            self.components.remove(.year)
         } else if includeYear {
-            components.insert(.year)
+            self.components.insert(.year)
         }
-        if !includeMonth && components.contains(.month) {
-            components.remove(.month)
+        if !self.includeMonth && self.components.contains(.month) {
+            self.components.remove(.month)
         } else if includeMonth {
-            components.insert(.month)
+            self.components.insert(.month)
         }
         
-        let updatedEvent = Event(id: self.eventId, name: self.name, due: self.due, color: self.color, components: self.components)
-        self.modeldata.updateEvent(updatedEvent)
-        self.modeldata.saveMoc()
+        self.event.name = self.name
+        self.event.due = self.due
+        self.event.colorHex = UIColor(self.color).toHexString()
+        self.event.components = try? JSONEncoder().encode(self.components)
     }
 }

@@ -14,13 +14,13 @@ import WidgetKit
 struct AccessoryRectangularCounterDownWidget: View {
     var entry: Provider.Entry
     var calendar = Calendar.current
-    var components: DateComponents { calendar.dateComponents([.year, .month, .day, .hour], from: Date(), to: self.entry.event.due) }
-    var eventIsWithinNextYear: Bool { calendar.isDateInNextYear(self.entry.event.due) }
-    var eventIsWithinNextMonth: Bool { calendar.isDateInNextMonth(self.entry.event.due) }
+    var components: DateComponents { calendar.dateComponents([.year, .month, .day, .hour], from: Date(), to: self.entry.event.eventDueDate) }
+    var eventIsWithinNextYear: Bool { calendar.isDateInNextYear(self.entry.event.eventDueDate) }
+    var eventIsWithinNextMonth: Bool { calendar.isDateInNextMonth(self.entry.event.eventDueDate) }
     
     var body: some View {
         VStack {
-            Text(self.entry.event.name)
+            Text(self.entry.event.eventName)
                 .fontWeight(.bold)
                 .multilineTextAlignment(.center)
             
@@ -47,6 +47,6 @@ struct AccessoryRectangularCounterDownWidget: View {
 @available(iOS 16.0, *)
 struct AccessoryRectangularCounterDownWidget_Previews: PreviewProvider {
     static var previews: some View {
-        AccessoryRectangularCounterDownWidget(entry: SimpleEntry(date: Date(), event: PreviewEvents.nyd))
+        AccessoryRectangularCounterDownWidget(entry: SimpleEntry(date: Date(), event: SavedEvent.exampleEvent))
     }
 }

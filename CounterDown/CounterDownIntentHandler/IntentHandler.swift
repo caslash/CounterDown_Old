@@ -11,23 +11,17 @@ import Intents
 class IntentHandler: INExtension, DynamicEventSelectionIntentHandling {
     
     func provideEventOptionsCollection(for intent: DynamicEventSelectionIntent, with completion: @escaping (INObjectCollection<CountdownEvent>?, Error?) -> Void) {
-        let moc = DataController.shared.container.viewContext
-        do {
-            let savedevents = try moc.fetch(SavedEvent.getSavedEventFetchRequest())
-            let events = savedevents.map { CountdownEvent(identifier: $0.wrappedEvent.id.uuidString, display: $0.wrappedEvent.name) }
+        guard let savedevents = try? DataController.shared.container.viewContext.fetch(SavedEvent.getSavedEventFetchRequest()) else { return }
+        let events = savedevents.map { CountdownEvent(identifier: $0.eventId.uuidString, display: $0.eventName) }
 
-            let collection = INObjectCollection(items: events)
+        let collection = INObjectCollection(items: events)
 
-            completion(collection, nil)
-        } catch {
-            let nserror = error as NSError
-            fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
-        }
+        completion(collection, nil)
         
     }
     
     func defaultEvent(for intent: DynamicEventSelectionIntent) -> CountdownEvent? {
-        return CountdownEvent(identifier: PreviewEvents.nyd.id.uuidString, display: PreviewEvents.nyd.name)
+        return CountdownEvent(identifier: SavedEvent.exampleEvent.eventId.uuidString, display: SavedEvent.exampleEvent.eventName)
     }
     
     override func handler(for intent: INIntent) -> Any {

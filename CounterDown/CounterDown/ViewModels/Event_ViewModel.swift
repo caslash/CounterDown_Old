@@ -9,16 +9,16 @@ import CounterKit
 import Foundation
 
 class EventViewModel: ObservableObject {
-    @Published var event: Event
+    @Published var event: SavedEvent
     @Published var now: Date
     
     let calendar = Calendar.current
     var components: DateComponents {
-        return calendar.dateComponents(self.event.components, from: now, to: self.event.due)
+        return calendar.dateComponents(Set(self.event.eventComponents), from: now, to: self.event.eventDueDate)
     }
     
     
-    init(event: Event, now: Date) {
+    init(event: SavedEvent, now: Date) {
         self.event = event
         self.now = now
     }

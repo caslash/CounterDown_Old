@@ -13,8 +13,9 @@ struct CountdownApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
-                .environmentObject(ModelData.shared)
                 .environment(\.managedObjectContext, DataController.shared.container.viewContext)
+                .environmentObject(DataController.shared)
+                .environmentObject(ModelData.shared)
         }
     }
 }

@@ -30,8 +30,8 @@ struct EditEventView: View {
             .toolbar {
                 ToolbarItem(placement: .primaryAction) {
                     Button {
-                        self.viewmodel.editEvent()
-                        self.modeldata.saveMoc()
+                        self.viewmodel.updateEvent()
+                        DataController.shared.save()
                         self.presentationMode.wrappedValue.dismiss()
                     } label: {
                         Text("Save")
@@ -51,13 +51,13 @@ struct EditEventView: View {
         }
     }
     
-    init(_ event: Event) {
+    init(_ event: SavedEvent) {
         _viewmodel = StateObject(wrappedValue: EditEventViewModel(event))
     }
 }
 
 struct EditEventView_Previews: PreviewProvider {
     static var previews: some View {
-        EditEventView(PreviewEvents.nyd)
+        EditEventView(SavedEvent.exampleEvent)
     }
 }
