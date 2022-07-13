@@ -11,8 +11,6 @@ import SwiftUI
 import EventKit
 
 class AddEventViewModel: ObservableObject {
-    @ObservedObject var modeldata = ModelData.shared
-
     @Published var name: String = String()
     @Published var due: Date = Date()
     @Published var color: Color = ModelData.shared.accentcolor
@@ -33,20 +31,25 @@ class AddEventViewModel: ObservableObject {
     func addEvent() {
         if includeYear { components.insert(.year) }
         if includeMonth { components.insert(.month) }
-        let newEvent = Event(name: self.name, due: self.due, color: self.color, components: self.components)
-        self.modeldata.saveEvent(newEvent)
-        self.modeldata.saveMoc()
+        
+        let newEvent = SavedEvent(context: DataController.shared.container.viewContext)
+        newEvent.id = UUID()
+        newEvent.name = self.name
+        newEvent.due = self.due
+        newEvent.colorHex = UIColor(self.color).toHexString()
+        newEvent.components = try? JSONEncoder().encode(self.components)
+        DataController.shared.save()
     }
     
     func getCalendarEvents() -> [EKEvent]? {
-        if self.modeldata.calendarAccessGranted && !self.modeldata.userSelectedCalendars.isEmpty {
+        if ModelData.shared.calendarAccessGranted && ModelData.shared.userSelectedCalendars.isEmpty {
             let today = Date()
             var dateComponents = DateComponents()
             dateComponents.year = 1
             
-            let predicate = self.modeldata.ekstore.predicateForEvents(withStart: today, end: Calendar.current.date(byAdding: dateComponents, to: today)!, calendars: Array(modeldata.userSelectedCalendars))
+            let predicate = ModelData.shared.ekstore.predicateForEvents(withStart: today, end: Calendar.current.date(byAdding: dateComponents, to: today)!, calendars: Array(ModelData.shared.userSelectedCalendars))
             
-            return self.modeldata.ekstore.events(matching: predicate)
+            return ModelData.shared.ekstore.events(matching: predicate)
         }
         
         return []

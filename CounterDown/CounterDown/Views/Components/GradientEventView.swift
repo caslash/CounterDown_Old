@@ -12,13 +12,14 @@ import SwiftUI
 
 @available(iOS 16.0, *)
 struct GradientEventView: View {
+    @EnvironmentObject var dataController: DataController
     @EnvironmentObject var modeldata: ModelData
     @ObservedObject var viewmodel: EventViewModel
     @State private var showingEditSheet = false
     var body: some View {
         VStack {
             ZStack {
-                Text(self.viewmodel.event.name)
+                Text(self.viewmodel.event.eventName)
                     .lineLimit(2)
                     .multilineTextAlignment(.center)
                     .truncationMode(.tail)
@@ -35,8 +36,8 @@ struct GradientEventView: View {
                         }
                         
                         Button(role: .destructive) {
-                            self.modeldata.deleteEvent(uuid: self.viewmodel.event.id)
-                            self.modeldata.saveMoc()
+                            self.dataController.delete(self.viewmodel.event)
+                            self.dataController.save()
                         } label: {
                             Label("Delete", systemImage: "trash")
                         }
@@ -48,9 +49,9 @@ struct GradientEventView: View {
             }
             
             HStack(spacing: 5) {
-                if viewmodel.event.components.contains(.year) {
+                if self.viewmodel.event.eventComponents.contains(.year) {
                     VStack {
-                        Text(viewmodel.yearsLeft())
+                        Text(self.viewmodel.yearsLeft())
                             .font(.title3.weight(.black))
                         
                         Text("YR")
@@ -61,9 +62,9 @@ struct GradientEventView: View {
                     .cornerRadius(10)
                 }
                 
-                if viewmodel.event.components.contains(.month) {
+                if self.viewmodel.event.eventComponents.contains(.month) {
                     VStack {
-                        Text(viewmodel.monthsLeft())
+                        Text(self.viewmodel.monthsLeft())
                             .font(.title3.weight(.black))
                         
                         Text("MTH")
@@ -75,7 +76,7 @@ struct GradientEventView: View {
                 }
                 
                 VStack {
-                    Text(viewmodel.daysLeft())
+                    Text(self.viewmodel.daysLeft())
                         .font(.title3.weight(.black))
                     
                     Text("DAY")
@@ -86,7 +87,7 @@ struct GradientEventView: View {
                 .cornerRadius(10)
                 
                 VStack {
-                    Text(viewmodel.hoursLeft())
+                    Text(self.viewmodel.hoursLeft())
                         .font(.title3.weight(.black))
                     
                     Text("HR")
@@ -97,7 +98,7 @@ struct GradientEventView: View {
                 .cornerRadius(10)
                 
                 VStack {
-                    Text(viewmodel.minutesLeft())
+                    Text(self.viewmodel.minutesLeft())
                         .font(.title3.weight(.black))
                     
                     Text("MIN")
@@ -108,7 +109,7 @@ struct GradientEventView: View {
                 .cornerRadius(10)
                 
                 VStack {
-                    Text(viewmodel.secondsLeft())
+                    Text(self.viewmodel.secondsLeft())
                         .font(.title3.weight(.black))
                     
                     Text("SEC")
@@ -119,10 +120,10 @@ struct GradientEventView: View {
                 .cornerRadius(10)
             }
         }
-        .foregroundColor(UIColor(self.viewmodel.event.color).isLight() ? .black : .white)
+        .foregroundColor(UIColor(self.viewmodel.event.eventColor).isLight() ? .black : .white)
         .frame(width: (UIScreen.main.bounds.width / 4) * 3)
         .padding()
-        .background(self.viewmodel.event.color.gradient)
+        .background(self.viewmodel.event.eventColor.gradient)
         .cornerRadius(20)
         .sheet(isPresented: $showingEditSheet) {
             EditEventView(self.viewmodel.event)
@@ -130,7 +131,7 @@ struct GradientEventView: View {
         }
     }
     
-    init(event: Event) {
+    init(event: SavedEvent) {
         self.viewmodel = EventViewModel(event: event, now: Date())
     }
 }
@@ -139,17 +140,9 @@ struct GradientEventView: View {
 struct GradientEventView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-            GradientEventView(event: PreviewEvents.nyd)
+            GradientEventView(event: SavedEvent.exampleEvent)
+                .environmentObject(DataController.preview)
                 .environmentObject(ModelData.shared)
-                .previewDisplayName("New Years")
-            
-            GradientEventView(event: PreviewEvents.christmas)
-                .environmentObject(ModelData.shared)
-                .previewDisplayName("Christmas")
-            
-            GradientEventView(event: PreviewEvents.birthday)
-                .environmentObject(ModelData.shared)
-                .previewDisplayName("Birthday")
         }
     }
 }

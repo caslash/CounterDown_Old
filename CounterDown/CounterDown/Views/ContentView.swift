@@ -11,10 +11,11 @@ import SFSymbolsFinder
 import SwiftUI
 
 struct ContentView: View {
+    @EnvironmentObject var dataController: DataController
     @EnvironmentObject var modeldata: ModelData
     @ObservedObject var viewmodel = ContentViewModel()
     @FetchRequest(fetchRequest: SavedEvent.getSavedEventFetchRequest()) var events: FetchedResults<SavedEvent>
-    @State var eventToEdit: Event?
+    @State var eventToEdit: SavedEvent?
     @State private var showingAddSheet = false
     @State private var showingSettingsSheet = false
     @State private var showingEditSheet = false
@@ -24,9 +25,9 @@ struct ContentView: View {
                 VStack {
                     ForEach(self.events, id: \.id) { event in
                         if #available(iOS 16.0, *) {
-                            GradientEventView(event: event.wrappedEvent)
+                            GradientEventView(event: event)
                         } else {
-                            FlatEventView(event: event.wrappedEvent)
+                            FlatEventView(event: event)
                         }
                     }
                 }
@@ -36,7 +37,7 @@ struct ContentView: View {
                 _ = self.viewmodel.timer
             }
             .navigationTitle("Events")
-            .sheet(isPresented: $showingAddSheet) {
+            .sheet(isPresented: self.$showingAddSheet) {
                 if #available(iOS 16, *) {
                     AddEventView()
                         .presentationDetents([.fraction(0.5), .large])
@@ -44,7 +45,7 @@ struct ContentView: View {
                     AddEventView()
                 }
             }
-            .sheet(item: $eventToEdit) { event in
+            .sheet(item: self.$eventToEdit) { event in
                 if #available(iOS 16.0, *) {
                     EditEventView(event)
                         .presentationDetents([.fraction(0.42)])
@@ -52,7 +53,7 @@ struct ContentView: View {
                     EditEventView(event)
                 }
             }
-            .sheet(isPresented: $showingSettingsSheet) {
+            .sheet(isPresented: self.$showingSettingsSheet) {
                 if #available(iOS 16.0, *) {
                     SettingsView()
                         .presentationDetents([.fraction(0.3)])
@@ -63,7 +64,7 @@ struct ContentView: View {
             .toolbar {
                 ToolbarItem(placement: .primaryAction) {
                     Button {
-                        showingAddSheet = true
+                        self.showingAddSheet = true
                     } label: {
                         Image(systemName: .plus)
                     }
@@ -71,13 +72,13 @@ struct ContentView: View {
                 
                 ToolbarItem(placement: .navigationBarLeading) {
                     Button {
-                        showingSettingsSheet = true
+                        self.showingSettingsSheet = true
                     } label: {
                         Image(systemName: .gear)
                     }
                 }
             }
-            .accentColor(modeldata.accentcolor)
+            .accentColor(self.modeldata.accentcolor)
         }
     }
 }
@@ -85,7 +86,8 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
-            .environmentObject(ModelData.shared)
             .environment(\.managedObjectContext, DataController.preview.container.viewContext)
+            .environmentObject(DataController.preview)
+            .environmentObject(ModelData.shared)
     }
 }

@@ -13,15 +13,15 @@ import WidgetKit
 struct GradientSystemSmallCounterDownWidget: View {
     var entry: Provider.Entry
     var calendar = Calendar.current
-    var components: DateComponents { calendar.dateComponents([.year, .month, .day, .hour], from: Date(), to: self.entry.event.due) }
-    var eventIsWithinNextYear: Bool { calendar.isDateInNextYear(self.entry.event.due) }
-    var eventIsWithinNextMonth: Bool { calendar.isDateInNextMonth(self.entry.event.due) }
+    var components: DateComponents { calendar.dateComponents([.year, .month, .day, .hour], from: Date(), to: self.entry.event.eventDueDate) }
+    var eventIsWithinNextYear: Bool { calendar.isDateInNextYear(self.entry.event.eventDueDate) }
+    var eventIsWithinNextMonth: Bool { calendar.isDateInNextMonth(self.entry.event.eventDueDate) }
     
     var body: some View {
         VStack(spacing: 10) {
             Spacer()
             
-            Text(entry.event.name)
+            Text(entry.event.eventName)
                 .font(.title3.weight(.black))
                 .multilineTextAlignment(.center)
             
@@ -36,8 +36,8 @@ struct GradientSystemSmallCounterDownWidget: View {
             Spacer()
         }
         .padding()
-        .background(entry.event.color.gradient)
-        .foregroundColor(UIColor(entry.event.color).isLight() ? .black : .white)
+        .background(entry.event.eventColor.gradient)
+        .foregroundColor(UIColor(entry.event.eventColor).isLight() ? .black : .white)
     }
     
     @ViewBuilder
@@ -122,16 +122,16 @@ struct GradientSystemSmallCounterDownWidget: View {
 struct FlatSystemSmallCounterDownWidget: View {
     var entry: Provider.Entry
     var calendar = Calendar.current
-    var components: DateComponents { calendar.dateComponents([.year, .month, .day, .hour], from: Date(), to: self.entry.event.due) }
-    var eventIsWithinNextYear: Bool { calendar.isDateInNextYear(self.entry.event.due) }
-    var eventIsWithinNextMonth: Bool { calendar.isDateInNextMonth(self.entry.event.due) }
+    var components: DateComponents { calendar.dateComponents([.year, .month, .day, .hour], from: Date(), to: self.entry.event.eventDueDate) }
+    var eventIsWithinNextYear: Bool { calendar.isDateInNextYear(self.entry.event.eventDueDate) }
+    var eventIsWithinNextMonth: Bool { calendar.isDateInNextMonth(self.entry.event.eventDueDate) }
     
     var body: some View {
         ZStack {
-            entry.event.color
+            entry.event.eventColor
             
             VStack(spacing: 10) {
-                Text(entry.event.name)
+                Text(entry.event.eventName)
                     .font(.title3.weight(.black))
                     .multilineTextAlignment(.center)
                 
@@ -139,7 +139,7 @@ struct FlatSystemSmallCounterDownWidget: View {
             }
             .padding()
         }
-        .foregroundColor(UIColor(entry.event.color).isLight() ? .black : .white)
+        .foregroundColor(UIColor(entry.event.eventColor).isLight() ? .black : .white)
     }
     
     @ViewBuilder
@@ -225,10 +225,10 @@ struct FlatSystemSmallCounterDownWidget: View {
 struct SystemSmallCounterDownWidget_Previews: PreviewProvider {
     static var previews: some View {
         if #available(iOS 16.0, *) {
-            GradientSystemSmallCounterDownWidget(entry: SimpleEntry(date: Date(), event: PreviewEvents.nyd))
+            GradientSystemSmallCounterDownWidget(entry: SimpleEntry(date: Date(), event: SavedEvent.exampleEvent))
                 .previewContext(WidgetPreviewContext(family: .systemSmall))
         } else {
-            FlatSystemSmallCounterDownWidget(entry: SimpleEntry(date: Date(), event: PreviewEvents.nyd))
+            FlatSystemSmallCounterDownWidget(entry: SimpleEntry(date: Date(), event: SavedEvent.exampleEvent))
                 .previewContext(WidgetPreviewContext(family: .systemSmall))
         }
     }

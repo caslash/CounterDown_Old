@@ -16,11 +16,11 @@ struct Provider: IntentTimelineProvider {
     public typealias Entry = SimpleEntry
     
     func placeholder(in context: Context) -> SimpleEntry {
-        return SimpleEntry(date: Date(), event: PreviewEvents.nyd)
+        return SimpleEntry(date: Date(), event: SavedEvent.exampleEvent)
     }
 
     func getSnapshot(for configuration: DynamicEventSelectionIntent, in context: Context, completion: @escaping (SimpleEntry) -> ()) {
-        let entry = SimpleEntry(date: Date(), event: PreviewEvents.nyd)
+        let entry = SimpleEntry(date: Date(), event: SavedEvent.exampleEvent)
         completion(entry)
     }
 
@@ -40,17 +40,17 @@ struct Provider: IntentTimelineProvider {
         completion(timeline)
     }
     
-    func event(for configuration: DynamicEventSelectionIntent) -> Event {
-        if let id = configuration.event?.identifier, let uuid = UUID(uuidString: id), let event = Event.eventFromId(uuid) {
+    func event(for configuration: DynamicEventSelectionIntent) -> SavedEvent {
+        if let id = configuration.event?.identifier, let uuid = UUID(uuidString: id), let event = SavedEvent.eventFromId(uuid) {
             return event
         }
-        return PreviewEvents.nyd
+        return SavedEvent.exampleEvent
     }
 }
 
 struct SimpleEntry: TimelineEntry {
     public let date: Date
-    let event: Event
+    let event: SavedEvent
 }
 
 struct CounterDownWidgetEntryView : View {
@@ -69,7 +69,7 @@ struct CounterDownWidgetEntryView : View {
         case .accessoryRectangular:
             if #available(iOS 16.0, *) { AccessoryRectangularCounterDownWidget(entry: entry) }
         default:
-            Text(entry.event.name)
+            Text(entry.event.eventName)
         }
     }
 }
@@ -99,7 +99,7 @@ struct CounterDownWidget: Widget {
 @available(iOS 16.0, *)
 struct CounterDownWidget_Previews: PreviewProvider {
     static var previews: some View {
-        CounterDownWidgetEntryView(entry: SimpleEntry(date: Date(), event: PreviewEvents.nyd))
+        CounterDownWidgetEntryView(entry: SimpleEntry(date: Date(), event: SavedEvent.exampleEvent))
             .previewContext(WidgetPreviewContext(family: .systemSmall))
     }
 }
