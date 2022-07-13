@@ -5,9 +5,11 @@
         <attribute name="components" optional="YES" attributeType="Binary"/>
         <attribute name="due" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="isRecurring" optional="YES" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
         <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="recurrenceInterval" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
     </entity>
     <elements>
-        <element name="SavedEvent" positionX="-63" positionY="-18" width="128" height="104"/>
+        <element name="SavedEvent" positionX="-63" positionY="-18" width="128" height="134"/>
     </elements>
 </model>

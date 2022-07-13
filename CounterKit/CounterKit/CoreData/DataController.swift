@@ -125,6 +125,10 @@ public class DataController: ObservableObject {
             event.due = Calendar.current.date(byAdding: .day, value: Int.random(in: 10..<365), to: Date())
             event.colorHex = UIColor(red: CGFloat(Int.random(in: 1..<255)), green: CGFloat(Int.random(in: 1..<255)), blue: CGFloat(Int.random(in: 1..<255)), alpha: 1).toHexString()
             event.components = try JSONEncoder().encode(components)
+            event.isRecurring = Bool.random()
+            if event.isRecurring {
+                event.recurrenceInterval = Int16.random(in: 1...5)
+            }
         }
         
         try viewContext.save()

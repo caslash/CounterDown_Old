@@ -17,6 +17,7 @@
 		2E66D393287E55880064A766 /* Sequence+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E66D390287E55880064A766 /* Sequence+Extension.swift */; };
 		2E66D394287E55880064A766 /* Bundle+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E66D391287E55880064A766 /* Bundle+Extension.swift */; };
 		2E66D395287E55880064A766 /* Binding+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E66D392287E55880064A766 /* Binding+Extension.swift */; };
+		2E66D397287E725C0064A766 /* RecurrenceInterval.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E66D396287E725C0064A766 /* RecurrenceInterval.swift */; };
 		2E7B4D28286A982800A9BE57 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E7B4D26286A982800A9BE57 /* UIColor+Extension.swift */; };
 		2E7B4D29286A982800A9BE57 /* CalendarComponents+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E7B4D27286A982800A9BE57 /* CalendarComponents+Extension.swift */; };
 		2EBBD246286A9FDB00477E14 /* CounterDownModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2EBBD244286A9FDB00477E14 /* CounterDownModel.xcdatamodeld */; };
@@ -44,6 +45,7 @@
 		2E66D390287E55880064A766 /* Sequence+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Sequence+Extension.swift"; sourceTree = "<group>"; };
 		2E66D391287E55880064A766 /* Bundle+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Bundle+Extension.swift"; sourceTree = "<group>"; };
 		2E66D392287E55880064A766 /* Binding+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Binding+Extension.swift"; sourceTree = "<group>"; };
+		2E66D396287E725C0064A766 /* RecurrenceInterval.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecurrenceInterval.swift; sourceTree = "<group>"; };
 		2E7B4D26286A982800A9BE57 /* UIColor+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		2E7B4D27286A982800A9BE57 /* CalendarComponents+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CalendarComponents+Extension.swift"; sourceTree = "<group>"; };
 		2EBBD245286A9FDB00477E14 /* CounterDownModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CounterDownModel.xcdatamodel; sourceTree = "<group>"; };
@@ -110,6 +112,7 @@
 			children = (
 				2E1A9DEC286A936700EA2BA2 /* DataController.swift */,
 				2EBBD244286A9FDB00477E14 /* CounterDownModel.xcdatamodeld */,
+				2E66D396287E725C0064A766 /* RecurrenceInterval.swift */,
 			);
 			path = CoreData;
 			sourceTree = "<group>";
@@ -251,6 +254,7 @@
 				2E1A9DBB286A919A00EA2BA2 /* CounterKit.docc in Sources */,
 				2E66D38D287E50B80064A766 /* SavedEvent+Extension.swift in Sources */,
 				2E7B4D29286A982800A9BE57 /* CalendarComponents+Extension.swift in Sources */,
+				2E66D397287E725C0064A766 /* RecurrenceInterval.swift in Sources */,
 				2E1A9DED286A936700EA2BA2 /* DataController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
