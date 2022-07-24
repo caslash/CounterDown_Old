@@ -42,14 +42,16 @@ struct AddEventView: View {
                 
                 if !self.viewmodel.calendarEvents.isEmpty {
                     Section(header: Text("Select Event From Calendar")) {
-                        ForEach(self.viewmodel.calendarEvents, id: \.eventIdentifier) { event in
+                        ForEach(self.viewmodel.calendarEvents, id: \.self) { event in
                             Button {
                                 self.viewmodel.name = event.title
                                 self.viewmodel.due = event.startDate
                             } label: {
                                 HStack {
                                     if self.viewmodel.name == event.title && self.viewmodel.due == event.startDate {
-                                        Image(systemName: .checkmark)
+                                        Image(systemName: .checkmarkCircleFill)
+                                    } else {
+                                        Image(systemName: .circle)
                                     }
                                     
                                     Text(event.title)

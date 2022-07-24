@@ -66,10 +66,10 @@ struct FlatEventView: View {
                     .multilineTextAlignment(.center)
                     .truncationMode(.tail)
                     .font(.title.weight(.black))
-                
             
             Text(self.viewmodel.event.dateText())
                 .font(.footnote)
+                
                 HStack(spacing: 5) {
                     if self.viewmodel.event.eventComponents.contains(.year) {
                         VStack {

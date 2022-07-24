@@ -49,7 +49,7 @@ class AddEventViewModel: ObservableObject {
     }
     
     func getCalendarEvents() -> [EKEvent]? {
-        if ModelData.shared.calendarAccessGranted && ModelData.shared.userSelectedCalendars.isEmpty {
+        if ModelData.shared.calendarAccessGranted && !ModelData.shared.userSelectedCalendars.isEmpty {
             let today = Date()
             var dateComponents = DateComponents()
             dateComponents.year = 1
