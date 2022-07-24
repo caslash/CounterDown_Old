@@ -17,10 +17,9 @@ class EventViewModel: ObservableObject {
         return calendar.dateComponents(Set(self.event.eventComponents), from: now, to: self.event.eventDueDate)
     }
     
-    
-    init(event: SavedEvent, now: Date) {
+    init(event: SavedEvent) {
         self.event = event
-        self.now = now
+        self.now = ModelData.shared.now
     }
     
     func yearsLeft() -> String {

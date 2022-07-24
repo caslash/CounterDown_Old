@@ -67,6 +67,9 @@ struct GradientEventView: View {
                     .multilineTextAlignment(.center)
                     .truncationMode(.tail)
                     .font(.title.weight(.black))
+                
+                Text(self.viewmodel.event.dateText())
+                    .font(.footnote)
             
                 HStack(spacing: 5) {
                     if self.viewmodel.event.eventComponents.contains(.year) {
@@ -144,8 +147,7 @@ struct GradientEventView: View {
         .foregroundColor(UIColor(self.viewmodel.event.eventColor).isLight() ? .black : .white)
         .frame(width: (UIScreen.main.bounds.width / 5) * 4, height: UIScreen.main.bounds.height / 7)
         .padding()
-        .background(self.viewmodel.event.eventColor.gradient)
-        .cornerRadius(20)
+        .background(self.viewmodel.event.eventColor.gradient, in: RoundedRectangle(cornerRadius: 20))
         .sheet(isPresented: $showingEditSheet) {
             EditEventView(self.viewmodel.event)
                 .presentationDetents([.fraction(0.42), .large])
@@ -153,7 +155,7 @@ struct GradientEventView: View {
     }
     
     init(event: SavedEvent) {
-        self.viewmodel = EventViewModel(event: event, now: Date())
+        self.viewmodel = EventViewModel(event: event)
     }
 }
 

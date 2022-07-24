@@ -5,6 +5,9 @@
       location = "group:CounterDown/CounterDown.xcodeproj">
    </FileRef>
    <FileRef
+      location = "group:../../SlashKit/SlashKit.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:CounterKit/CounterKit.xcodeproj">
    </FileRef>
 </Workspace>

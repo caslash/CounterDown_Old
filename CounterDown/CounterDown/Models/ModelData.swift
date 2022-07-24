@@ -41,12 +41,13 @@ class ModelData: ObservableObject {
     
     @Published var accentcolor = Color.primary {
         didSet {
-            
             if let encoded = try? self.jsonEncoder.encode(accentcolor) {
                 self.userdefaults.set(encoded, forKey: "user_selected_accentcolor")
             }
         }
     }
+    
+    @Published var now = Date()
     
     init() {
         self.ekstore = EKEventStore()

@@ -5,6 +5,7 @@
 //  Created by Cameron Slash on 27/6/22.
 //
 
+import SlashKit
 import CoreData
 import Foundation
 import UIKit

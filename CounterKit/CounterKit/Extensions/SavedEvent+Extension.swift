@@ -70,6 +70,12 @@ extension SavedEvent: Comparable {
         RecurrenceInterval(rawValue: Int(recurrenceInterval)) ?? .none
     }
     
+    public func dateText() -> String {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "EEEE, MMMM d, yyyy"
+        return formatter.string(from: self.eventDueDate)
+    }
+    
     public static func eventFromId(_ id: UUID) -> SavedEvent? {
         let request = NSFetchRequest<SavedEvent>(entityName: "SavedEvent")
         request.predicate = NSPredicate(format: "id = %@", id as CVarArg)

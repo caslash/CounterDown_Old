@@ -22,6 +22,10 @@
 		2E33228C28727AE200D74706 /* FlatEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E33228B28727AE200D74706 /* FlatEventView.swift */; };
 		2E3C5B99286BE59400341101 /* CounterKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E3C5B92286BE54F00341101 /* CounterKit.framework */; };
 		2E3C5B9A286BE59400341101 /* CounterKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2E3C5B92286BE54F00341101 /* CounterKit.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		2E3D904F288CB95B004F7860 /* SlashKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E3D904E288CB95B004F7860 /* SlashKit.framework */; };
+		2E3D9050288CB95B004F7860 /* SlashKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2E3D904E288CB95B004F7860 /* SlashKit.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		2E3D9057288CBA80004F7860 /* EventListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E3D9056288CBA80004F7860 /* EventListView.swift */; };
+		2E3D9059288CBBC2004F7860 /* EventList_ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E3D9058288CBBC2004F7860 /* EventList_ViewModel.swift */; };
 		2E6247572840404B00BB2A48 /* CountdownApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6247562840404B00BB2A48 /* CountdownApp.swift */; };
 		2E6247592840404B00BB2A48 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6247582840404B00BB2A48 /* ContentView.swift */; };
 		2E62475B2840404C00BB2A48 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E62475A2840404C00BB2A48 /* Assets.xcassets */; };
@@ -42,6 +46,7 @@
 		2EAE125B286273A400755BAF /* SystemSmallCounterDownWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EAE125A286273A400755BAF /* SystemSmallCounterDownWidget.swift */; };
 		2EC61D992860BFB80018EEDF /* SFSymbolsFinder in Frameworks */ = {isa = PBXBuildFile; productRef = 2EC61D982860BFB80018EEDF /* SFSymbolsFinder */; };
 		2EC61D9B2860BFB80018EEDF /* DynamicColor in Frameworks */ = {isa = PBXBuildFile; productRef = 2EC61D9A2860BFB80018EEDF /* DynamicColor */; };
+		2EF0C6F2288CB49900DFD914 /* NewEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF0C6F1288CB49900DFD914 /* NewEventView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +74,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				2E3C5B9A286BE59400341101 /* CounterKit.framework in Embed Frameworks */,
+				2E3D9050288CB95B004F7860 /* SlashKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -103,6 +109,9 @@
 		2E3C5B8F286BE4F700341101 /* CounterKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CounterKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E3C5B92286BE54F00341101 /* CounterKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CounterKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E3C5B96286BE55900341101 /* CounterKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CounterKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2E3D904E288CB95B004F7860 /* SlashKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SlashKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2E3D9056288CBA80004F7860 /* EventListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventListView.swift; sourceTree = "<group>"; };
+		2E3D9058288CBBC2004F7860 /* EventList_ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventList_ViewModel.swift; sourceTree = "<group>"; };
 		2E6247532840404B00BB2A48 /* CounterDown.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CounterDown.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E6247562840404B00BB2A48 /* CountdownApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownApp.swift; sourceTree = "<group>"; };
 		2E6247582840404B00BB2A48 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -125,6 +134,7 @@
 		2EAE125A286273A400755BAF /* SystemSmallCounterDownWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemSmallCounterDownWidget.swift; sourceTree = "<group>"; };
 		2EEE4E892841DBEB0041A0C8 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		2EEE4E8B2841DBEB0041A0C8 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		2EF0C6F1288CB49900DFD914 /* NewEventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewEventView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,6 +164,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2E3C5B99286BE59400341101 /* CounterKit.framework in Frameworks */,
+				2E3D904F288CB95B004F7860 /* SlashKit.framework in Frameworks */,
 				2E7B4D42286A9C0500A9BE57 /* DynamicColor in Frameworks */,
 				2E7BAD5E285E7E5A001F0505 /* SFSymbolsFinder in Frameworks */,
 			);
@@ -165,6 +176,7 @@
 		2E1A6E162860379400D91FBA /* CounterDownWidget */ = {
 			isa = PBXGroup;
 			children = (
+				2E8D55032861143500852B4D /* CounterDownWidgetExtension.entitlements */,
 				2E1A6E172860379400D91FBA /* CounterDownWidget.swift */,
 				2E1A6E32286037EF00D91FBA /* DynamicEventSelection.intentdefinition */,
 				2EAE125D286280F400755BAF /* WidgetViews */,
@@ -187,7 +199,6 @@
 		2E62474A2840404B00BB2A48 = {
 			isa = PBXGroup;
 			children = (
-				2E8D55032861143500852B4D /* CounterDownWidgetExtension.entitlements */,
 				2E6247552840404B00BB2A48 /* CounterDown */,
 				2E1A6E162860379400D91FBA /* CounterDownWidget */,
 				2E1A6E28286037C400D91FBA /* CounterDownIntentHandler */,
@@ -249,6 +260,7 @@
 				2E6247912840462F00BB2A48 /* Event_ViewModel.swift */,
 				2E92EABF28417532008E7393 /* Content_ViewModel.swift */,
 				2E9AE09A285D781C00C1EBCF /* EditEvent_ViewModel.swift */,
+				2E3D9058288CBBC2004F7860 /* EventList_ViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -266,6 +278,8 @@
 			children = (
 				2E3322892872787400D74706 /* GradientEventView.swift */,
 				2E33228B28727AE200D74706 /* FlatEventView.swift */,
+				2EF0C6F1288CB49900DFD914 /* NewEventView.swift */,
+				2E3D9056288CBA80004F7860 /* EventListView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -282,6 +296,7 @@
 		2EEE4E882841DBEB0041A0C8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2E3D904E288CB95B004F7860 /* SlashKit.framework */,
 				2E3C5B96286BE55900341101 /* CounterKit.framework */,
 				2E3C5B92286BE54F00341101 /* CounterKit.framework */,
 				2E3C5B8F286BE4F700341101 /* CounterKit.framework */,
@@ -466,11 +481,14 @@
 				2E6247592840404B00BB2A48 /* ContentView.swift in Sources */,
 				2E92EAC028417532008E7393 /* Content_ViewModel.swift in Sources */,
 				2E6247572840404B00BB2A48 /* CountdownApp.swift in Sources */,
+				2EF0C6F2288CB49900DFD914 /* NewEventView.swift in Sources */,
 				2E6247862840409800BB2A48 /* AddEvent_ViewModel.swift in Sources */,
 				2E87A1952847014000AD3624 /* CalendarChooser.swift in Sources */,
 				2E6247842840408200BB2A48 /* AddEventView.swift in Sources */,
+				2E3D9057288CBA80004F7860 /* EventListView.swift in Sources */,
 				2E6247922840462F00BB2A48 /* Event_ViewModel.swift in Sources */,
 				2E62478B2840417D00BB2A48 /* ModelData.swift in Sources */,
+				2E3D9059288CBBC2004F7860 /* EventList_ViewModel.swift in Sources */,
 				2E33228A2872787400D74706 /* GradientEventView.swift in Sources */,
 				2E9AE099285D780E00C1EBCF /* EditEventView.swift in Sources */,
 			);
@@ -498,7 +516,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
-				CODE_SIGN_ENTITLEMENTS = CounterDownWidgetExtension.entitlements;
+				CODE_SIGN_ENTITLEMENTS = CounterDownWidget/CounterDownWidgetExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = NO;
@@ -529,7 +547,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
-				CODE_SIGN_ENTITLEMENTS = CounterDownWidgetExtension.entitlements;
+				CODE_SIGN_ENTITLEMENTS = CounterDownWidget/CounterDownWidgetExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = NO;

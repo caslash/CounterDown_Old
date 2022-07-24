@@ -12,13 +12,9 @@
 		2E1A9DC6286A919A00EA2BA2 /* CounterKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1A9DC5286A919A00EA2BA2 /* CounterKitTests.swift */; };
 		2E1A9DC7286A919A00EA2BA2 /* CounterKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 2E1A9DB9286A919A00EA2BA2 /* CounterKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2E1A9DED286A936700EA2BA2 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1A9DEC286A936700EA2BA2 /* DataController.swift */; };
+		2E3D9053288CB9AB004F7860 /* SlashKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E3D9052288CB9AB004F7860 /* SlashKit.framework */; };
 		2E66D38D287E50B80064A766 /* SavedEvent+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E66D38C287E50B80064A766 /* SavedEvent+Extension.swift */; };
-		2E66D38F287E540F0064A766 /* NSColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E66D38E287E540F0064A766 /* NSColor+Extension.swift */; };
-		2E66D393287E55880064A766 /* Sequence+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E66D390287E55880064A766 /* Sequence+Extension.swift */; };
-		2E66D394287E55880064A766 /* Bundle+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E66D391287E55880064A766 /* Bundle+Extension.swift */; };
-		2E66D395287E55880064A766 /* Binding+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E66D392287E55880064A766 /* Binding+Extension.swift */; };
 		2E66D397287E725C0064A766 /* RecurrenceInterval.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E66D396287E725C0064A766 /* RecurrenceInterval.swift */; };
-		2E7B4D28286A982800A9BE57 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E7B4D26286A982800A9BE57 /* UIColor+Extension.swift */; };
 		2E7B4D29286A982800A9BE57 /* CalendarComponents+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E7B4D27286A982800A9BE57 /* CalendarComponents+Extension.swift */; };
 		2EBBD246286A9FDB00477E14 /* CounterDownModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2EBBD244286A9FDB00477E14 /* CounterDownModel.xcdatamodeld */; };
 /* End PBXBuildFile section */
@@ -40,13 +36,9 @@
 		2E1A9DC0286A919A00EA2BA2 /* CounterKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CounterKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E1A9DC5286A919A00EA2BA2 /* CounterKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterKitTests.swift; sourceTree = "<group>"; };
 		2E1A9DEC286A936700EA2BA2 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
+		2E3D9052288CB9AB004F7860 /* SlashKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SlashKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E66D38C287E50B80064A766 /* SavedEvent+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SavedEvent+Extension.swift"; sourceTree = "<group>"; };
-		2E66D38E287E540F0064A766 /* NSColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSColor+Extension.swift"; sourceTree = "<group>"; };
-		2E66D390287E55880064A766 /* Sequence+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Sequence+Extension.swift"; sourceTree = "<group>"; };
-		2E66D391287E55880064A766 /* Bundle+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Bundle+Extension.swift"; sourceTree = "<group>"; };
-		2E66D392287E55880064A766 /* Binding+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Binding+Extension.swift"; sourceTree = "<group>"; };
 		2E66D396287E725C0064A766 /* RecurrenceInterval.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecurrenceInterval.swift; sourceTree = "<group>"; };
-		2E7B4D26286A982800A9BE57 /* UIColor+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		2E7B4D27286A982800A9BE57 /* CalendarComponents+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CalendarComponents+Extension.swift"; sourceTree = "<group>"; };
 		2EBBD245286A9FDB00477E14 /* CounterDownModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CounterDownModel.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -56,6 +48,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E3D9053288CB9AB004F7860 /* SlashKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,6 +69,7 @@
 				2E1A9DB8286A919A00EA2BA2 /* CounterKit */,
 				2E1A9DC4286A919A00EA2BA2 /* CounterKitTests */,
 				2E1A9DB7286A919A00EA2BA2 /* Products */,
+				2E3D9051288CB9AB004F7860 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -120,15 +114,18 @@
 		2E1A9E1A286A963900EA2BA2 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				2E66D392287E55880064A766 /* Binding+Extension.swift */,
-				2E66D391287E55880064A766 /* Bundle+Extension.swift */,
 				2E7B4D27286A982800A9BE57 /* CalendarComponents+Extension.swift */,
-				2E66D38E287E540F0064A766 /* NSColor+Extension.swift */,
 				2E66D38C287E50B80064A766 /* SavedEvent+Extension.swift */,
-				2E66D390287E55880064A766 /* Sequence+Extension.swift */,
-				2E7B4D26286A982800A9BE57 /* UIColor+Extension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		2E3D9051288CB9AB004F7860 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2E3D9052288CB9AB004F7860 /* SlashKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -245,11 +242,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2E66D395287E55880064A766 /* Binding+Extension.swift in Sources */,
-				2E7B4D28286A982800A9BE57 /* UIColor+Extension.swift in Sources */,
-				2E66D393287E55880064A766 /* Sequence+Extension.swift in Sources */,
-				2E66D394287E55880064A766 /* Bundle+Extension.swift in Sources */,
-				2E66D38F287E540F0064A766 /* NSColor+Extension.swift in Sources */,
 				2EBBD246286A9FDB00477E14 /* CounterDownModel.xcdatamodeld in Sources */,
 				2E1A9DBB286A919A00EA2BA2 /* CounterKit.docc in Sources */,
 				2E66D38D287E50B80064A766 /* SavedEvent+Extension.swift in Sources */,
@@ -403,7 +395,6 @@
 		2E1A9DCB286A919A00EA2BA2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -443,7 +434,6 @@
 		2E1A9DCC286A919A00EA2BA2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;

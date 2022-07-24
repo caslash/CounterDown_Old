@@ -66,7 +66,10 @@ struct FlatEventView: View {
                     .multilineTextAlignment(.center)
                     .truncationMode(.tail)
                     .font(.title.weight(.black))
+                
             
+            Text(self.viewmodel.event.dateText())
+                .font(.footnote)
                 HStack(spacing: 5) {
                     if self.viewmodel.event.eventComponents.contains(.year) {
                         VStack {
@@ -143,15 +146,14 @@ struct FlatEventView: View {
         .foregroundColor(UIColor(self.viewmodel.event.eventColor).isLight() ? .black : .white)
         .frame(width: (UIScreen.main.bounds.width / 5) * 4, height: UIScreen.main.bounds.height / 7)
         .padding()
-        .background(self.viewmodel.event.eventColor)
-        .cornerRadius(20)
+        .background(self.viewmodel.event.eventColor, in: RoundedRectangle(cornerRadius: 20))
         .sheet(isPresented: $showingEditSheet) {
             EditEventView(self.viewmodel.event)
         }
     }
     
     init(event: SavedEvent) {
-        self.viewmodel = EventViewModel(event: event, now: Date())
+        self.viewmodel = EventViewModel(event: event)
     }
 }
 
