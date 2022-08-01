@@ -152,6 +152,12 @@ struct GradientEventView: View {
             EditEventView(self.viewmodel.event)
                 .presentationDetents([.fraction(0.42), .large])
         }
+        .onChange(of: self.viewmodel.now) {_ in
+            if self.viewmodel.event.eventDueDate <= self.viewmodel.now {
+                print("\(self.viewmodel.event.eventName) is past due")
+                self.dataController.processRefresh(event: self.viewmodel.event)
+            }
+        }
     }
     
     init(event: SavedEvent) {

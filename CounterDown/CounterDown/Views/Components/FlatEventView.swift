@@ -150,6 +150,12 @@ struct FlatEventView: View {
         .sheet(isPresented: $showingEditSheet) {
             EditEventView(self.viewmodel.event)
         }
+        .onChange(of: self.viewmodel.now) {_ in
+            if self.viewmodel.event.eventDueDate <= self.viewmodel.now {
+                print("\(self.viewmodel.event.eventName) is past due")
+                self.dataController.processRefresh(event: self.viewmodel.event)
+            }
+        }
     }
     
     init(event: SavedEvent) {
