@@ -16,11 +16,11 @@ struct Provider: IntentTimelineProvider {
     public typealias Entry = SimpleEntry
     
     func placeholder(in context: Context) -> SimpleEntry {
-        return SimpleEntry(date: Date(), event: SavedEvent.exampleEvent)
+        return SimpleEntry(date: Date(), event: SavedEvent.defaultEvent)
     }
 
     func getSnapshot(for configuration: DynamicEventSelectionIntent, in context: Context, completion: @escaping (SimpleEntry) -> ()) {
-        let entry = SimpleEntry(date: Date(), event: SavedEvent.exampleEvent)
+        let entry = SimpleEntry(date: Date(), event: SavedEvent.defaultEvent)
         completion(entry)
     }
 
@@ -44,7 +44,7 @@ struct Provider: IntentTimelineProvider {
         if let id = configuration.event?.identifier, let uuid = UUID(uuidString: id), let event = SavedEvent.eventFromId(uuid) {
             return event
         }
-        return SavedEvent.exampleEvent
+        return SavedEvent.defaultEvent
     }
 }
 
@@ -99,7 +99,14 @@ struct CounterDownWidget: Widget {
 @available(iOS 16.0, *)
 struct CounterDownWidget_Previews: PreviewProvider {
     static var previews: some View {
-        CounterDownWidgetEntryView(entry: SimpleEntry(date: Date(), event: SavedEvent.exampleEvent))
-            .previewContext(WidgetPreviewContext(family: .systemSmall))
+        Group {
+            CounterDownWidgetEntryView(entry: SimpleEntry(date: Date(), event: SavedEvent.exampleEvent))
+                .previewDisplayName("System Small")
+                .previewContext(WidgetPreviewContext(family: .systemSmall))
+            
+            CounterDownWidgetEntryView(entry: SimpleEntry(date: Date(), event: SavedEvent.exampleEvent))
+                .previewDisplayName("Accessory Rectangular")
+                .previewContext(WidgetPreviewContext(family: .accessoryRectangular))
+        }
     }
 }

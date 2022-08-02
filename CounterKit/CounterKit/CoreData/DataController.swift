@@ -5,6 +5,7 @@
 //  Created by Cameron Slash on 27/6/22.
 //
 
+import SlashKit
 import CoreData
 import Foundation
 import UIKit
@@ -24,6 +25,10 @@ public class DataController: ObservableObject {
     }()
     
     public let container: NSPersistentCloudKitContainer
+    
+    private enum RefreshStatus {
+        case success, failure
+    }
     
     init(inMemory: Bool = false) {
         let momdName = "CounterDownModel"
@@ -62,6 +67,8 @@ public class DataController: ObservableObject {
         self.container = container
 
         NotificationCenter.default.addObserver(self, selector: #selector(self.processUpdate), name: .NSPersistentStoreRemoteChange, object: nil)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(self.processRefresh), name: .CDEventEnded, object: nil)
     }
     
     public func save() {
@@ -105,6 +112,35 @@ public class DataController: ObservableObject {
                 }
             }
         }
+    }
+    
+    @objc
+    public func processRefresh(notification: Notification) {
+        let context = self.container.newBackgroundContext()
+        let event = notification.userInfo!["event"] as! SavedEvent
+        
+        context.perform {
+            let refreshResult = self.handleEventsRefresh(event)
+            
+            if refreshResult == .success {
+                self.save()
+            } else {
+                fatalError("Couldn't handle refresh.")
+            }
+        }
+    }
+    
+    private func handleEventsRefresh(_ event: SavedEvent) -> RefreshStatus {
+        if !event.isRecurring {
+            self.delete(event)
+        } else {
+            event.due = Calendar.current.date(byAdding: event.eventRecurrenceInterval.component!, value: event.eventRecurrenceInterval.offset, to: event.eventDueDate)
+        }
+        
+        if self.container.viewContext.hasChanges {
+            return .success
+        }
+        return .failure
     }
     
     lazy var operationQueue: OperationQueue = {

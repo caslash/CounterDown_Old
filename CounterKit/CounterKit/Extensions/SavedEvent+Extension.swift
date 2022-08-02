@@ -11,10 +11,27 @@ import SwiftUI
 
 extension SavedEvent: Comparable {
     public static var exampleEvent: SavedEvent {
-        let controller = DataController.shared
+        let controller = DataController.preview
         let vc = controller.container.viewContext
         
-        let components: [Calendar.Component] = [.day, .hour, .minute, .second]
+        let components: [Calendar.Component] = [.month, .day, .hour, .minute, .second]
+        
+        let event = SavedEvent(context: vc)
+        event.id = UUID()
+        event.name = "New Years Day"
+        event.due = Date(timeIntervalSince1970: 1672549200)
+        event.colorHex = UIColor(.green).toHexString()
+        event.components = try? JSONEncoder().encode(components)
+        event.isRecurring = true
+        event.recurrenceInterval = Int16(RecurrenceInterval.yearly.rawValue)
+        
+        return event
+    }
+    
+    public static var defaultEvent: SavedEvent {
+        let vc = DataController.shared.container.newBackgroundContext()
+        
+        let components: [Calendar.Component] = [.month, .day, .hour, .minute, .second]
         
         let event = SavedEvent(context: vc)
         event.id = UUID()
@@ -68,6 +85,12 @@ extension SavedEvent: Comparable {
     }
     public var eventRecurrenceInterval: RecurrenceInterval {
         RecurrenceInterval(rawValue: Int(recurrenceInterval)) ?? .none
+    }
+    
+    public func dateText() -> String {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "EEEE, MMMM d, yyyy"
+        return formatter.string(from: self.eventDueDate)
     }
     
     public static func eventFromId(_ id: UUID) -> SavedEvent? {

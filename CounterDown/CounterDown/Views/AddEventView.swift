@@ -19,27 +19,39 @@ struct AddEventView: View {
         NavigationView {
             Form {
                 Section(header: Text("Create New Event")) {
-                    TextField("Event Name", text: $viewmodel.name)
+                    TextField("Event Name", text: self.$viewmodel.name)
                     
-                    DatePicker("Event Date", selection: $viewmodel.due)
+                    DatePicker("Event Date", selection: self.$viewmodel.due)
                     
-                    ColorPicker("Event Color", selection: $viewmodel.color)
+                    ColorPicker("Event Color", selection: self.$viewmodel.color)
                     
-                    Toggle("Show Years", isOn: $viewmodel.includeYear)
+                    Toggle("Show Years", isOn: self.$viewmodel.includeYear)
                     
-                    Toggle("Show Months", isOn: $viewmodel.includeMonth)
+                    Toggle("Show Months", isOn: self.$viewmodel.includeMonth)
+                    
+                    Toggle("Is This Event Recurring?", isOn: self.$viewmodel.isRecurring)
+                    
+                    if self.viewmodel.isRecurring {
+                        Picker("Repeat...", selection: self.$viewmodel.recurrenceInterval) {
+                            ForEach(RecurrenceInterval.allCases.dropFirst(), id: \.self) { interval in
+                                Text(interval.displayName)
+                            }
+                        }
+                    }
                 }
                 
                 if !self.viewmodel.calendarEvents.isEmpty {
                     Section(header: Text("Select Event From Calendar")) {
-                        ForEach(viewmodel.calendarEvents, id: \.eventIdentifier) { event in
+                        ForEach(self.viewmodel.calendarEvents, id: \.self) { event in
                             Button {
-                                viewmodel.name = event.title
-                                viewmodel.due = event.startDate
+                                self.viewmodel.name = event.title
+                                self.viewmodel.due = event.startDate
                             } label: {
                                 HStack {
-                                    if viewmodel.name == event.title && viewmodel.due == event.startDate {
-                                        Image(systemName: .checkmark)
+                                    if self.viewmodel.name == event.title && self.viewmodel.due == event.startDate {
+                                        Image(systemName: .checkmarkCircleFill)
+                                    } else {
+                                        Image(systemName: .circle)
                                     }
                                     
                                     Text(event.title)
@@ -54,7 +66,8 @@ struct AddEventView: View {
             .toolbar {
                 ToolbarItem(placement: .primaryAction) {
                     Button {
-                        viewmodel.addEvent()
+                        self.viewmodel.addEvent()
+                        self.dataController.save()
                         presentationMode.wrappedValue.dismiss()
                     } label: {
                         Image(systemName: .plus)
@@ -69,7 +82,7 @@ struct AddEventView: View {
                     }
                 }
             }
-            .accentColor(modeldata.accentcolor)
+            .accentColor(self.modeldata.accentcolor)
         }
     }
 }
@@ -77,7 +90,7 @@ struct AddEventView: View {
 struct AddView_Previews: PreviewProvider {
     static var previews: some View {
         AddEventView()
-            .environmentObject(ModelData.shared)
             .environmentObject(DataController.preview)
+            .environmentObject(ModelData.shared)
     }
 }

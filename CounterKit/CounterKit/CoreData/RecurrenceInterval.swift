@@ -28,4 +28,32 @@ extension RecurrenceInterval {
             return "Yearly"
         }
     }
+    
+    public var component: Calendar.Component? {
+        switch self {
+        case .none:
+            return nil
+        case .daily:
+            return .day
+        case .weekly:
+            return .weekOfYear
+        case .biweekly:
+            return .weekOfYear
+        case .monthly:
+            return .month
+        case .yearly:
+            return .year
+        }
+    }
+    
+    public var offset: Int {
+        switch self {
+        case .none:
+            return 0
+        case .biweekly:
+            return 2
+        default:
+            return 1
+        }
+    }
 }

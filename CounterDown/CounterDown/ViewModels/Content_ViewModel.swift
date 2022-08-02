@@ -9,10 +9,6 @@ import CounterKit
 import Foundation
 
 class ContentViewModel: ObservableObject {
-    @Published var now = Date()
-    var timer: Timer {
-        Timer.scheduledTimer(withTimeInterval: 1, repeats: true) {_ in
-            self.now = Date()
-        }
-    }
+    @Published var showingAddSheet = false
+    @Published var showingSettingsSheet = false
 }

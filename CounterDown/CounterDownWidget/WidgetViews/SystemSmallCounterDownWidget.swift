@@ -221,7 +221,6 @@ struct FlatSystemSmallCounterDownWidget: View {
     func hoursLeft() -> String { String(format: "%02d", self.components.hour ?? 00) }
 }
 
-
 struct SystemSmallCounterDownWidget_Previews: PreviewProvider {
     static var previews: some View {
         if #available(iOS 16.0, *) {
