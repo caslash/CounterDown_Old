@@ -147,10 +147,7 @@ struct GradientEventView: View {
         .frame(width: (UIScreen.main.bounds.width / 5) * 4, height: UIScreen.main.bounds.height / 7)
         .padding()
         .background(self.viewmodel.event.eventColor.gradient, in: RoundedRectangle(cornerRadius: 20))
-        .sheet(isPresented: $showingEditSheet) {
-            EditEventView(self.viewmodel.event)
-                .presentationDetents([.fraction(0.42), .large])
-        }
+        .sheet(isPresented: $showingEditSheet) { EditEventView(self.viewmodel.event) }
         .onChange(of: self.viewmodel.now) {_ in
             if self.viewmodel.event.eventDueDate <= self.viewmodel.now {
                 print("\(self.viewmodel.event.eventName) is past due")

@@ -19,14 +19,7 @@ struct ContentView: View {
         NavigationView {
             EventListView(showingAddSheet: self.$viewmodel.showingAddSheet)
                 .navigationTitle("Events")
-                .sheet(isPresented: self.$viewmodel.showingAddSheet) {
-                    if #available(iOS 16, *) {
-                        AddEventView()
-                            .presentationDetents([.fraction(0.5), .large])
-                    } else {
-                        AddEventView()
-                    }
-                }
+                .sheet(isPresented: self.$viewmodel.showingAddSheet) { AddEventView() }
                 .sheet(isPresented: self.$viewmodel.showingSettingsSheet) {
                     if #available(iOS 16.0, *) {
                         SettingsView()
