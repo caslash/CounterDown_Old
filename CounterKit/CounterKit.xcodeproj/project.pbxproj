@@ -13,6 +13,7 @@
 		2E1A9DC7286A919A00EA2BA2 /* CounterKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 2E1A9DB9286A919A00EA2BA2 /* CounterKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2E1A9DED286A936700EA2BA2 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1A9DEC286A936700EA2BA2 /* DataController.swift */; };
 		2E3D9053288CB9AB004F7860 /* SlashKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E3D9052288CB9AB004F7860 /* SlashKit.framework */; };
+		2E5A33F32898B7BD004FF354 /* Notification+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E5A33F22898B7BD004FF354 /* Notification+Extension.swift */; };
 		2E66D38D287E50B80064A766 /* SavedEvent+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E66D38C287E50B80064A766 /* SavedEvent+Extension.swift */; };
 		2E66D397287E725C0064A766 /* RecurrenceInterval.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E66D396287E725C0064A766 /* RecurrenceInterval.swift */; };
 		2E7B4D29286A982800A9BE57 /* CalendarComponents+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E7B4D27286A982800A9BE57 /* CalendarComponents+Extension.swift */; };
@@ -37,6 +38,7 @@
 		2E1A9DC5286A919A00EA2BA2 /* CounterKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterKitTests.swift; sourceTree = "<group>"; };
 		2E1A9DEC286A936700EA2BA2 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 		2E3D9052288CB9AB004F7860 /* SlashKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SlashKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2E5A33F22898B7BD004FF354 /* Notification+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notification+Extension.swift"; sourceTree = "<group>"; };
 		2E66D38C287E50B80064A766 /* SavedEvent+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SavedEvent+Extension.swift"; sourceTree = "<group>"; };
 		2E66D396287E725C0064A766 /* RecurrenceInterval.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecurrenceInterval.swift; sourceTree = "<group>"; };
 		2E7B4D27286A982800A9BE57 /* CalendarComponents+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CalendarComponents+Extension.swift"; sourceTree = "<group>"; };
@@ -116,6 +118,7 @@
 			children = (
 				2E7B4D27286A982800A9BE57 /* CalendarComponents+Extension.swift */,
 				2E66D38C287E50B80064A766 /* SavedEvent+Extension.swift */,
+				2E5A33F22898B7BD004FF354 /* Notification+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -246,6 +249,7 @@
 				2E1A9DBB286A919A00EA2BA2 /* CounterKit.docc in Sources */,
 				2E66D38D287E50B80064A766 /* SavedEvent+Extension.swift in Sources */,
 				2E7B4D29286A982800A9BE57 /* CalendarComponents+Extension.swift in Sources */,
+				2E5A33F32898B7BD004FF354 /* Notification+Extension.swift in Sources */,
 				2E66D397287E725C0064A766 /* RecurrenceInterval.swift in Sources */,
 				2E1A9DED286A936700EA2BA2 /* DataController.swift in Sources */,
 			);

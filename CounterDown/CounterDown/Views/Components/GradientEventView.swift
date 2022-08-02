@@ -155,7 +155,7 @@ struct GradientEventView: View {
         .onChange(of: self.viewmodel.now) {_ in
             if self.viewmodel.event.eventDueDate <= self.viewmodel.now {
                 print("\(self.viewmodel.event.eventName) is past due")
-                self.dataController.processRefresh(event: self.viewmodel.event)
+                NotificationCenter.default.post(name: .CDEventEnded, object: nil, userInfo: ["event": self.viewmodel.event])
             }
         }
     }

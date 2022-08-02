@@ -67,6 +67,8 @@ public class DataController: ObservableObject {
         self.container = container
 
         NotificationCenter.default.addObserver(self, selector: #selector(self.processUpdate), name: .NSPersistentStoreRemoteChange, object: nil)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(self.processRefresh), name: .CDEventEnded, object: nil)
     }
     
     public func save() {
@@ -112,10 +114,12 @@ public class DataController: ObservableObject {
         }
     }
     
-    public func processRefresh(event: SavedEvent) {
+    @objc
+    public func processRefresh(notification: Notification) {
         let context = self.container.newBackgroundContext()
+        let event = notification.userInfo!["event"] as! SavedEvent
         
-        context.performAndWait {
+        context.perform {
             let refreshResult = self.handleEventsRefresh(event)
             
             if refreshResult == .success {
