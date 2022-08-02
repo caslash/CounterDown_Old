@@ -12,7 +12,8 @@
 		2E1A9DC6286A919A00EA2BA2 /* CounterKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1A9DC5286A919A00EA2BA2 /* CounterKitTests.swift */; };
 		2E1A9DC7286A919A00EA2BA2 /* CounterKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 2E1A9DB9286A919A00EA2BA2 /* CounterKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2E1A9DED286A936700EA2BA2 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1A9DEC286A936700EA2BA2 /* DataController.swift */; };
-		2E3D9053288CB9AB004F7860 /* SlashKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E3D9052288CB9AB004F7860 /* SlashKit.framework */; };
+		2E2FB7CD2898D4E40034FF16 /* SlashKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E3D9052288CB9AB004F7860 /* SlashKit.framework */; };
+		2E2FB7CE2898D4E40034FF16 /* SlashKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2E3D9052288CB9AB004F7860 /* SlashKit.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		2E5A33F32898B7BD004FF354 /* Notification+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E5A33F22898B7BD004FF354 /* Notification+Extension.swift */; };
 		2E66D38D287E50B80064A766 /* SavedEvent+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E66D38C287E50B80064A766 /* SavedEvent+Extension.swift */; };
 		2E66D397287E725C0064A766 /* RecurrenceInterval.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E66D396287E725C0064A766 /* RecurrenceInterval.swift */; };
@@ -29,6 +30,20 @@
 			remoteInfo = CounterKit;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		2E2FB7CF2898D4E40034FF16 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				2E2FB7CE2898D4E40034FF16 /* SlashKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		2E1A9DB6286A919A00EA2BA2 /* CounterKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CounterKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -50,7 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2E3D9053288CB9AB004F7860 /* SlashKit.framework in Frameworks */,
+				2E2FB7CD2898D4E40034FF16 /* SlashKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -153,6 +168,7 @@
 				2E1A9DB2286A919A00EA2BA2 /* Sources */,
 				2E1A9DB3286A919A00EA2BA2 /* Frameworks */,
 				2E1A9DB4286A919A00EA2BA2 /* Resources */,
+				2E2FB7CF2898D4E40034FF16 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
