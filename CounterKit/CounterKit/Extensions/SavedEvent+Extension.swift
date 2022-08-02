@@ -11,10 +11,10 @@ import SwiftUI
 
 extension SavedEvent: Comparable {
     public static var exampleEvent: SavedEvent {
-        let controller = DataController.shared
+        let controller = DataController.preview
         let vc = controller.container.viewContext
         
-        let components: [Calendar.Component] = [.day, .hour, .minute, .second]
+        let components: [Calendar.Component] = [.month ,.day, .hour, .minute, .second]
         
         let event = SavedEvent(context: vc)
         event.id = UUID()

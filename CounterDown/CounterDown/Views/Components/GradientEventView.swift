@@ -44,20 +44,19 @@ struct GradientEventView: View {
                 }
             }
             
-            
             if self.viewmodel.event.isRecurring {
                 HStack {
-                    Spacer()
-                    
                     VStack {
-                        Spacer()
-                        
                         Text(self.viewmodel.event.eventRecurrenceInterval.displayName)
                             .font(.footnote.weight(.bold))
                             .padding(3)
                             .background(.ultraThinMaterial)
                             .cornerRadius(5)
+                        
+                        Spacer()
                     }
+                    
+                    Spacer()
                 }
             }
             

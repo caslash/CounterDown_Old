@@ -99,7 +99,14 @@ struct CounterDownWidget: Widget {
 @available(iOS 16.0, *)
 struct CounterDownWidget_Previews: PreviewProvider {
     static var previews: some View {
-        CounterDownWidgetEntryView(entry: SimpleEntry(date: Date(), event: SavedEvent.exampleEvent))
-            .previewContext(WidgetPreviewContext(family: .systemSmall))
+        Group {
+            CounterDownWidgetEntryView(entry: SimpleEntry(date: Date(), event: SavedEvent.exampleEvent))
+                .previewDisplayName("System Small")
+                .previewContext(WidgetPreviewContext(family: .systemSmall))
+            
+            CounterDownWidgetEntryView(entry: SimpleEntry(date: Date(), event: SavedEvent.exampleEvent))
+                .previewDisplayName("Accessory Rectangular")
+                .previewContext(WidgetPreviewContext(family: .accessoryRectangular))
+        }
     }
 }
