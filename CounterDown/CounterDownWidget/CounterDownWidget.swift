@@ -16,11 +16,11 @@ struct Provider: IntentTimelineProvider {
     public typealias Entry = SimpleEntry
     
     func placeholder(in context: Context) -> SimpleEntry {
-        return SimpleEntry(date: Date(), event: SavedEvent.exampleEvent)
+        return SimpleEntry(date: Date(), event: SavedEvent.defaultEvent)
     }
 
     func getSnapshot(for configuration: DynamicEventSelectionIntent, in context: Context, completion: @escaping (SimpleEntry) -> ()) {
-        let entry = SimpleEntry(date: Date(), event: SavedEvent.exampleEvent)
+        let entry = SimpleEntry(date: Date(), event: SavedEvent.defaultEvent)
         completion(entry)
     }
 
@@ -44,7 +44,7 @@ struct Provider: IntentTimelineProvider {
         if let id = configuration.event?.identifier, let uuid = UUID(uuidString: id), let event = SavedEvent.eventFromId(uuid) {
             return event
         }
-        return SavedEvent.exampleEvent
+        return SavedEvent.defaultEvent
     }
 }
 

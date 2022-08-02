@@ -21,7 +21,7 @@ class IntentHandler: INExtension, DynamicEventSelectionIntentHandling {
     }
     
     func defaultEvent(for intent: DynamicEventSelectionIntent) -> CountdownEvent? {
-        return CountdownEvent(identifier: SavedEvent.exampleEvent.eventId.uuidString, display: SavedEvent.exampleEvent.eventName)
+        return CountdownEvent(identifier: SavedEvent.defaultEvent.eventId.uuidString, display: SavedEvent.defaultEvent.eventName)
     }
     
     override func handler(for intent: INIntent) -> Any {
