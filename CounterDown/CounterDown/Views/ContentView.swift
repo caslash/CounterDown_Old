@@ -15,14 +15,11 @@ struct ContentView: View {
     @EnvironmentObject var dataController: DataController
     @EnvironmentObject var modeldata: ModelData
     @ObservedObject var viewmodel = ContentViewModel()
-    @State private var showingAddSheet = false
-    @State private var showingSettingsSheet = false
-    @State private var showingEditSheet = false
     var body: some View {
         NavigationView {
-            EventListView(showingAddSheet: self.$showingAddSheet)
+            EventListView(showingAddSheet: self.$viewmodel.showingAddSheet)
                 .navigationTitle("Events")
-                .sheet(isPresented: self.$showingAddSheet) {
+                .sheet(isPresented: self.$viewmodel.showingAddSheet) {
                     if #available(iOS 16, *) {
                         AddEventView()
                             .presentationDetents([.fraction(0.5), .large])
@@ -30,7 +27,7 @@ struct ContentView: View {
                         AddEventView()
                     }
                 }
-                .sheet(isPresented: self.$showingSettingsSheet) {
+                .sheet(isPresented: self.$viewmodel.showingSettingsSheet) {
                     if #available(iOS 16.0, *) {
                         SettingsView()
                             .presentationDetents([.fraction(0.3)])
@@ -41,7 +38,7 @@ struct ContentView: View {
                 .toolbar {
                     ToolbarItem(placement: .primaryAction) {
                         Button {
-                            self.showingAddSheet = true
+                            self.viewmodel.showingAddSheet = true
                         } label: {
                             Label("Add Event", systemImage: "plus")
                                 .font(.body.weight(.black))
@@ -51,7 +48,7 @@ struct ContentView: View {
                     
                     ToolbarItem(placement: .navigationBarLeading) {
                         Button {
-                            self.showingSettingsSheet = true
+                            self.viewmodel.showingSettingsSheet = true
                         } label: {
                             Label("Settings", systemImage: "gear")
                                 .font(.body.weight(.black))

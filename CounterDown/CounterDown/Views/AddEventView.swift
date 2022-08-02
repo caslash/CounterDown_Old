@@ -29,10 +29,10 @@ struct AddEventView: View {
                     
                     Toggle("Show Months", isOn: self.$viewmodel.includeMonth)
                     
-                    Toggle("Is This Event Recurring", isOn: self.$viewmodel.isRecurring)
+                    Toggle("Is This Event Recurring?", isOn: self.$viewmodel.isRecurring)
                     
                     if self.viewmodel.isRecurring {
-                        Picker("Repeat", selection: self.$viewmodel.recurrenceInterval) {
+                        Picker("Repeat...", selection: self.$viewmodel.recurrenceInterval) {
                             ForEach(RecurrenceInterval.allCases.dropFirst(), id: \.self) { interval in
                                 Text(interval.displayName)
                             }

@@ -9,4 +9,6 @@ import CounterKit
 import Foundation
 
 class ContentViewModel: ObservableObject {
+    @Published var showingAddSheet = false
+    @Published var showingSettingsSheet = false
 }
