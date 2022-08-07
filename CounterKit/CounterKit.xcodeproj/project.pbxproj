@@ -17,6 +17,7 @@
 		2E66D397287E725C0064A766 /* RecurrenceInterval.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E66D396287E725C0064A766 /* RecurrenceInterval.swift */; };
 		2E7B4D29286A982800A9BE57 /* CalendarComponents+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E7B4D27286A982800A9BE57 /* CalendarComponents+Extension.swift */; };
 		2EBBD246286A9FDB00477E14 /* CounterDownModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2EBBD244286A9FDB00477E14 /* CounterDownModel.xcdatamodeld */; };
+		2EBDC491289F3D0800BFB56F /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EBDC490289F3D0800BFB56F /* UIColor+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +42,7 @@
 		2E66D396287E725C0064A766 /* RecurrenceInterval.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecurrenceInterval.swift; sourceTree = "<group>"; };
 		2E7B4D27286A982800A9BE57 /* CalendarComponents+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CalendarComponents+Extension.swift"; sourceTree = "<group>"; };
 		2EBBD245286A9FDB00477E14 /* CounterDownModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CounterDownModel.xcdatamodel; sourceTree = "<group>"; };
+		2EBDC490289F3D0800BFB56F /* UIColor+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIColor+Extension.swift"; path = "../../../../../SlashKit/SlashKit/Extensions/UIColor+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +115,7 @@
 		2E1A9E1A286A963900EA2BA2 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				2EBDC490289F3D0800BFB56F /* UIColor+Extension.swift */,
 				2E7B4D27286A982800A9BE57 /* CalendarComponents+Extension.swift */,
 				2E66D38C287E50B80064A766 /* SavedEvent+Extension.swift */,
 				2E5A33F22898B7BD004FF354 /* Notification+Extension.swift */,
@@ -248,6 +251,7 @@
 				2E5A33F32898B7BD004FF354 /* Notification+Extension.swift in Sources */,
 				2E66D397287E725C0064A766 /* RecurrenceInterval.swift in Sources */,
 				2E1A9DED286A936700EA2BA2 /* DataController.swift in Sources */,
+				2EBDC491289F3D0800BFB56F /* UIColor+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

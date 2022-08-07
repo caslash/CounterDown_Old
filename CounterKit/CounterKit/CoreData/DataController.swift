@@ -5,7 +5,6 @@
 //  Created by Cameron Slash on 27/6/22.
 //
 
-import SlashKit
 import CoreData
 import Foundation
 import UIKit
@@ -159,7 +158,7 @@ public class DataController: ObservableObject {
             event.id = UUID()
             event.name = "Event \(i)"
             event.due = Calendar.current.date(byAdding: .day, value: Int.random(in: 10..<365), to: Date())
-            event.colorHex = UIColor(red: CGFloat(Int.random(in: 1..<255)), green: CGFloat(Int.random(in: 1..<255)), blue: CGFloat(Int.random(in: 1..<255)), alpha: 1).toHexString()
+            event.colorHex = String(format: "#%6x", Int.random(in: 0...16777215))
             event.components = try JSONEncoder().encode(components)
             event.isRecurring = Bool.random()
             if event.isRecurring {
