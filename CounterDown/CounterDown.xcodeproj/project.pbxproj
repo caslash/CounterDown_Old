@@ -22,8 +22,6 @@
 		2E33228C28727AE200D74706 /* FlatEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E33228B28727AE200D74706 /* FlatEventView.swift */; };
 		2E3C5B99286BE59400341101 /* CounterKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E3C5B92286BE54F00341101 /* CounterKit.framework */; };
 		2E3C5B9A286BE59400341101 /* CounterKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2E3C5B92286BE54F00341101 /* CounterKit.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		2E3D904F288CB95B004F7860 /* SlashKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E3D904E288CB95B004F7860 /* SlashKit.framework */; };
-		2E3D9050288CB95B004F7860 /* SlashKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2E3D904E288CB95B004F7860 /* SlashKit.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		2E3D9057288CBA80004F7860 /* EventListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E3D9056288CBA80004F7860 /* EventListView.swift */; };
 		2E3D9059288CBBC2004F7860 /* EventList_ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E3D9058288CBBC2004F7860 /* EventList_ViewModel.swift */; };
 		2E6247572840404B00BB2A48 /* CountdownApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6247562840404B00BB2A48 /* CountdownApp.swift */; };
@@ -39,6 +37,7 @@
 		2E7BAD5E285E7E5A001F0505 /* SFSymbolsFinder in Frameworks */ = {isa = PBXBuildFile; productRef = 2E7BAD5D285E7E5A001F0505 /* SFSymbolsFinder */; };
 		2E87A1912846D18600AD3624 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E87A1902846D18600AD3624 /* SettingsView.swift */; };
 		2E87A1952847014000AD3624 /* CalendarChooser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E87A1942847014000AD3624 /* CalendarChooser.swift */; };
+		2E90B484289F491B004A10BF /* SlashKit in Frameworks */ = {isa = PBXBuildFile; productRef = 2E90B483289F491B004A10BF /* SlashKit */; };
 		2E92EAC028417532008E7393 /* Content_ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E92EABF28417532008E7393 /* Content_ViewModel.swift */; };
 		2E9AE099285D780E00C1EBCF /* EditEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9AE098285D780E00C1EBCF /* EditEventView.swift */; };
 		2E9AE09B285D781C00C1EBCF /* EditEvent_ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9AE09A285D781C00C1EBCF /* EditEvent_ViewModel.swift */; };
@@ -74,7 +73,6 @@
 			dstSubfolderSpec = 10;
 			files = (
 				2E3C5B9A286BE59400341101 /* CounterKit.framework in Embed Frameworks */,
-				2E3D9050288CB95B004F7860 /* SlashKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -109,7 +107,6 @@
 		2E3C5B8F286BE4F700341101 /* CounterKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CounterKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E3C5B92286BE54F00341101 /* CounterKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CounterKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E3C5B96286BE55900341101 /* CounterKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CounterKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		2E3D904E288CB95B004F7860 /* SlashKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SlashKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E3D9056288CBA80004F7860 /* EventListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventListView.swift; sourceTree = "<group>"; };
 		2E3D9058288CBBC2004F7860 /* EventList_ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventList_ViewModel.swift; sourceTree = "<group>"; };
 		2E6247532840404B00BB2A48 /* CounterDown.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CounterDown.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -163,8 +160,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E90B484289F491B004A10BF /* SlashKit in Frameworks */,
 				2E3C5B99286BE59400341101 /* CounterKit.framework in Frameworks */,
-				2E3D904F288CB95B004F7860 /* SlashKit.framework in Frameworks */,
 				2E7B4D42286A9C0500A9BE57 /* DynamicColor in Frameworks */,
 				2E7BAD5E285E7E5A001F0505 /* SFSymbolsFinder in Frameworks */,
 			);
@@ -296,7 +293,6 @@
 		2EEE4E882841DBEB0041A0C8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				2E3D904E288CB95B004F7860 /* SlashKit.framework */,
 				2E3C5B96286BE55900341101 /* CounterKit.framework */,
 				2E3C5B92286BE54F00341101 /* CounterKit.framework */,
 				2E3C5B8F286BE4F700341101 /* CounterKit.framework */,
@@ -373,6 +369,7 @@
 			packageProductDependencies = (
 				2E7BAD5D285E7E5A001F0505 /* SFSymbolsFinder */,
 				2E7B4D41286A9C0500A9BE57 /* DynamicColor */,
+				2E90B483289F491B004A10BF /* SlashKit */,
 			);
 			productName = Countdown;
 			productReference = 2E6247532840404B00BB2A48 /* CounterDown.app */;
@@ -411,6 +408,7 @@
 			packageReferences = (
 				2E7BAD5C285E7E5A001F0505 /* XCRemoteSwiftPackageReference "SFSymbolsFinder" */,
 				2E7BAD5F285E7E62001F0505 /* XCRemoteSwiftPackageReference "DynamicColor" */,
+				2E90B482289F491B004A10BF /* XCRemoteSwiftPackageReference "SlashKit" */,
 			);
 			productRefGroup = 2E6247542840404B00BB2A48 /* Products */;
 			projectDirPath = "";
@@ -881,6 +879,14 @@
 				kind = branch;
 			};
 		};
+		2E90B482289F491B004A10BF /* XCRemoteSwiftPackageReference "SlashKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/caslash/SlashKit";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -903,6 +909,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 2E7BAD5C285E7E5A001F0505 /* XCRemoteSwiftPackageReference "SFSymbolsFinder" */;
 			productName = SFSymbolsFinder;
+		};
+		2E90B483289F491B004A10BF /* SlashKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2E90B482289F491B004A10BF /* XCRemoteSwiftPackageReference "SlashKit" */;
+			productName = SlashKit;
 		};
 		2EC61D982860BFB80018EEDF /* SFSymbolsFinder */ = {
 			isa = XCSwiftPackageProductDependency;

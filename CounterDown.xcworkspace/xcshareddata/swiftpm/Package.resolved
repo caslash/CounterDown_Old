@@ -17,6 +17,15 @@
         "branch" : "master",
         "revision" : "955b818250237756389a9e27d163142e983e77f3"
       }
+    },
+    {
+      "identity" : "slashkit",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/caslash/SlashKit",
+      "state" : {
+        "branch" : "main",
+        "revision" : "4d2af7307e5897e4c20e84e25b46e08b6c21d3eb"
+      }
     }
   ],
   "version" : 2
