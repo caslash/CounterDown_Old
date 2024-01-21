@@ -1,81 +1,61 @@
 //
 //  SettingsView.swift
-//  Countdown
+//  CounterDown
 //
-//  Created by Cameron Slash on 31/5/22.
+//  Created by Cameron Slash on 1/16/24.
 //
 
 import CounterKit
-import SFSymbolsFinder
 import SwiftUI
 import EventKit
 
 struct SettingsView: View {
-    @Environment(\.presentationMode) var presentationMode
-    @EnvironmentObject var modeldata: ModelData
-    @State private var showingCalendarChooser = false
-    var buildNum: String {
-        if let text = Bundle.main.infoDictionary?["CFBundleVersion"] as? String {
-            return text
-        }
-        return "0"
-    }
+    @Environment(\.dismiss) private var dismiss
+    @Bindable var permissionsService: PermissionsService
+    @Bindable var utilities: Utilities
     
-    var versionNum: String {
-        if let text = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String {
-            return text
-        }
-        return "0"
-    }
+    @State private var showingCalendarChooser: Bool = false
+    
     var body: some View {
-        NavigationView {
-            ZStack {
-                Form {
+        NavigationStack {
+            Form {
+                Section {
                     Button {
-                        showingCalendarChooser = true
+                        self.showingCalendarChooser = true
                     } label: {
                         HStack {
                             Text("Choose Calendars")
                             
                             Spacer()
                             
-                            Image(systemName: .chevronRight)
+                            Image(systemName: "chevron.right")
                         }
                     }
-                    .foregroundColor(.primary)
                     
-                    ColorPicker("Accent Color", selection: $modeldata.accentcolor)
-                }
-                
-                VStack {
-                    Spacer()
-                    
-                    Text("v\(versionNum) build \(buildNum)")
-                        .foregroundColor(modeldata.accentcolor)
+                    ColorPicker("Accent Color", selection: self.$utilities.accentcolor)
+                } footer: {
+                    Text("Accent color will affect buttons, header elements, and default colors for new events. ")
                 }
             }
             .navigationTitle("Settings")
+            .sheet(isPresented: self.$showingCalendarChooser) {
+                CalendarChooser(calendars: self.$permissionsService.userSelectedCalendars, eventStore: self.permissionsService.ekStore)
+            }
             .toolbar {
                 ToolbarItem(placement: .cancellationAction) {
                     Button {
-                        self.presentationMode.wrappedValue.dismiss()
+                        self.dismiss.callAsFunction()
                     } label: {
-                        Image(systemName: .xmarkCircleFill)
+                        Label("Exit Settings", systemImage: "xmark.circle.fill")
+                            .labelStyle(.iconOnly)
                     }
                 }
             }
-            .sheet(isPresented: $showingCalendarChooser) {
-                    CalendarChooser(calendars: $modeldata.userSelectedCalendars, eventStore: ModelData.shared.ekstore)
-                    .ignoresSafeArea()
-            }
-            .accentColor(modeldata.accentcolor)
         }
+        .tint(self.utilities.accentcolor)
     }
 }
 
-struct SettingsView_Previews: PreviewProvider {
-    static var previews: some View {
-        SettingsView()
-            .environmentObject(ModelData.shared)
-    }
+#Preview {
+    SettingsView(permissionsService: PermissionsService.preview, utilities: Utilities.shared)
 }

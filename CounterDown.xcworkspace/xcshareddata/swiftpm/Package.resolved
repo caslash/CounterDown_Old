@@ -5,17 +5,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/yannickl/DynamicColor.git",
       "state" : {
-        "branch" : "master",
-        "revision" : "cf7c6eed080ea4b678592ae5af987c207ca8a232"
-      }
-    },
-    {
-      "identity" : "sfsymbolsfinder",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/abadikaka/SFSymbolsFinder.git",
-      "state" : {
-        "branch" : "master",
-        "revision" : "955b818250237756389a9e27d163142e983e77f3"
+        "revision" : "d9beca13ca85baa50ee29832d0db5129fba69630",
+        "version" : "5.0.1"
       }
     },
     {
@@ -24,7 +15,7 @@
       "location" : "https://github.com/caslash/SlashKit",
       "state" : {
         "branch" : "main",
-        "revision" : "4d2af7307e5897e4c20e84e25b46e08b6c21d3eb"
+        "revision" : "ab8e99cff44e287d601f66adc8f0a9145896dcf2"
       }
     }
   ],

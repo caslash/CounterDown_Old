@@ -4,122 +4,30 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>CountdownIntent.xcscheme_^#shared#^_</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>2</integer>
-		</dict>
-		<key>CountdownIntents.xcscheme_^#shared#^_</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>1</integer>
-		</dict>
-		<key>CountdownIntentsUI.xcscheme_^#shared#^_</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>1</integer>
-		</dict>
-		<key>CountdownWidgetExtension.xcscheme_^#shared#^_</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>1</integer>
-		</dict>
 		<key>CounterDown.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
-		<key>CounterDownIntentHandler.xcscheme_^#shared#^_</key>
+		<key>WidgetsExtension.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>1</integer>
-		</dict>
-		<key>CounterDownWidgetExtension.xcscheme_^#shared#^_</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>2</integer>
-		</dict>
-		<key>EventViewWidgetExtension.xcscheme_^#shared#^_</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>2</integer>
-		</dict>
-		<key>EventWidgetIntents.xcscheme_^#shared#^_</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>1</integer>
-		</dict>
-		<key>Example (Playground) 1.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-			<key>orderHint</key>
-			<integer>4</integer>
-		</dict>
-		<key>Example (Playground) 2.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-			<key>orderHint</key>
-			<integer>5</integer>
-		</dict>
-		<key>Example (Playground) 3.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-			<key>orderHint</key>
-			<integer>2</integer>
-		</dict>
-		<key>Example (Playground) 4.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-			<key>orderHint</key>
-			<integer>5</integer>
-		</dict>
-		<key>Example (Playground) 5.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-			<key>orderHint</key>
-			<integer>6</integer>
-		</dict>
-		<key>Example (Playground).xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-			<key>orderHint</key>
-			<integer>3</integer>
-		</dict>
-		<key>WidgetExtension.xcscheme_^#shared#^_</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>0</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>2E1A6E122860379400D91FBA</key>
+		<key>2EBAA4BA2B58CBD300F3005D</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>2E1A6E25286037C400D91FBA</key>
+		<key>2EBAA4D02B58CBF700F3005D</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>2E6247522840404B00BB2A48</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>2E6247622840404C00BB2A48</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>2E62476C2840404C00BB2A48</key>
+		<key>2EFEBA362B525F4000AE19F3</key>
 		<dict>
 			<key>primary</key>
 			<true/>

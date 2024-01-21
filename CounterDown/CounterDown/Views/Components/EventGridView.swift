@@ -1,5 +1,5 @@
 //
-//  EventListView.swift
+//  EventGridView.swift
 //  CounterDown
 //
 //  Created by Cameron Slash on 1/21/24.
@@ -9,7 +9,7 @@ import CounterKit
 import SwiftData
 import SwiftUI
 
-struct EventListView: View {
+struct EventGridView: View {
     @Environment(\.modelContext) private var modelContext
     @Environment(DateService.self) private var dateService
     
@@ -17,9 +17,11 @@ struct EventListView: View {
     
     @Binding var selectedEvent: SavedEvent?
     
+    let columns = [GridItem(.flexible()), GridItem(.flexible())]
+    
     var body: some View {
         ScrollView {
-            VStack(spacing: 10) {
+            LazyVGrid(columns: columns) {
                 ForEach(events) { event in
                     EventView(event: event)
                         .contextMenu {
@@ -56,7 +58,7 @@ struct EventListView: View {
     container.mainContext.insert(SavedEvent.birthday)
     container.mainContext.insert(SavedEvent.visionpro)
     
-    return EventListView(selectedEvent: .constant(.example))
+    return EventGridView(selectedEvent: .constant(nil))
         .modelContainer(container)
         .environment(DateService.shared)
 }
