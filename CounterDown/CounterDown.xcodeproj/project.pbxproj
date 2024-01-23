@@ -162,7 +162,7 @@
 		2EBAA5172B58DC5C00F3005D /* EventWidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventWidgetView.swift; sourceTree = "<group>"; };
 		2ECE3EFE2B5E1E5300B68BE7 /* EventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventView.swift; sourceTree = "<group>"; };
 		2ECE3F002B5E28A100B68BE7 /* CounterDown (Watch).entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "CounterDown (Watch).entitlements"; sourceTree = "<group>"; };
-		2ECE3F012B5E2D1600B68BE7 /* CounterDown--Watch--Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "CounterDown--Watch--Info.plist"; sourceTree = "<group>"; };
+		2ECE3F012B5E2D1600B68BE7 /* CounterDownWatchInfo.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = CounterDownWatchInfo.plist; sourceTree = "<group>"; };
 		2EFEBA372B525F4000AE19F3 /* CounterDown.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CounterDown.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2EFEBA3A2B525F4000AE19F3 /* CounterDownApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterDownApp.swift; sourceTree = "<group>"; };
 		2EFEBA3C2B525F4000AE19F3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -207,6 +207,7 @@
 		2E01056D2B5E177B00A03873 /* Watch */ = {
 			isa = PBXGroup;
 			children = (
+				2ECE3F012B5E2D1600B68BE7 /* CounterDownWatchInfo.plist */,
 				2E01056E2B5E177B00A03873 /* CounterDownWatchApp.swift */,
 				2E0105702B5E177B00A03873 /* ContentView.swift */,
 				2ECE3EFE2B5E1E5300B68BE7 /* EventView.swift */,
@@ -290,7 +291,6 @@
 		2EFEBA2E2B525F4000AE19F3 = {
 			isa = PBXGroup;
 			children = (
-				2ECE3F012B5E2D1600B68BE7 /* CounterDown--Watch--Info.plist */,
 				2EFEBA392B525F4000AE19F3 /* CounterDown */,
 				2E01056D2B5E177B00A03873 /* Watch */,
 				2EBAA4FD2B58D3A100F3005D /* Widgets */,
@@ -550,7 +550,7 @@
 				DEVELOPMENT_TEAM = 3S8XC6A264;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "CounterDown--Watch--Info.plist";
+				INFOPLIST_FILE = Watch/CounterDownWatchInfo.plist;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.Cameron.Slash.Counterdown;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -583,7 +583,7 @@
 				DEVELOPMENT_TEAM = 3S8XC6A264;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "CounterDown--Watch--Info.plist";
+				INFOPLIST_FILE = Watch/CounterDownWatchInfo.plist;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.Cameron.Slash.Counterdown;
 				LD_RUNPATH_SEARCH_PATHS = (
