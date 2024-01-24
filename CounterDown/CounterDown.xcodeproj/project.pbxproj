@@ -15,6 +15,8 @@
 		2E0105802B5E17A900A03873 /* CounterKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E01057F2B5E17A900A03873 /* CounterKit.framework */; };
 		2E0105812B5E17A900A03873 /* CounterKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2E01057F2B5E17A900A03873 /* CounterKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		2E0105872B5E1A1F00A03873 /* Widgets.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 2EBAA4FA2B58D3A100F3005D /* Widgets.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		2E020E102B60C31800B1F8A6 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E020E0F2B60C31800B1F8A6 /* CloudKit.framework */; };
+		2E020E122B60C32300B1F8A6 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E020E112B60C32300B1F8A6 /* CloudKit.framework */; };
 		2E1AD5422B5A372900F405A4 /* DynamicColor in Frameworks */ = {isa = PBXBuildFile; productRef = 2E1AD5412B5A372900F405A4 /* DynamicColor */; };
 		2E1AD5432B5A37EE00F405A4 /* EventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E66C1B02B5A08910032249C /* EventView.swift */; };
 		2E1AD5492B5A394100F405A4 /* SystemSmallEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1AD5452B5A382B00F405A4 /* SystemSmallEventView.swift */; };
@@ -133,6 +135,8 @@
 		2E0105702B5E177B00A03873 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		2E0105722B5E177C00A03873 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2E01057F2B5E17A900A03873 /* CounterKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CounterKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2E020E0F2B60C31800B1F8A6 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS17.2.sdk/System/Library/Frameworks/CloudKit.framework; sourceTree = DEVELOPER_DIR; };
+		2E020E112B60C32300B1F8A6 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS10.2.sdk/System/Library/Frameworks/CloudKit.framework; sourceTree = DEVELOPER_DIR; };
 		2E1AD5452B5A382B00F405A4 /* SystemSmallEventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemSmallEventView.swift; sourceTree = "<group>"; };
 		2E1AD5472B5A387F00F405A4 /* SystemMediumEventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemMediumEventView.swift; sourceTree = "<group>"; };
 		2E66C1A92B58DE4C0032249C /* CounterKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CounterKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -176,6 +180,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E020E122B60C32300B1F8A6 /* CloudKit.framework in Frameworks */,
 				2E0105802B5E17A900A03873 /* CounterKit.framework in Frameworks */,
 				2E01057E2B5E17A600A03873 /* DynamicColor in Frameworks */,
 			);
@@ -196,6 +201,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E020E102B60C31800B1F8A6 /* CloudKit.framework in Frameworks */,
 				2E66C1B62B5A1E0D0032249C /* DynamicColor in Frameworks */,
 				2EBAA44F2B54AE7600F3005D /* CounterKit.framework in Frameworks */,
 			);
@@ -230,6 +236,8 @@
 		2EBAA44D2B54AE7600F3005D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2E020E0F2B60C31800B1F8A6 /* CloudKit.framework */,
+				2E020E112B60C32300B1F8A6 /* CloudKit.framework */,
 				2E01057F2B5E17A900A03873 /* CounterKit.framework */,
 				2E72BC0B2B5E0D88002F75F1 /* CounterKit.framework */,
 				2E66C1A92B58DE4C0032249C /* CounterKit.framework */,
