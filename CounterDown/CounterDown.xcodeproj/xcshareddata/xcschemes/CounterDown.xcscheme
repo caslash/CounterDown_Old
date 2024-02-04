@@ -15,8 +15,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "2EFEBA362B525F4000AE19F3"
-               BuildableName = "CounterDown (Mobile).app"
-               BlueprintName = "CounterDown (Mobile)"
+               BuildableName = "CounterDown.app"
+               BlueprintName = "CounterDown"
                ReferencedContainer = "container:CounterDown.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -44,8 +44,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2EFEBA362B525F4000AE19F3"
-            BuildableName = "CounterDown (Mobile).app"
-            BlueprintName = "CounterDown (Mobile)"
+            BuildableName = "CounterDown.app"
+            BlueprintName = "CounterDown"
             ReferencedContainer = "container:CounterDown.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -61,8 +61,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2EFEBA362B525F4000AE19F3"
-            BuildableName = "CounterDown (Mobile).app"
-            BlueprintName = "CounterDown (Mobile)"
+            BuildableName = "CounterDown.app"
+            BlueprintName = "CounterDown"
             ReferencedContainer = "container:CounterDown.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>

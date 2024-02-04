@@ -219,7 +219,7 @@
 		2EF29BEB2B6364DF0004F616 /* CounterDownWatch-Release.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = "CounterDownWatch-Release.entitlements"; sourceTree = "<group>"; };
 		2EF29BEC2B6365440004F616 /* CounterDownMac-Release.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = "CounterDownMac-Release.entitlements"; sourceTree = "<group>"; };
 		2EF29BED2B6365A20004F616 /* Widgets-Release.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = "Widgets-Release.entitlements"; sourceTree = "<group>"; };
-		2EFEBA372B525F4000AE19F3 /* CounterDown (Mobile).app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CounterDown (Mobile).app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2EFEBA372B525F4000AE19F3 /* CounterDown.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CounterDown.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2EFEBA3A2B525F4000AE19F3 /* CounterDownApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterDownApp.swift; sourceTree = "<group>"; };
 		2EFEBA3C2B525F4000AE19F3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		2EFEBA3E2B525F4100AE19F3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -412,7 +412,7 @@
 		2EFEBA382B525F4000AE19F3 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				2EFEBA372B525F4000AE19F3 /* CounterDown (Mobile).app */,
+				2EFEBA372B525F4000AE19F3 /* CounterDown.app */,
 				2EBAA4FA2B58D3A100F3005D /* Widgets.appex */,
 				2E01056C2B5E177B00A03873 /* CounterDown.app */,
 				2E179CBE2B60CD2500972657 /* CounterDown (Mac).app */,
@@ -514,9 +514,9 @@
 			productReference = 2EBAA4FA2B58D3A100F3005D /* Widgets.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
-		2EFEBA362B525F4000AE19F3 /* CounterDown (Mobile) */ = {
+		2EFEBA362B525F4000AE19F3 /* CounterDown */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2EFEBA462B525F4100AE19F3 /* Build configuration list for PBXNativeTarget "CounterDown (Mobile)" */;
+			buildConfigurationList = 2EFEBA462B525F4100AE19F3 /* Build configuration list for PBXNativeTarget "CounterDown" */;
 			buildPhases = (
 				2EFEBA332B525F4000AE19F3 /* Sources */,
 				2EFEBA342B525F4000AE19F3 /* Frameworks */,
@@ -531,12 +531,12 @@
 				2EBAA5092B58D3A300F3005D /* PBXTargetDependency */,
 				2E0105782B5E177C00A03873 /* PBXTargetDependency */,
 			);
-			name = "CounterDown (Mobile)";
+			name = CounterDown;
 			packageProductDependencies = (
 				2E66C1B52B5A1E0D0032249C /* DynamicColor */,
 			);
 			productName = CounterDown;
-			productReference = 2EFEBA372B525F4000AE19F3 /* CounterDown (Mobile).app */;
+			productReference = 2EFEBA372B525F4000AE19F3 /* CounterDown.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -579,7 +579,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				2EFEBA362B525F4000AE19F3 /* CounterDown (Mobile) */,
+				2EFEBA362B525F4000AE19F3 /* CounterDown */,
 				2E179CBD2B60CD2500972657 /* CounterDown (Mac) */,
 				2E01056B2B5E177A00A03873 /* CounterDown (Watch) */,
 				2EBAA4F92B58D3A100F3005D /* Widgets */,
@@ -1185,7 +1185,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2EFEBA462B525F4100AE19F3 /* Build configuration list for PBXNativeTarget "CounterDown (Mobile)" */ = {
+		2EFEBA462B525F4100AE19F3 /* Build configuration list for PBXNativeTarget "CounterDown" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2EFEBA472B525F4100AE19F3 /* Debug */,
