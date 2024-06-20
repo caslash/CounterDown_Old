@@ -2,44 +2,40 @@
 //  SettingsView.swift
 //  CounterDown (Mac)
 //
-//  Created by Cameron Slash on 1/28/24.
+//  Created by Cameron Slash on 6/16/24.
 //
 
 import CounterKit
-import SwiftData
 import SwiftUI
 
 struct SettingsView: View {
-    @Environment(\.modelContext) private var modelContext
-    @Bindable var permissionsService: PermissionsService
-    @Bindable var utilities: Utilities
+    private enum Tabs: Hashable {
+        case general, info
+    }
     
-    @Query(sort: \SavedEvent.due) var events: [SavedEvent]
+    @Environment(\.modelContext) private var modelContext
+    @Environment(Utilities.self) private var utilities
     
     var body: some View {
-        NavigationStack {
-            Form {
-                Section {
-                    Picker("Menu Bar Countdown", selection: self.$utilities.menubarEvent) {
-                        ForEach(self.events) { event in
-                            Text(event.name)
-                        }
-                    }
-                    .pickerStyle(.palette)
-                    
-                    ColorPicker("Accent Color", selection: self.$utilities.accentcolor)
-                } footer: {
-                    Text("Accent color will affect buttons, header elements, and default colors for new events.")
+        TabView {
+            GeneralSettingsView()
+                .tabItem {
+                    Label("General", systemImage: "gear")
                 }
-            }
-            .navigationTitle("Settings")
-            .padding()
+                .tag(Tabs.general)
+            
+            Text("Info")
+                .tabItem {
+                    Label("Info", systemImage: "info.circle")
+                }
+                .tag(Tabs.info)
         }
+        .padding()
     }
 }
 
 #Preview {
-    SettingsView(permissionsService: PermissionsService.preview, utilities: Utilities.shared)
-        .environment(PermissionsService.preview)
+    SettingsView()
+        .modelContainer(for: SavedEvent.self)
         .environment(Utilities.shared)
 }
