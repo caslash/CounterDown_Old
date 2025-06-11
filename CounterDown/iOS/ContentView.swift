@@ -68,6 +68,8 @@ struct ContentView: View {
     container.mainContext.insert(SavedEvent.birthday)
     container.mainContext.insert(SavedEvent.iOS18)
     
+    print("Hello, World!")
+    
     return ContentView()
         .modelContainer(container)
         .environment(PermissionsService.preview)
