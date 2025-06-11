@@ -73,5 +73,4 @@ struct ContentView: View {
         .environment(PermissionsService.preview)
         .environment(Utilities.shared)
         .environment(DateService.shared)
-        .previewDevice("iPhone 15 Pro Max")
 }
